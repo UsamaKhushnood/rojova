@@ -1,0 +1,28 @@
+$fa-font-path: '~font-awesome/fonts/';
+$ionicons-font-path: '~ionicons/dist/fonts/'; 
+
+// Fonts and icons
+@import './fonts/ionicons/css/ionicons.min.css';
+@import '~font-awesome/scss/font-awesome.scss';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic';
+
+// FPlugin CSS
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~admin-lte/dist/css/AdminLTE.css';
+@import '~admin-lte/dist/css/skins/_all-skins.min.css';
+@import '~icheck/skins/all.css';
+@import '~inputmask/css/inputmask.css';
+@import '~datatables.net-bs/css/dataTables.bootstrap.css';
+@import '~select2/src/scss/core.scss';
+@import '~admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css';
+@import '~bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
+
+// Theme CSS
+@import './scss/__colors.scss';
+@import './scss/__place-holder-shimmer.scss';
+@import './scss/__fix.scss';
+@import './scss/__skinFix.scss';
+@import './scss/__modal.scss';
+@import './scss/__uploader.scss';
+@import './scss/__shop-box.scss';
+@import './scss/__form-tab-widget.scss';

@@ -1,0 +1,75 @@
+
+.shopbox {
+  margin-left: 0px;
+  max-width: 600px;
+}
+.shop-img {
+  position: relative;
+}
+.shop-img img {
+  width: 100%;
+}
+.shopname {
+  position: absolute;
+  color: #fff;
+  padding: 8px;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+}
+.discount-percent {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0px;
+  border-top: 100px solid #70ad47;
+  border-left: 100px solid transparent;
+  right: 0px;
+}
+.percent {
+  color: #fff;
+  font-size: 25px;
+  top: 5%;
+  position: absolute;
+  right: 5%;
+  font-weight: bold;
+}
+.rating-event {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.rating-event span {
+  color: #ffff02;
+}
+.shop-content {
+  padding-top: 6px;
+}
+.shop-content h4 {
+  color: #df0101;
+}
+.shopbox hr {
+  margin: 15px 30px;
+  border-color: #dadada;
+}
+.btn-reservation {
+  background-color: #70ad47;
+  text-align: center;
+  color: #fff;
+  border-radius: 0px;
+  padding: 10px;
+  width: 100%;
+}
+.shop-link ul {
+  padding: 12px 20px;
+  text-align: center;
+}
+.shop-link a {
+  font-size: 12px !important;
+}
+.shop-link a {
+  color: #808080;
+  transition: 0.2s;
+}
