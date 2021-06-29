@@ -59,36 +59,9 @@
           </router-link>
         </li>
          <li class="messages-menu" style="margin-right: 8px;">
-          <BsModal
-              type="default"
-              class="header-modal"
-            >
-            <template #button>
-              <span class="btn btn-success" style="margin-top: 6px; padding-top: 8px; padding-bottom: 8px;">
-                <i class="fa fa-plus-circle"></i>
-                <span class="hidden-xs"> Add POS</span>
-              </span>
-            </template>
-            <div class="container-fluid">
-              <AddPOSForm></AddPOSForm>
-            </div>
-          </BsModal>
         </li>
         <li class=" messages-menu" style="margin-right: 8px;">
-          <BsModal
-              type="default"
-              class="header-modal"
-            >
-            <template #button>
-              <span class="btn btn-success" style="margin-top: 6px; padding-top: 8px; padding-bottom: 8px;">
-                <i class="fa fa-files-o"></i>
-                <span class="hidden-xs"> Add New Shop</span>
-              </span>
-            </template>
-            <div class="container-fluid">
-              <AddShopForm></AddShopForm>
-            </div>
-          </BsModal>
+
           <ul class="dropdown-menu">
            <!--  <li class="header">You have 4 messages</li> -->
             <li>
@@ -187,16 +160,14 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-import BsModal from '@/components/BsModal'
-import AddPOSForm from '@/components/AddPOSForm'
-import AddShopForm from '@/components/AddShopForm'
+// import BsModal from '@/components/BsModal'
+// import AddPOSForm from '@/components/AddPOSForm'
+// import AddShopForm from '@/components/AddShopForm'
 // import gql from 'graphql-tag'
 
 export default {
   name: 'ThemeHeader',
-  components: {
-    AddShopForm, BsModal, AddPOSForm
-  },
+
   computed: {
     ...mapState({
       // authUser: state => state.authUser
