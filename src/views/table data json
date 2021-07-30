@@ -1,0 +1,16 @@
+
+
+
+      manageNewsFields: [
+        'ID','NewsDescription', 'NewsCategory', 'NewsImgaes', 'Status', 'Option'
+      ],
+      
+      manageNewsItems: [
+        {
+          NewsDescription: "Sameer12",
+          NewsCategory: "categ",
+          NewsImgaes: "categ",
+          Status: "active",
+          Option: "buttons here",
+        },
+      ],

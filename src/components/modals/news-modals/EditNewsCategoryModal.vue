@@ -1,13 +1,13 @@
 <template>
   <div>
     <b-modal
-      :id="'edit-news-category-modal' + index"
+      :id="'edit-news-category-modal' + index " 
       header-bg-variant="success"
       header-text-variant="light"
       size="sm"
-      title="Remove"
+      title="Remove "
     >
-      <div class="modal-body">
+      <div class="modal-body"> 
         <div class="row">
           <div class="input-group col-xs-12">
             <label

@@ -14,8 +14,8 @@
             src="@/assets/img/DE.png"
           /><label style="padding-left: 5px">username</label>
         </div>
-        <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="A">Standard</b-form-radio>
-      <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B">Premium</b-form-radio>
+        <b-form-radio v-model="selected" name="some-radios" value="A">Standard</b-form-radio>
+      <b-form-radio v-model="selected"  name="some-radios" value="B">Premium</b-form-radio>
  
                 <div class="input-group col-xs-12" style="padding-top: 15px">
             <label

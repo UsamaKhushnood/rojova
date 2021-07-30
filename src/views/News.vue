@@ -53,7 +53,11 @@
                       <div class="allLinks">
                         <a
                           class="editLink"
-                          v-b-modal="'edit-news-modal' + data.index + 'news'"
+                          v-b-modal="
+                            'edit-news-category-modal' +
+                            data.index +
+                            'news-category'
+                          "
                         >
                           <i
                             class="fa fa-pencil"
@@ -70,6 +74,10 @@
                           ></i>
                         </a>
                       </div>
+                      <EditNewsCategoryModal
+                        :index="data.index +
+                            'news-category'"
+                      ></EditNewsCategoryModal>
                       <DeleteNewsModal
                         :index="data.index + 'news'"
                       ></DeleteNewsModal>
@@ -92,7 +100,7 @@
                     responsive="sm"
                   >
                     <!-- A virtual column -->
-                    <template #cell(index)="data">
+                    <template #cell(ID)="data">
                       {{ data.index + 1 }}
                     </template>
 
@@ -110,11 +118,11 @@
                     <template #cell(newsImage)="data">
                       {{ data.item.newsImage }}
                     </template>
-                    <template #cell(status)="data">
+                    <template #cell(Status)="data">
                       <b-badge
                         variant="success"
                         style="background-color: #28a745"
-                        >{{ data.item.status }}</b-badge
+                        >{{ data.item.Status }}</b-badge
                       >
                     </template>
                     <template #cell(option)="data">
@@ -183,12 +191,11 @@
                       <div class="allLinks">
                         <a
                           class="editLink"
-                          v-b-modal="
-                            'edit-news-category-modal' +
-                            data.index +
-                            'news-category'
-                          "
+                          v-b-modal="'edit-news-category-modal' + data.index"
                         >
+                          <EditNewsCategoryModal
+                            :index="data.index"
+                          ></EditNewsCategoryModal>
                           <i
                             class="fa fa-pencil"
                             style="font-size: 16px; color: #e9573f"
@@ -197,9 +204,7 @@
                         <a
                           class="deleteLink"
                           v-b-modal="
-                            'delete-news-modal' +
-                            data.index +
-                            'news-category'
+                            'delete-news-modal' + data.index + 'news-category'
                           "
                         >
                           <i
@@ -208,9 +213,7 @@
                           ></i>
                         </a>
                       </div>
-                      <EditNewsCategoryModal
-                        :index="data.index + 'news-category'"
-                      ></EditNewsCategoryModal>
+
                       <DeleteNewsModal
                         :index="data.index + 'news-category'"
                       ></DeleteNewsModal>
@@ -258,7 +261,6 @@ a.deleteLink {
   cursor: pointer;
   margin-left: 3px;
 }
-
 </style>
 
     
@@ -269,7 +271,7 @@ import EditNewsCategoryModal from "@/components/modals/news-modals/EditNewsCateg
 export default {
   components: {
     DeleteNewsModal,
-    EditNewsCategoryModal
+    EditNewsCategoryModal,
   },
   data() {
     return {
@@ -311,43 +313,34 @@ export default {
           option: "buttons here",
         },
       ],
+      // new style 
       manageNewsFields: [
-        // A virtual column that doesn't exist in items
-        { key: "index", label: "ID" },
-        // A column that needs custom formatting
-        { key: "newsDescription", label: "News Description" },
-        // { key: 'userimg', label: 'User'},
-        // A regular column
-        { key: "newsCategory", label: "News Category" },
-        // A regular column
-        { key: "newsImage", label: "News Image" },
-        // A virtual column made up from two fields
-        { key: "status", label: "Status" },
-        //
-        { key: "option", label: "Option" },
+        'ID','NewsDescription', 'NewsCategory', 'NewsImgaes', 'Status', 'Option'
       ],
+      
       manageNewsItems: [
         {
-          newsDescription: "Sameer12",
-          newsCategory: "categ",
-          newsImage: "categ",
-          status: "active",
-          option: "buttons here",
+          NewsDescription: "Sameer12",
+          NewsCategory: "categ",
+          NewsImgaes: "categ",
+          Status: "active",
+          Option: "buttons here",
         },
         {
-          newsDescription: "Sameer",
-          newsCategory: "categ",
-          newsImage: "categ",
-          status: "active",
-          option: "buttons here",
+          NewsDescription: "Sameer12",
+          NewsCategory: "categ",
+          NewsImgaes: "categ",
+          Status: "active",
+          Option: "buttons here",
         },
         {
-          newsDescription: "Sameer",
-          newsCategory: "categ",
-          newsImage: "categ",
-          status: "active",
-          option: "buttons here",
+          NewsDescription: "Sameer12",
+          NewsCategory: "categ",
+          NewsImgaes: "categ",
+          Status: "active",
+          Option: "buttons here",
         },
+
       ],
       addCategoryFields: [
         // A virtual column that doesn't exist in items
