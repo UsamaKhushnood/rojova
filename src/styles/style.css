@@ -1,2 +1,82 @@
 @import url("./material-dashboard.css");
 @import url("./demo.css");
+
+.icons-size-lg {
+  font-size: 25px;
+}
+.icons-size-sm {
+  font-size: 16px;
+}
+ul.sidebar-menu.tree li a span {
+  font-size: 12px;
+}
+ul.treeview-menu li a {
+  font-size: 12px;
+}
+.sidebar-menu.tree li a {
+  text-decoration: none;
+}
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 65%;
+}
+th div {
+  font-size: 16px;
+  font-weight: 500;
+}
+td {
+  font-size: 13px;
+  font-weight: 500;
+}
+.navbar-custom-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+  list-style-type: none;
+}
+
+.navbar-custom-menu .nav.navbar-nav {
+  flex-direction: row;
+  align-items: center;
+}
+.card-header.card-header-icon {
+  width: 64px;
+}
+
+.modal-header {
+  border-radius: 0 !important;
+}
+.modal-footer {
+  color: white;
+}
+footer.footer-content {
+  background: white;
+  padding-left: 240px;
+  padding-right: 20px;
+}
+nav.navbar.navbar-static-top {
+  padding: 0;
+}
+.nav-tabs .nav-link {
+  color: #367fa9;
+}
+section#page-content {
+  padding: 30px;
+  padding-bottom: 150px;
+}
+div#__BVID__56__BV_tab_container_ {
+    height: 850px;
+    margin-bottom: 20px;
+  }
+.bg-white.container-fluid.post[data-v-66b2084c] {
+    align-items: unset;
+    height: 700px;
+    margin-bottom: 20px;
+}
+.tableStyles tr > th:first-child {
+  width: 150px;
+}

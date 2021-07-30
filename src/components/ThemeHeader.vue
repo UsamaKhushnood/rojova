@@ -33,31 +33,7 @@
     </form>
         </li>
         <!-- Messages: style can be found in dropdown.less-->
-        <li class="dropdown messages-menu" style="margin-right: 8px;">
-          <router-link to="/reports/user-ticket" class="btn btn-success" data-toggle="dropdown" style="margin-top: 6px; padding-top: 8px; padding-bottom: 8px;">
-            <!-- <i class="fa fa-list"></i> -->
-            <span class="hidden-xs"> New Ticket</span>
-            <!-- <span class="label label-danger" v-if="ticketUserSummery.new>0" style="top: -4px; right: -5px; text-align: center; font-size: 13px;">
-              {{ ticketUserSummery.new }}
-            </span> -->
-            <span class="label label-danger"  style="top: -4px; right: -5px; text-align: center; font-size: 13px;">
-            0
-            </span>
-          </router-link>
-        </li>
-        <li class="dropdown messages-menu" style="margin-right: 8px;">
-          <router-link to="/request" class="btn btn-success" style="margin-top: 6px; padding-top: 8px; padding-bottom: 8px;">
-            <!-- <i class="fa fa-bars"></i> -->
-            <span class="hidden-xs"> New Request</span>
-            <!-- <span class="label label-danger" v-if="requestsSummery.new>0" style="top: -4px; right: -5px; text-align: center; font-size: 13px;">
-              {{ requestsSummery.new }}
-            </span> -->
-             <span class="label label-danger" style="top: -4px; right: -5px; text-align: center; font-size: 13px;">
-              0 
-            </span>
-
-          </router-link>
-        </li>
+        
          <li class="messages-menu" style="margin-right: 8px;">
         </li>
         <li class=" messages-menu" style="margin-right: 8px;">
@@ -101,28 +77,7 @@
         <!-- Tasks: style can be found in dropdown.less -->
 
         <!-- User Account: style can be found in dropdown.less -->
-        <li class="dropdown user user-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <!-- <img v-if="authUser.avater" :src="authUser.avater" class="user-image"> -->
-            <!-- <img v-else class="user-image place-holder-shimmer"> -->
-            <!-- <span :class="authUser.first_name&&authUser.last_name?'hidden-xs':'hidden-xs width-100 display-inline-block place-holder-shimmer'">
-              {{ authUser.first_name }}
-              {{ authUser.lsat_name }}
-            </span> -->
-            <span>DUMMY LOGIN</span>
-          </a>
-          <ul class="dropdown-menu">
-            <!-- User image -->
-            <li class="user-header">
-              <!-- <img v-if="authUser.avater" :src="authUser.avater" class="img-circle"> -->
-              <!-- <img v-else class="img-circle place-holder-shimmer"> -->
-              <!-- <p>
-                <span :class="authUser.name?'':'width-100 place-holder-shimmer display-inline-block'">{{ authUser.name }}</span>
-                -
-                <span :class="authUser.designation?'':'width-100 place-holder-shimmer display-inline-block'">{{ authUser.designation }}</span>
-                <small :class="authUser.memberFrom?'':'width-100p place-holder-shimmer'">Member since {{ authUser.memberFrom }}</small>
-              </p> -->
-            </li>
+        
             <!-- Menu Body -->
             <!-- <li class="user-body">
               <div class="row">
@@ -138,21 +93,14 @@
               </div>
             </li> -->
             <!-- Menu Footer-->
-            <li class="user-footer">
-              <div class="pull-left">
-                <router-link :to="getPath('Profile')" class="btn btn-default btn-flat">Profile</router-link>
-              </div>
-              <div class="pull-right">
-                <a href="#" @click="logout()" class="btn btn-default btn-flat">Sign out</a>
-              </div>
-            </li>
+          
           </ul>
-        </li>
+       
         <!-- Control Sidebar Toggle Button -->
         <li>
-          <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears" style="color: white"></i></a>
         </li>
-      </ul>
+   
     </div>
   </nav>
 </header>

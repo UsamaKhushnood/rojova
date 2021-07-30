@@ -28,12 +28,12 @@
     <ul class="sidebar-menu" data-widget="tree">
 
       <li :class="checkPath('NewDash')?'active':''">
-        <router-link :to="getPath('NewDash')"><i class="fa fa-dashboard"></i> <span>Dashboard</span></router-link>
+        <router-link :to="getPath('NewDash')"><i class="fa fa-tachometer"></i> <span>Dashboard</span></router-link>
       </li>
-        <li :class="checkPath('NewDash')
-          ||checkPath('NewDash')?'active treeview':' treeview'">
+        <li :class="checkPath('StandardUser')
+          ||checkPath('StandardUser')?'active treeview':' treeview'">
           <a href="#" @click.prevent="">
-            <i class="fa fa-files-o"></i>
+            <i class="fa fa-user-o"></i>
             <span>Users</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -55,17 +55,17 @@
           </ul>
         </li>
         <li :class="checkPath('Post')?'active':''">
-          <router-link :to="getPath('Post')"><i class="fa fa-list"></i> <span>Post</span></router-link>
+          <router-link :to="getPath('Post')"><i class="fa fa-bullhorn"></i> <span>Post</span></router-link>
         </li>
 
         <li :class="checkPath('News')?'active':''">
-          <router-link :to="getPath('News')"><i class="fa fa-circle-o"></i> <span>News</span></router-link>
+          <router-link :to="getPath('News')"><i class="fa fa-newspaper-o"></i> <span>News</span></router-link>
         </li>
 
         <li :class="checkPath('AddMusic')
           ||checkPath('AddMusic')?'active treeview':' treeview'">
           <a href="#" @click.prevent="">
-            <i class="fa fa-truck"></i>
+            <i class="fa fa-music"></i>
             <span>Music</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -83,18 +83,18 @@
           </ul>
         </li>
         <li :class="checkPath('Videos')?'active':''">
-          <router-link :to="getPath('Videos')"><i class="fa fa-circle-o"></i> <span>Video</span></router-link>
+          <router-link :to="getPath('Videos')"><i class="fa fa-video-camera"></i> <span>Videos</span></router-link>
         </li>
         <li :class="checkPath('School')?'active':''">
-          <router-link :to="getPath('School')"><i class="fa fa-circle-o"></i> <span>School</span></router-link>
+          <router-link :to="getPath('School')"><i class="fa fa-graduation-cap"></i> <span>School</span></router-link>
         </li>
         <li :class="checkPath('Events')?'active':''">
-          <router-link :to="getPath('Events')"><i class="fa fa-circle-o"></i> <span>Events</span></router-link>
+          <router-link :to="getPath('Events')"><i class="fa fa-calendar"></i> <span>Events</span></router-link>
         </li>
         <li :class="checkPath('OnlineShopDashboard')
           ||checkPath('OnlineShopDashboard')?'active treeview':' treeview'">
           <a href="#" @click.prevent="">
-            <i class="fa fa-files-o"></i>
+            <i class="fa fa-cart-plus"></i>
             <span>Online Shop</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -133,15 +133,15 @@
           </ul>
         </li>
         <li :class="checkPath('History')?'active':''">
-          <router-link :to="getPath('History')"><i class="fa fa-circle-o"></i> <span>History</span></router-link>
+          <router-link :to="getPath('History')"><i class="fa fa-clock-o"></i> <span>History</span></router-link>
         </li>
         <li :class="checkPath('Tickets')?'active':''">
-          <router-link :to="getPath('Tickets')"><i class="fa fa-circle-o"></i> <span>Tickets</span></router-link>
+          <router-link :to="getPath('Tickets')"><i class="fa fa-ticket"></i> <span>Tickets</span></router-link>
         </li>
         <li :class="checkPath('NewRequest')
           ||checkPath('NewRequest')?'active treeview':' treeview'">
           <a href="#" @click.prevent="">
-            <i class="fa fa-cutlery"></i>
+            <i class="fa fa-user"></i>
             <span>Fan Page</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -163,21 +163,21 @@
           </ul>
         </li>
         <li :class="checkPath('Income')?'active':''">
-          <router-link :to="getPath('Income')"><i class="fa fa-circle-o"></i> <span>Income</span></router-link>
+          <router-link :to="getPath('Income')"><i class="fa fa-money"></i> <span>Income</span></router-link>
         </li>
         <li :class="checkPath('Donation')?'active':''">
-          <router-link :to="getPath('Donation')"><i class="fa fa-circle-o"></i> <span>Donation</span></router-link>
+          <router-link :to="getPath('Donation')"><i class="fa fa-heartbeat"></i> <span>Donation</span></router-link>
         </li>
         <li :class="checkPath('Voting')?'active':''">
-          <router-link :to="getPath('Voting')"><i class="fa fa-circle-o"></i> <span>Voting</span></router-link>
+          <router-link :to="getPath('Voting')"><i class="fa fa-pie-chart"></i> <span>Voting</span></router-link>
         </li>
         <li :class="checkPath('Media')?'active':''">
-          <router-link :to="getPath('Media')"><i class="fa fa-circle-o"></i> <span>Media</span></router-link>
+          <router-link :to="getPath('Media')"><i class="fa fa-television"></i> <span>Media</span></router-link>
         </li>
         <li :class="checkPath('UserReport')
           ||checkPath('UserReport')?'active treeview':' treeview'">
           <a href="#" @click.prevent="">
-            <i class="fa fa-files-o"></i>
+            <i class="fa fa-bug"></i>
             <span>Reports</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -195,7 +195,7 @@
           </ul>
         </li>
         <li :class="checkPath('Bazar')?'active':''">
-          <router-link :to="getPath('Bazar')"><i class="fa fa-circle-o"></i> <span>Bazar</span></router-link>
+          <router-link :to="getPath('Bazar')"><i class="fa fa-cart-plus"></i> <span>Bazar</span></router-link>
         </li>
         
         <li :class="checkPath('Language')
@@ -307,6 +307,8 @@
   </section>
 </aside>
 </template>
+
+
 
 <script>
 export default {

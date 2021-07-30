@@ -1,6 +1,7 @@
 <template>
   <div>
     <section id="page-content">
+      
       <!--/ End header content -->
 
       <!-- Start body content -->
@@ -121,7 +122,7 @@
                         data-placement="bottom"
                         title="Refresh"
                       >
-                        <i class="material-icons">refresh</i>
+                        <i class="fas fa-redo"></i>
                       </button>
                       <button
                         type="button"
@@ -130,7 +131,7 @@
                         data-placement="bottom"
                         title="Change Date"
                       >
-                        <i class="material-icons">edit</i>
+                        <i class="fas fa-pen"></i>
                       </button>
                     </div>
                     <h4 class="card-title">Website Views</h4>
@@ -138,7 +139,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="stats">
-                      <i class="material-icons">access_time</i> campaign sent 2
+                      <i class="far fa-clock"></i> campaign sent 2
                       days ago
                     </div>
                   </div>
@@ -168,7 +169,7 @@
                         data-placement="bottom"
                         title="Refresh"
                       >
-                        <i class="material-icons">refresh</i>
+                        <i class="fas fa-redo"></i>
                       </button>
                       <button
                         type="button"
@@ -177,7 +178,7 @@
                         data-placement="bottom"
                         title="Change Date"
                       >
-                        <i class="material-icons">edit</i>
+                        <i class="fas fa-pen"></i>
                       </button>
                     </div>
                     <h4 class="card-title">Daily Sales</h4>
@@ -190,7 +191,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="stats">
-                      <i class="material-icons">access_time</i> updated 4
+                      <i class="far fa-clock"></i> updated 4
                       minutes ago
                     </div>
                   </div>
@@ -220,7 +221,7 @@
                         data-placement="bottom"
                         title="Refresh"
                       >
-                        <i class="material-icons">refresh</i>
+                        <i class="fas fa-redo"></i>
                       </button>
                       <button
                         type="button"
@@ -229,7 +230,7 @@
                         data-placement="bottom"
                         title="Change Date"
                       >
-                        <i class="material-icons">edit</i>
+                        <i class="fas fa-pen"></i>
                       </button>
                     </div>
                     <h4 class="card-title">Completed Tasks</h4>
@@ -237,7 +238,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="stats">
-                      <i class="material-icons">access_time</i> campaign sent 2
+                      <i class="far fa-clock"></i> campaign sent 2
                       days ago
                     </div>
                   </div>
@@ -248,7 +249,7 @@
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="orange">
-                    <i class="material-icons">weekend</i>
+                    <i class="fas fa-couch"></i>
                   </div>
                   <div class="card-content">
                     <p class="category">Bookings</p>
@@ -256,7 +257,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="stats">
-                      <i class="material-icons text-danger">warning</i>
+                      <i class="fas fa-exclamation-triangle"></i>
                       <a href="#pablo">Get More Space...</a>
                     </div>
                   </div>
@@ -265,7 +266,7 @@
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="rose">
-                    <i class="material-icons">equalizer</i>
+                    <i class="fas fa-chart-bar"></i>
                   </div>
                   <div class="card-content">
                     <p class="category">Website Visits</p>
@@ -273,7 +274,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="stats">
-                      <i class="material-icons">local_offer</i> Tracked from
+                      <i class="fas fa-tag"></i> Tracked from
                       Google Analytics
                     </div>
                   </div>
@@ -282,7 +283,7 @@
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="green">
-                    <i class="material-icons">store</i>
+                    <i class="fas fa-store"></i>
                   </div>
                   <div class="card-content">
                     <p class="category">Revenue</p>
@@ -290,7 +291,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="stats">
-                      <i class="material-icons">date_range</i> Last 24 Hours
+                      <i class="far fa-calendar-alt"></i> Last 24 Hours
                     </div>
                   </div>
                 </div>
@@ -298,7 +299,7 @@
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="blue">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fab fa-twitter"></i>
                   </div>
                   <div class="card-content">
                     <p class="category">Followers</p>
@@ -306,7 +307,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="stats">
-                      <i class="material-icons">update</i> Just Updated
+                      <i class="fas fa-history"></i> Just Updated
                     </div>
                   </div>
                 </div>
@@ -319,7 +320,7 @@
                 <div class="card card-product">
                   <div class="card-image" data-header-animation="true">
                     <a href="#pablo">
-                      <img class="img" src="img/BILLY-ARGEL-GINGA.jpg" />
+                      <img class="img" src="@/assets/img/BILLY-ARGEL-GINGA.jpg" />
                     </a>
                   </div>
                   <div class="card-content">
@@ -337,7 +338,7 @@
                         data-placement="bottom"
                         title="View"
                       >
-                        <i class="material-icons">art_track</i>
+                        <i class="fas fa-eye-slash"></i>
                       </button>
                       <button
                         type="button"
@@ -346,7 +347,7 @@
                         data-placement="bottom"
                         title="Edit"
                       >
-                        <i class="material-icons">edit</i>
+                        <i class="fas fa-pen"></i>
                       </button>
                       <button
                         type="button"
@@ -355,7 +356,7 @@
                         data-placement="bottom"
                         title="Remove"
                       >
-                        <i class="material-icons">close</i>
+                        <i class="fas fa-times"></i>
                       </button>
                     </div>
                     <h4 class="card-title">
@@ -373,7 +374,7 @@
                     </div>
                     <div class="stats pull-right">
                       <p class="category">
-                        <i class="material-icons">place</i> Barcelona, Spain
+                        <i class="fas fa-map-marker-alt"></i> Barcelona, Spain
                       </p>
                     </div>
                   </div>
@@ -383,7 +384,7 @@
                 <div class="card card-product">
                   <div class="card-image" data-header-animation="true">
                     <a href="#pablo">
-                      <img class="img" src="img/BILLY-ARGEL-GINGA.jpg" />
+                      <img class="img" src="@/assets/img/BILLY-ARGEL-GINGA.jpg" />
                     </a>
                   </div>
                   <div class="card-content">
@@ -401,7 +402,7 @@
                         data-placement="bottom"
                         title="View"
                       >
-                        <i class="material-icons">art_track</i>
+                        <i class="fas fa-eye-slash"></i>
                       </button>
                       <button
                         type="button"
@@ -410,7 +411,7 @@
                         data-placement="bottom"
                         title="Edit"
                       >
-                        <i class="material-icons">edit</i>
+                        <i class="fas fa-pen"></i>
                       </button>
                       <button
                         type="button"
@@ -419,7 +420,7 @@
                         data-placement="bottom"
                         title="Remove"
                       >
-                        <i class="material-icons">close</i>
+                        <i class="fas fa-times"></i>
                       </button>
                     </div>
                     <h4 class="card-title">
@@ -437,7 +438,7 @@
                     </div>
                     <div class="stats pull-right">
                       <p class="category">
-                        <i class="material-icons">place</i> London, UK
+                        <i class="fas fa-map-marker-alt"></i> London, UK
                       </p>
                     </div>
                   </div>
@@ -447,7 +448,7 @@
                 <div class="card card-product">
                   <div class="card-image" data-header-animation="true">
                     <a href="#pablo">
-                      <img class="img" src="img/BILLY-ARGEL-GINGA.jpg" />
+                      <img class="img" src="@/assets/img/BILLY-ARGEL-GINGA.jpg" />
                     </a>
                   </div>
                   <div class="card-content">
@@ -465,7 +466,7 @@
                         data-placement="bottom"
                         title="View"
                       >
-                        <i class="material-icons">art_track</i>
+                        <i class="fas fa-eye-slash"></i>
                       </button>
                       <button
                         type="button"
@@ -474,7 +475,7 @@
                         data-placement="bottom"
                         title="Edit"
                       >
-                        <i class="material-icons">edit</i>
+                        <i class="fas fa-pen"></i>
                       </button>
                       <button
                         type="button"
@@ -483,7 +484,7 @@
                         data-placement="bottom"
                         title="Remove"
                       >
-                        <i class="material-icons">close</i>
+                        <i class="fas fa-times"></i>
                       </button>
                     </div>
                     <h4 class="card-title">
@@ -501,7 +502,7 @@
                     </div>
                     <div class="stats pull-right">
                       <p class="category">
-                        <i class="material-icons">place</i> Milan, Italy
+                        <i class="fas fa-map-marker-alt"></i> Milan, Italy
                       </p>
                     </div>
                   </div>

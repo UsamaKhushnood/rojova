@@ -7,7 +7,7 @@
         <router-view/>
       </div>
     </div>
-    <!-- <ThemeFooter></ThemeFooter> -->
+    <ThemeFooter></ThemeFooter>
     <ControlSidebar></ControlSidebar>
     <div class="control-sidebar-bg"></div>
     
@@ -18,13 +18,13 @@
 <script>
 import ThemeHeader from '@/components/ThemeHeader.vue'
 import MainSidebar from '@/components/MainSidebar.vue'
-// import ThemeFooter from '@/components/ThemeFooter.vue'
+import ThemeFooter from '@/components/ThemeFooter.vue'
 import ControlSidebar from '@/components/ControlSidebar.vue'
 
 export default {
   name: 'Theme',
   components: {
-    ThemeHeader, MainSidebar, ControlSidebar
+    ThemeHeader, MainSidebar, ControlSidebar, ThemeFooter
   },
   created: async function () {
     $(document).ready(function () {
@@ -39,10 +39,8 @@ export default {
   }
 
 }
+
 </script>
-
-
-</style>
 
 <style>
   

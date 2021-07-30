@@ -10,5 +10,5 @@ module.exports = {
         options.prettify = false
         return options
       })
-  }
+  },
 }

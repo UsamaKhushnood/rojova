@@ -1,487 +1,295 @@
 <template>
-    <div>
-        <section id="page-content">
-
-               
-                <!--/ End header content -->
-
-                <!-- Start body content -->
-                <div class="body-content animated fadeIn ">
-
-                  
-
-                    <div class="row">
-                        
-          <div class="vd_content-section clearfix" style="min-height:90vh">
-			<!-- Start double tabs -->
-                            <div class="panel panel-tab panel-tab-double rounded shadow">
-                                <!-- Start tabs heading -->
-                                <div class="panel-heading no-padding">
-                                    <ul class="nav nav-tabs">
-                                        <li class="active">
-                                            <a href="component-tabsaccordion.html#tab2-1" data-toggle="tab">
-                                                <i class="fa fa-user"></i>
-                                                <div>
-                                                    <h6 class="text-strong">Manage Items</h6>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="component-tabsaccordion.html#tab2-2" data-toggle="tab">
-                                                <i class="fa fa-plus-circle"></i>
-                                                <div>
-                                                    <h6 class="text-strong">Add Category</h6>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        
-                                    </ul>
-                                </div><!-- /.panel-heading -->
-                                <!--/ End tabs heading -->
-
-                                <!-- Start tabs content -->
-                                <div class="panel-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade in active" id="tab2-1">
-                        <div class="col-md-4"></div>
-				<div class="col-md-4">
-						<button type="button" class="btn btn-primary col-xs-12 btn-lg" data-toggle="modal" data-target="#addMedia">
-                            <span class="append-icon"><i class="fa fa-plus-square"></i></span>&nbsp;Add Item</button>
-				</div>
-               
-                    <div class="col-md-4"></div>                    
-				<div class="col-md-12" style="padding-top:30px">
-                    
-                    
-					<table class="table table-striped table-primary">
-						
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>Image</th>
-								<th>Category </th>
-								<th>Item Name </th>
-								<th>Sound </th>
-								<th>Option</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="text-center" style="width: 7%;">
-                                    <b>1024</b>
-                                </td> 
-                                <td class="text-center" style="width: 1%">
-                                    <img src="@/assets/img/media/realistic/4.jpg" alt="..." width="100" class="mt-5 mb-5">
-                                </td>
-                                <td>categ</td> 
-								<td>categ</td> 
-								<td style="width:10%">  
-                                    <audio controls="">
-                                  <source src="imgSelect/horse.ogg" type="audio/ogg">
-                                  Your browser does not support the audio element.
-                                </audio>
-                                <audio controls="">
-                                  <source src="imgSelect/horse.ogg" type="audio/ogg">
-                                  Your browser does not support the audio element.
-                                </audio>
-                                </td> 
-								<td class="menu-action">
-									<div class="pdng5">
-										<a data-toggle="modal" data-target="#EditMedia" class="btn btn-xs btn-default"><i class="fa fa-pencil" data-original-title="Edit" data-toggle="tooltip" data-placement="top"></i></a>
-										<a data-toggle="modal" data-target="#removeLang" class="btn btn-xs btn-default"><i class="fa fa-trash-o" data-original-title="Remove" data-toggle="tooltip" data-placement="top"></i></a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="text-center" style="width: 7%;">
-                                    <b>1074</b>
-                                </td>
-                                <td class="text-center" style="width: 1%">
-                                    <img src="@/assets/img/media/realistic/4.jpg" alt="..." width="100" class="mt-5 mb-5">
-                                </td>
-								<td>subcategory</td> 
-								<td>subcategory</td> 
-								<td style="width:10%">  
-                                    <audio controls="">
-                                  <source src="imgSelect/horse.ogg" type="audio/ogg">
-                                  Your browser does not support the audio element.
-                                </audio>
-                                <audio controls="">
-                                  <source src="imgSelect/horse.ogg" type="audio/ogg">
-                                  Your browser does not support the audio element.
-                                </audio>
-                                </td> 
-								<td class="menu-action">
-									<div class="pdng5">
-										<a data-toggle="modal" data-target="#EditMedia" class="btn btn-xs btn-default"><i class="fa fa-pencil" data-original-title="Edit" data-toggle="tooltip" data-placement="top"></i></a>
-										<a data-toggle="modal" data-target="#removeLang" class="btn btn-xs btn-default"><i class="fa fa-trash-o" data-original-title="Remove" data-toggle="tooltip" data-placement="top"></i></a>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div><!-- col-md-12 end -->    
-                                        </div>
-                <div class="tab-pane fade" id="tab2-2">
-                <div class="col-md-4"></div>
-				<div class="col-md-4">
-						<button type="button" class="btn btn-primary col-xs-12 btn-lg" data-toggle="modal" data-target="#addLang">
-                            <span class="append-icon"><i class="fa fa-plus-square"></i></span>&nbsp;Add Category</button>
-				</div>
-                
-				<div class="col-md-4"></div>
-                    <div class="col-md-12" style="padding-top:30px">
-                    <table class="table table-striped table-primary">
-						
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>Category Image</th>
-								<th>Category</th>
-								
-								<th>Option</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="text-center" style="width: 7%;">
-                                    <b>1024</b>
-                                </td>                               
-								<td class="text-center" style="width: 1%">
-                                    <img src="@/assets/img/media/realistic/4.jpg" alt="..." width="160" class="mt-5 mb-5">
-                                </td>
-								<td>543</td> 
-								<td class="menu-action">
-									<div class="pdng5">
-										<a data-toggle="modal" data-target="#editcat" class="btn btn-xs btn-default"><i class="fa fa-pencil" data-original-title="Edit" data-toggle="tooltip" data-placement="top"></i></a>
-										<a data-toggle="modal" data-target="#removeLang" class="btn btn-xs btn-default"><i class="fa fa-trash-o" data-original-title="Remove" data-toggle="tooltip" data-placement="top"></i></a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="text-center" style="width: 7%;">
-                                    <b>1074</b>
-                                </td> 
-								<td class="text-center" style="width: 1%">
-                                    <img src="@/assets/img/media/realistic/4.jpg" alt="..." width="160" class="mt-5 mb-5">
-                                </td> 
-								<td>total</td> 
-								<td class="menu-action">
-									<div class="pdng5">
-										<a data-toggle="modal" data-target="#editcat" class="btn btn-xs btn-default"><i class="fa fa-pencil" data-original-title="Edit" data-toggle="tooltip" data-placement="top"></i></a>
-										<a data-toggle="modal" data-target="#removeLang" class="btn btn-xs btn-default"><i class="fa fa-trash-o" data-original-title="Remove" data-toggle="tooltip" data-placement="top"></i></a>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-                    </div>
+  <div>
+    <section id="page-content">
+      <div>
+        <b-card no-body>
+          <b-tabs card>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-user iconStyle"></i>
+                <strong>Manage Items</strong>
+              </template>
+              <b-card-text>
+                <div class="container-fluid mb-4" align="center">
+                  <button class="btn btn-success btn-md"
+                  v-b-modal="'add-item-modal'"
+                  >
+                    <i class="fa fa-plus-circle"></i>
+                    Add Item
+                  </button>
                 </div>
-                                       
-                                    </div>
-                                </div><!-- /.panel-body -->
-                                <!--/ End tabs content -->
-                            </div><!-- /.panel -->
+                <div>
+                  <b-table
+                    small
+                    :fields="manageItemsFields"
+                    :items="manageSchoolItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
 
-                        </div>
-                    </div>
+                    <!-- A custom formatted column -->
+                    <template #cell(image)="data">
+                      <img
+                        :src="data.item.image"
+                        alt="image"
+                        style="width: 100px; height: auto"
+                      />
+                    </template>
 
-                </div><!-- /.body-content -->
-                <!--/ End body content -->
-                <!-- ADD LANG -->
-                 <!--modal-->
-                    <div class="modal modal-success " role="dialog" id="addMedia">
-                        <div class="modal-dialog modal-md">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title">Add Category</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="input-group col-xs-12">
-                                              <label class="col-sm-4 control-label" style="font-size:15px;padding-top:10px">Seclect Category</label>
-                                                <div class="col-sm-7 controls">
-                                                    <div>
-                                            <select class="langSelect col-xs-12 " style="display: none;">
-                                                <option selected="">Choose a Category</option>
-                                                <option>org1</option>
-                                                <option>category2</option>
-                                                <option>category3</option>
-                                                <option>category4</option>
-                                                <option>category5</option>
+                    <!-- A virtual composite column -->
+                    <template #cell(category)="data">
+                      {{ data.item.category }}
+                    </template>
 
-                                            </select><div class="chosen-container chosen-container-single" style="width: 0px;" title=""><a class="chosen-single" tabindex="-1"><span>Choose a Category</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-                                                    </div>
-                                                </div>
+                    <!-- Optional default data cell scoped slot -->
+                    <template #cell(itemName)="data">
+                      {{ data.item.itemName }}
+                    </template>
+                    <template #cell(sound)="data">
+                      <div class="container">
+                        <audio controls>
+                          <source :src="data.item.sound1" type="audio/mpeg" />
+                        </audio>
+                      </div>
+                      <div class="container">
+                        <audio controls>
+                          <source :src="data.item.sound2" type="audio/mpeg" />
+                        </audio>
+                      </div>
+                    </template>
 
-                                          </div>
-                                            <br>
-                                            <div class="input-group col-xs-12">
-                                      <label class="col-sm-4 control-label" style="font-size:15px;padding-top:10px">Item Name</label>
-                                        <div class="col-sm-7 controls">
-                                         <input id="acc" type="text" class="form-control col-xs-12" name="name" placeholder="Item Name ">
-
-                                        </div>
-                                                
-                                  </div> 
-                                           
-                                         
-                                  <br>
-                                     <div class="form-group">
-                                                <label class="col-md-4 control-label">Item Image:</label>
-                                                <div class="col-md-8">
-                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px; line-height: 150px;"></div>
-                                                        <div>
-                                                            <span class="btn btn-info btn-file"><span class="fileinput-new">Select Image</span><span class="fileinput-exists">Change</span><input type="hidden" value="" name="..."><input type="file" name=""></span>
-                                                            <a href="form-element.html#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                         <br>
-                                            <div class="form-group">
-                                                <label class="col-md-4 control-label">upload Sound 1:</label>
-                                                <div class="col-md-8">
-                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 50px; line-height: 150px;"></div>
-                                                        <div>
-                                                            <span class="btn btn-info btn-file"><span class="fileinput-new">Select </span><span class="fileinput-exists">Change</span><input type="hidden" value="" name="..."><input type="file" multiple="" name=""></span>
-                                                            <a href="form-element.html#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                         <br>
-                                            <div class="form-group">
-                                                <label class="col-md-4 control-label">upload Sound 2 :</label>
-                                                <div class="col-md-8">
-                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 50px; line-height: 150px;"></div>
-                                                        <div>
-                                                            <span class="btn btn-info btn-file"><span class="fileinput-new">Select </span><span class="fileinput-exists">Change</span><input type="hidden" value="" name="..."><input type="file" multiple="" name=""></span>
-                                                            <a href="form-element.html#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-success" data-dismiss="modal">Save and add new</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save and close</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
-                
-                
-                 <!--modal-->
-                    <div class="modal modal-success " role="dialog" id="EditMedia">
-                        <div class="modal-dialog modal-md">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title">Edit Category</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="input-group col-xs-12">
-                                              <label class="col-sm-4 control-label" style="font-size:15px;padding-top:10px">Seclect Category</label>
-                                                <div class="col-sm-7 controls">
-                                                    <div>
-                                            <select class="langSelect col-xs-12 " style="display: none;">
-                                                <option selected="">Choose a Category</option>
-                                                <option>org1</option>
-                                                <option>category2</option>
-                                                <option>category3</option>
-                                                <option>category4</option>
-                                                <option>category5</option>
-
-                                            </select><div class="chosen-container chosen-container-single" style="width: 0px;" title=""><a class="chosen-single" tabindex="-1"><span>Choose a Category</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
-                                                    </div>
-                                                </div>
-
-                                          </div>
-                                            <br>
-                                            <div class="input-group col-xs-12">
-                                      <label class="col-sm-4 control-label" style="font-size:15px;padding-top:10px">Item Name</label>
-                                        <div class="col-sm-7 controls">
-                                         <input id="acc" type="text" class="form-control col-xs-12" name="name" placeholder="Item Name ">
-
-                                        </div>
-                                                
-                                  </div> 
-                                           
-                                         
-                                  <br>
-                                     <div class="form-group">
-                                                <label class="col-md-4 control-label">Item Image:</label>
-                                                <div class="col-md-8">
-                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px; line-height: 150px;"></div>
-                                                        <div>
-                                                            <span class="btn btn-info btn-file"><span class="fileinput-new">Select Image</span><span class="fileinput-exists">Change</span><input type="hidden" value="" name="..."><input type="file" name=""></span>
-                                                            <a href="form-element.html#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <br>
-                                            <div class="form-group">
-                                                <label class="col-md-4 control-label">upload Sound 1:</label>
-                                                <div class="col-md-8">
-                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 50px; line-height: 150px;"></div>
-                                                        <div>
-                                                            <span class="btn btn-info btn-file"><span class="fileinput-new">Select </span><span class="fileinput-exists">Change</span><input type="hidden" value="" name="..."><input type="file" multiple="" name=""></span>
-                                                            <a href="form-element.html#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                         <br>
-                                            <div class="form-group">
-                                                <label class="col-md-4 control-label">upload Sound 2 :</label>
-                                                <div class="col-md-8">
-                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 50px; line-height: 150px;"></div>
-                                                        <div>
-                                                            <span class="btn btn-info btn-file"><span class="fileinput-new">Select </span><span class="fileinput-exists">Change</span><input type="hidden" value="" name="..."><input type="file" multiple="" name=""></span>
-                                                            <a href="form-element.html#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-success" data-dismiss="modal">Save and add new</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save and close</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
-<div class="modal fade modal-primary" id="addLang" tabindex="-1" role="dialog" aria-labelledby="Add maincategory" aria-hidden="true">
-  <div class="modal-dialog modal-md" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">Add Category</h4>
-        </div>
-      <div class="modal-body" id="input-mask">
-        <form method="post">
-            <div class="row">
-		   <div class="input-group col-xs-12">
-              <label class="col-sm-4 control-label" style="font-size:15px;padding-top:10px"> Category Name</label>
-				<div class="col-sm-7 controls">
-				 <input id="title" type="title" class="form-control col-xs-12" name="categ" placeholder="Category Name">
-
-				</div>
-		      <br>
-		  </div>
-		  
-            <br>
-            <div class="form-group">
-            <label class="col-md-4 control-label">Upload Image:</label>
-            <div class="col-md-8">
-                <div class="fileinput fileinput-new" data-provides="fileinput">
-                    <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px; line-height: 150px;"></div>
-                    <div>
-                        <span class="btn btn-info btn-file"><span class="fileinput-new">Select Image</span><span class="fileinput-exists">Change</span><input type="hidden" value="" name="..."><input type="file" name=""></span>
-                        <a href="form-element.html#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                    </div>
+                    <template #cell(option)="data">
+                      <div class="allLinks">
+                        <a class="editLink"
+                        v-b-modal="'edit-item-modal' + data.index + 'item'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                        </a>
+                        <a class="deleteLink"
+                        v-b-modal="'delete-item-modal' + data.index + 'item'"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                        </a>
+                      </div>
+                      <DeleteItemModal :index="data.index + 'item'"></DeleteItemModal>
+                      <EditItemModal :index="data.index + 'item'"></EditItemModal>
+                    </template>
+                  </b-table>
                 </div>
-            </div>
-        </div>
-            </div>
-		</form>
-      </div>	  
-      <div class="modal-footer vd_bg-white">		  
-        <button type="button" class="btn btn-primary " data-dismiss="modal">Save and add new</button>
-        <button type="button" class="btn btn-primary " data-dismiss="modal">Save and close</button>
-      </div>
-    </div>
-  </div>
-</div>
-           
-                                  <!-- /.modal -->
-<div class="modal fade modal-primary" id="editcat" tabindex="-1" role="dialog" aria-labelledby="Add maincategory" aria-hidden="true">
-  <div class="modal-dialog modal-md" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">Edit Category</h4>
-        </div>
-      <div class="modal-body" id="input-mask">
-        <form method="post">
-            <div class="row">
-		   <div class="input-group col-xs-12">
-              <label class="col-sm-4 control-label" style="font-size:15px;padding-top:10px"> Category Name</label>
-				<div class="col-sm-7 controls">
-				 <input id="title" type="title" class="form-control col-xs-12" name="categ" placeholder="Category Name">
-
-				</div>
-		      <br>
-		  </div>
-		  
-            <br>
-            <div class="form-group">
-            <label class="col-md-4 control-label">Upload Image:</label>
-            <div class="col-md-8">
-                <div class="fileinput fileinput-new" data-provides="fileinput">
-                    <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px; line-height: 150px;"></div>
-                    <div>
-                        <span class="btn btn-info btn-file"><span class="fileinput-new">Select Image</span><span class="fileinput-exists">Change</span><input type="hidden" value="" name="..."><input type="file" name=""></span>
-                        <a href="form-element.html#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                    </div>
+              </b-card-text>
+              <AddItemModal></AddItemModal>
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-plus-circle iconStyle"></i>
+                <strong>Add Category</strong>
+              </template>
+              <b-card-text>
+                <div class="container-fluid mb-4" align="center">
+                  <button
+                    class="btn btn-success btn-md"
+                    v-b-modal="'add-category-modal'"
+                  >
+                    <i class="fa fa-plus-circle"></i>
+                    Add Category
+                  </button>
                 </div>
-            </div>
-        </div>
-            </div>
-		</form>
-      </div>	  
-      <div class="modal-footer vd_bg-white">		  
-        <button type="button" class="btn btn-primary " data-dismiss="modal">Save and add new</button>
-        <button type="button" class="btn btn-primary " data-dismiss="modal">Save and close</button>
+                <div>
+                  <b-table
+                    small
+                    :fields="addItemCategoryFields"
+                    :items="addSchoolCategoryItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- Optional default data cell scoped slot -->
+                    <template #cell(image)="data">
+                      <img :src="data.item.image" alt="item image"
+                      style="width: 100px; height: auto;">
+                    </template>
+                    <template #cell(category)="data">
+                      {{ data.item.category }}
+                    </template>
+
+                    <template #cell(option)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-category-modal' + data.index + 'category'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-category-modal' + data.index + 'category'"
+                           
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                        </a>
+                      </div>
+                    <DeleteCategoryModal :index="data.index + 'category'"></DeleteCategoryModal>
+                    <EditCategoryModal :index="data.index + 'category'"></EditCategoryModal>
+
+                    </template>
+                  </b-table>
+                </div>
+              </b-card-text>
+
+                <AddCategoryModal></AddCategoryModal>
+              
+            </b-tab>
+          </b-tabs>
+        </b-card>
       </div>
-    </div>
+    </section>
   </div>
-</div>
-<!-- EDIT LANG -->
-
-
-<!-- REMOVE LANG -->
-<div class="modal fade modal-danger" id="removeLang" tabindex="-1" role="dialog" aria-labelledby="Add maincategory" aria-hidden="true">
-  <div class="modal-dialog modal-md" role="document">
-    <div class="modal-content">
-      <div class="modal-header vd_bg-red">
-        <button type="button" class="close vd_white" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h4 class="modal-title vd_white">REMOVE</h4>
-      </div>
-      <div class="modal-body">
-          <p>Are you sure you want to remove this</p>
-      </div>	  
-      <div class="modal-footer vd_bg-white">		  
-        <button type="button" class="btn btn-primary " data-dismiss="modal">CONFIRM</button>
-      </div>
-    </div>
-  </div>
-</div>
-                <!-- Start footer content -->
-                <footer class="footer-content">
-                    2014 - <span id="copyright-year">2021</span>© SmartSystems . Created by <a href="" target="_blank">SmartDesign</a>
-                    <span class="pull-right">0.01 GB(0%) of 15 GB used</span>
-                </footer><!-- /.footer-content -->
-                <!--/ End footer content -->
-
-            </section>
-    </div>
 </template>
+    
+<style scoped>
+.iconStyle {
+  margin-right: 10px;
+}
+.imageStyles {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.badge {
+  font-size: 13px;
+}
+.allLinks {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+a.editLink {
+  border: 2px solid #e9573f;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a.deleteLink {
+  border: 2px solid #367fa9;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 3px;
+}
+</style>
+
+    
+<script>
+  import DeleteItemModal from "@/components/modals/school-modals/DeleteItemModal";
+  import EditItemModal from "@/components/modals/school-modals/EditItemModal";
+  import AddItemModal from "@/components/modals/school-modals/AddItemModal";
+  import DeleteCategoryModal from "@/components/modals/school-modals/DeleteCategoryModal";
+  import EditCategoryModal from "@/components/modals/school-modals/EditCategoryModal";
+  import AddCategoryModal from "@/components/modals/school-modals/AddCategoryModal";
+//  import EditVideoModal from "@/components/modals/videos-modals/EditVideoModal";
+//  import AddVideoModal from "@/components/modals/videos-modals/AddVideoModal";
+//  import AddVideoCategoryModal from "@/components/modals/videos-modals/AddVideoCategoryModal";
+//  import EditVideoCategoryModal from "@/components/modals/videos-modals/EditVideoCategoryModal";
+//  import DeleteVideoCategoryModal from "@/components/modals/videos-modals/DeleteVideoCategoryModal";
+
+export default {
+    components: {
+     DeleteItemModal,
+     EditItemModal,
+     AddItemModal,
+     DeleteCategoryModal,
+     EditCategoryModal,
+     AddCategoryModal,
+  //      EditVideoModal,
+  //      AddVideoModal,
+  //      AddVideoCategoryModal,
+  //      EditVideoCategoryModal,
+  //      DeleteVideoCategoryModal,
+   },
+  data() {
+    return {
+      manageItemsFields: [
+        // A virtual column that doesn't exist in items
+        { key: "index", label: "ID" },
+        // A column that needs custom formatting
+        { key: "image", label: "Image" },
+        // { key: 'userimg', label: 'User'},
+        // A regular column
+        { key: "category", label: "Category" },
+        // A regular column
+        { key: "itemName", label: "Item Name" },
+        { key: "sound", label: "Sound" },
+        // A virtual column made up from two fields
+        //
+        { key: "option", label: "Option" },
+      ],
+      manageSchoolItems: [
+        {
+          image: require("@/assets/img/media/realistic/4.jpg"),
+          category: "categ",
+          itemName: "categ",
+          sound1: require("@/assets/Count On Me.mp3"),
+          sound2: require("@/assets/Count On Me.mp3"),
+        },
+        {
+          image: require("@/assets/img/media/realistic/4.jpg"),
+          category: "categ",
+          itemName: "categ",
+          sound1: require("@/assets/Count On Me.mp3"),
+          sound2: require("@/assets/Count On Me.mp3"),
+        },
+        {
+          image: require("@/assets/img/media/realistic/4.jpg"),
+          category: "categ",
+          itemName: "categ",
+          sound1: require("@/assets/Count On Me.mp3"),
+          sound2: require("@/assets/Count On Me.mp3"),
+        },
+      ],
+      addItemCategoryFields: [
+        // A virtual column that doesn't exist in items
+        { key: "index", label: "ID" },
+        // A column that needs custom formatting
+        { key: "image", label: "Image" },
+        { key: "category", label: "Category" },
+        //
+        { key: "option", label: "Option" },
+      ],
+      addSchoolCategoryItems: [
+        {
+            image: require("@/assets/img/media/realistic/4.jpg"),
+            category: 'categ'
+        },
+        {
+            image: require("@/assets/img/media/realistic/4.jpg"),
+            category: 'categ'
+        },
+        {
+            image: require("@/assets/img/media/realistic/4.jpg"),
+            category: 'categ'
+        }
+      ],
+    };
+  },
+};
+</script>
