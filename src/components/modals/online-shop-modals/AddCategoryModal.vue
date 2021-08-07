@@ -1,11 +1,11 @@
 <template>
   <div>
     <b-modal
-      :id="'edit-news-category-modal' + index " 
+      :id="'add-online-shop-category-modal'" 
       header-bg-variant="success"
       header-text-variant="light"
       size="sm"
-      title="Remove "
+      title="Add Category "
     >
       <div class="modal-body"> 
         <div class="row">
@@ -40,8 +40,4 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["index"],
-};
-</script>
+

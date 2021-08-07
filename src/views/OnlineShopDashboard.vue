@@ -19,13 +19,13 @@
                       data-title="Total like all your channel on facebook"
                       data-original-title=""
                       title=""
-                      ><i class="fa fa-question"></i
+                      ><i class="fa fa-question" style="color: white;"></i
                     ></span>
                   </h3>
                   <h1>
                     <span class="status">
-                      <span class="percent fg-danger">-25%</span>
-                      <i class="fa fa-angle-down fg-danger"></i>
+                      <span class="percent ">-25%</span>
+                      <i class="fa fa-angle-down "></i>
                     </span>
                     <span class="number">25K</span>
                   </h1>
@@ -43,13 +43,13 @@
                       data-title="Total comment all your channel on facebook"
                       data-original-title=""
                       title=""
-                      ><i class="fa fa-question"></i
+                      ><i class="fa fa-question" style="color: white;"></i
                     ></span>
                   </h3>
                   <h1>
                     <span class="status">
-                      <span class="percent fg-danger">-10%</span>
-                      <i class="fa fa-angle-down fg-danger"></i>
+                      <span class="percent ">-10%</span>
+                      <i class="fa fa-angle-down "></i>
                     </span>
                     <span class="number">550</span>
                   </h1>
@@ -67,13 +67,13 @@
                       data-title="Total click all your channel on facebook"
                       data-original-title=""
                       title=""
-                      ><i class="fa fa-question"></i
+                      ><i class="fa fa-question" style="color: white;"></i
                     ></span>
                   </h3>
                   <h1>
                     <span class="status">
-                      <span class="percent fg-success">+25%</span>
-                      <i class="fa fa-angle-up fg-success"></i>
+                      <span class="percent ">+25%</span>
+                      <i class="fa fa-angle-up "></i>
                     </span>
                     <span class="number">10K</span>
                   </h1>
@@ -91,13 +91,13 @@
                       data-title="Total share all your channel on facebook"
                       data-original-title=""
                       title=""
-                      ><i class="fa fa-question"></i
+                      ><i class="fa fa-question" style="color: white;"></i
                     ></span>
                   </h3>
                   <h1>
                     <span class="status">
-                      <span class="percent fg-danger">+25%</span>
-                      <i class="fa fa-angle-down fg-danger"></i>
+                      <span class="percent ">+25%</span>
+                      <i class="fa fa-angle-down "></i>
                     </span>
                     <span class="number">350</span>
                   </h1>

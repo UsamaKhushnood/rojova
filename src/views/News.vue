@@ -165,10 +165,11 @@
               </template>
               <b-card-text>
                 <div class="container-fluid mb-4" align="center">
-                  <button class="btn btn-success btn-md">
+                  <button class="btn btn-success btn-md" v-b-modal="'add-news-category-modal'">
                     <i class="fa fa-plus-circle"></i>
                     Add Category
                   </button>
+                  <AddNewsCategoryModal></AddNewsCategoryModal>
                 </div>
                 <div>
                   <b-table
@@ -267,11 +268,13 @@ a.deleteLink {
 <script>
 import DeleteNewsModal from "@/components/modals/news-modals/DeleteNewsModal";
 import EditNewsCategoryModal from "@/components/modals/news-modals/EditNewsCategoryModal";
+import AddNewsCategoryModal from "@/components/modals/news-modals/AddNewsCategoryModal";
 
 export default {
   components: {
     DeleteNewsModal,
     EditNewsCategoryModal,
+    AddNewsCategoryModal,
   },
   data() {
     return {
