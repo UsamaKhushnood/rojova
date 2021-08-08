@@ -1,803 +1,255 @@
 <template>
   <div>
     <section id="page-content">
-      <!--/ End header content -->
-
-      <!-- Start body content -->
-      <div class="body-content animated fadeIn">
-        <div class="row">
-          <div class="vd_content-section clearfix" style="min-height: 90vh">
-            <!-- Start double tabs -->
-            <div class="panel panel-tab panel-tab-double rounded shadow">
-              <!-- Start tabs heading -->
-              <div class="panel-heading no-padding">
-                <ul class="nav nav-tabs">
-                  <li class="active">
-                    <a
-                      href="component-tabsaccordion.html#tab2-1"
-                      data-toggle="tab"
-                    >
-                      <i class="fa fa-user"></i>
-                      <div>
-                        <h6 class="text-strong">Manage Items</h6>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="component-tabsaccordion.html#tab2-2"
-                      data-toggle="tab"
-                    >
-                      <i class="fa fa-plus-circle"></i>
-                      <div>
-                        <h6 class="text-strong">Add Category</h6>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /.panel-heading -->
-              <!--/ End tabs heading -->
-
-              <!-- Start tabs content -->
-              <div class="panel-body">
-                <div class="tab-content">
-                  <div class="tab-pane fade in active" id="tab2-1">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                      <button
-                        type="button"
-                        class="btn btn-primary col-xs-12 btn-lg"
-                        data-toggle="modal"
-                        data-target="#addMedia"
-                      >
-                        <span class="append-icon"
-                          ><i class="fa fa-plus-square"></i></span
-                        >&nbsp;Add Media
-                      </button>
-                    </div>
-
-                    <div class="col-md-4"></div>
-                    <div class="col-md-12" style="padding-top: 30px">
-                      <table class="table table-striped table-primary">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Option</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="text-center" style="width: 7%">
-                              <b>1024</b>
-                            </td>
-                            <td>1345</td>
-                            <td>categ</td>
-                            <td class="menu-action">
-                              <div class="pdng5">
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#viewItem"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-eye"
-                                    data-original-title="Edit"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#EditMedia"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-pencil"
-                                    data-original-title="Edit"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#removeLang"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-trash-o"
-                                    data-original-title="Remove"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="text-center" style="width: 7%">
-                              <b>1074</b>
-                            </td>
-
-                            <td>Hopkins</td>
-
-                            <td>subcategory</td>
-                            <td class="menu-action">
-                              <div class="pdng5">
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#viewItem"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-eye"
-                                    data-original-title="Edit"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#EditMedia"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-pencil"
-                                    data-original-title="Edit"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#removeLang"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-trash-o"
-                                    data-original-title="Remove"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!-- col-md-12 end -->
-                  </div>
-                  <div class="tab-pane fade" id="tab2-2">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                      <button
-                        type="button"
-                        class="btn btn-primary col-xs-12 btn-lg"
-                        data-toggle="modal"
-                        data-target="#addLang"
-                      >
-                        <span class="append-icon"
-                          ><i class="fa fa-plus-square"></i></span
-                        >&nbsp;Add Category
-                      </button>
-                    </div>
-
-                    <div class="col-md-4"></div>
-                    <div class="col-md-12" style="padding-top: 30px">
-                      <table class="table table-striped table-primary">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Category</th>
-
-                            <th>Option</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="text-center" style="width: 7%">
-                              <b>1024</b>
-                            </td>
-                            <td>543</td>
-                            <td class="menu-action">
-                              <div class="pdng5">
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#editcat"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-pencil"
-                                    data-original-title="Edit"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#removeLang"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-trash-o"
-                                    data-original-title="Remove"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="text-center" style="width: 7%">
-                              <b>1074</b>
-                            </td>
-                            <td>category</td>
-                            <td class="menu-action">
-                              <div class="pdng5">
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#editcat"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-pencil"
-                                    data-original-title="Edit"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                                <a
-                                  data-toggle="modal"
-                                  data-target="#removeLang"
-                                  class="btn btn-xs btn-default"
-                                  ><i
-                                    class="fa fa-trash-o"
-                                    data-original-title="Remove"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                  ></i
-                                ></a>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+      <div>
+        <b-card no-body>
+          <b-tabs card>
+            
+            <b-tab>
+              <template #title>
+                <i class="fa fa-user iconStyle"></i>
+                <strong>Manage Items</strong>
+              </template>
+              <b-card-text>
+                <div class="container-fluid mb-4" align="center">
+                  <button class="btn btn-success btn-md" v-b-modal="'add-media-modal'">
+                    <i class="fa fa-plus-circle"></i>
+                    Add Media
+                  </button>
+                  <AddMediaModal></AddMediaModal>
                 </div>
-              </div>
-              <!-- /.panel-body -->
-              <!--/ End tabs content -->
-            </div>
-            <!-- /.panel -->
-          </div>
-        </div>
-      </div>
-      <!-- /.body-content -->
-      <!--/ End body content -->
-      <!-- ADD LANG -->
-      <!--modal-->
-      <div class="modal modal-success" role="dialog" id="addMedia">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Add Media</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group col-xs-12">
-                  <label
-                    class="col-sm-4 control-label"
-                    style="font-size: 15px; padding-top: 10px"
-                    >Title</label
+                <div>
+                  <b-table
+                    small
+                    :fields="manageItemsFields"
+                    :items="manageItems"
+                    responsive="sm"
                   >
-                  <div class="col-sm-7 controls">
-                    <input
-                      id="name"
-                      type="name"
-                      class="form-control col-xs-12"
-                      name="name"
-                      placeholder="title"
-                    />
-                  </div>
-                </div>
-                <div class="input-group col-xs-12">
-                  <label
-                    class="col-sm-4 control-label"
-                    style="font-size: 15px; padding-top: 10px"
-                    >URL</label
-                  >
-                  <div class="col-sm-7 controls">
-                    <input
-                      id="name"
-                      type="url"
-                      class="form-control col-xs-12"
-                      name="name"
-                      placeholder="URL"
-                    />
-                  </div>
-                </div>
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
 
-                <div class="form-group">
-                  <label class="col-md-4 control-label">Banner upload:</label>
-                  <div class="col-md-8">
-                    <div
-                      class="fileinput fileinput-new"
-                      data-provides="fileinput"
-                    >
-                      <div
-                        class="fileinput-preview thumbnail"
-                        data-trigger="fileinput"
-                        style="width: 200px; height: 150px; line-height: 150px"
-                      ></div>
-                      <div>
-                        <span class="btn btn-info btn-file"
-                          ><span class="fileinput-new">Select Banner</span
-                          ><span class="fileinput-exists">Change</span
-                          ><input type="hidden" value="" name="..." /><input
-                            type="file"
-                            name=""
-                        /></span>
+                    <!-- A custom formatted column -->
+
+                    <template #cell(title)="data">
+                      {{ data.item.title }}
+                    </template>
+                    
+                    <template #cell(category)="data">
+                      {{ data.item.category }}
+                    </template>
+
+                    <template #cell(option)="data">
+                      <div class="allLinks">
                         <a
-                          href="form-element.html#"
-                          class="btn btn-danger fileinput-exists"
-                          data-dismiss="fileinput"
-                          >Remove</a
+                          class="viewLink"
+                          v-b-modal="'view-manage-media-item-modal' + data.index" 
                         >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-success"
-                data-dismiss="modal"
-              >
-                Save and add new
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-              >
-                Save and close
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <!--modal-->
-      <div class="modal modal-success" role="dialog" id="EditMedia">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Edit Media</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group col-xs-12">
-                  <label
-                    class="col-sm-4 control-label"
-                    style="font-size: 15px; padding-top: 10px"
-                    >Title</label
-                  >
-                  <div class="col-sm-7 controls">
-                    <input
-                      id="name"
-                      type="name"
-                      class="form-control col-xs-12"
-                      name="name"
-                      placeholder="title"
-                    />
-                  </div>
-                </div>
-                <div class="input-group col-xs-12">
-                  <label
-                    class="col-sm-4 control-label"
-                    style="font-size: 15px; padding-top: 10px"
-                    >URL</label
-                  >
-                  <div class="col-sm-7 controls">
-                    <input
-                      id="name"
-                      type="url"
-                      class="form-control col-xs-12"
-                      name="name"
-                      placeholder="URL"
-                    />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-md-4 control-label">Banner upload:</label>
-                  <div class="col-md-8">
-                    <div
-                      class="fileinput fileinput-new"
-                      data-provides="fileinput"
-                    >
-                      <div
-                        class="fileinput-preview thumbnail"
-                        data-trigger="fileinput"
-                        style="width: 200px; height: 150px; line-height: 150px"
-                      ></div>
-                      <div>
-                        <span class="btn btn-info btn-file"
-                          ><span class="fileinput-new">Select Banner</span
-                          ><span class="fileinput-exists">Change</span
-                          ><input type="hidden" value="" name="..." /><input
-                            type="file"
-                            name=""
-                        /></span>
+                          
+                          <i
+                            class="fa fa-eye"
+                            style="font-size: 16px; color: black;"
+                          ></i>
+                          <ViewManageItemModal :index="data.index"></ViewManageItemModal>
+                        </a>
                         <a
-                          href="form-element.html#"
-                          class="btn btn-danger fileinput-exists"
-                          data-dismiss="fileinput"
-                          >Remove</a
+                          class="editLink"
+                          v-b-modal="'edit-media-modal' + data.index"
                         >
+                          
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditMediaModal :index="data.index"></EditMediaModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-manage-media-item-modal' + data.index"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteManageItemModal :index="data.index"></DeleteManageItemModal>
+                        </a>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-success"
-                data-dismiss="modal"
-              >
-                Save and add new
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-              >
-                Save and close
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <div
-        class="modal fade modal-primary"
-        id="addLang"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="Add maincategory"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-md" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Add Category</h4>
-            </div>
-            <div class="modal-body">
-              <form method="post">
-                <div class="input-group col-xs-12">
-                  <label
-                    class="col-sm-4 control-label"
-                    style="font-size: 15px; padding-top: 10px"
-                    >Categorey Name</label
-                  >
-                  <div class="col-sm-7 controls">
-                    <input
-                      id="categ"
-                      type="categ"
-                      class="form-control col-xs-12"
-                      name="categ"
-                      placeholder="Categorey Name"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer vd_bg-white">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-              >
-                Save and add new
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-              >
-                Save and close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Edit category -->
-      <div
-        class="modal fade modal-primary"
-        id="editcat"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="Add maincategory"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-md" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Edit category</h4>
-            </div>
-            <div class="modal-body">
-              <form method="post">
-                <br />
-                <div class="input-group col-xs-12">
-                  <label
-                    class="col-sm-4 control-label"
-                    style="font-size: 15px; padding-top: 10px"
-                    >Category</label
+                      
+                    </template>
+                  </b-table>
+                </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-plus-circle iconStyle"></i>
+                <strong>Add Category</strong>
+              </template>
+              <b-card-text>
+                <div class="container-fluid mb-4" align="center">
+                  <button class="btn btn-success btn-md" v-b-modal="'add-media-category-modal'">
+                    <i class="fa fa-plus-circle"></i>
+                    Add Category
+                  </button>
+                  <AddCategoryModal></AddCategoryModal>
+                </div>
+                <div>
+                  <b-table
+                    small
+                    :fields="addCategoryFields"
+                    :items="addCategoryItems"
+                    responsive="sm"
                   >
-                  <div class="col-sm-7 controls">
-                    <input
-                      id="name"
-                      type="name"
-                      class="form-control col-xs-12"
-                      name="name"
-                      placeholder="Subcategory"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer vd_bg-white">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-              >
-                Save and add new
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-              >
-                Save and close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- EDIT LANG -->
-      <div
-        class="modal right fade modal-success"
-        id="viewItem"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="Add maincategory"
-        aria-hidden="true"
-        style="z-index: 1049"
-      >
-        <div class="modal-dialog modal-md" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">View Items</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="input-group col-xs-12" style="font-size: 15px">
-                    <label class="col-sm-4 control-label">Title</label>
-                    <div class="col-sm-7 controls">
-                      <p>title</p>
-                    </div>
-                  </div>
-                  <div class="input-group col-xs-12" style="font-size: 15px">
-                    <label class="col-sm-4 control-label">Url</label>
-                    <div class="col-sm-7 controls">
-                      <p>www.example.com</p>
-                    </div>
-                  </div>
-                  <div class="input-group col-xs-12" style="font-size: 15px">
-                    <label class="col-sm-4 control-label">Banner</label>
-                    <div class="col-sm-7 controls">
-                      <img
-                        src="@/assets/img/BILLY-ARGEL-GINGA.jpg"
-                        width="100%"
-                        height="200px"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <!-- col-md-12 end -->
-              </div>
-              <!-- row end -->
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- EDIT TRANSLATION -->
-      <div
-        class="modal right fade modal-success"
-        id="editTranslation"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="Add maincategory"
-        aria-hidden="true"
-        style="z-index: 1050"
-      >
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Edit Arabic Translation</h4>
-            </div>
-            <div class="modal-body">
-              <form method="post">
-                <div class="form-group clearfix">
-                  <h4 class="col-sm-4 control-label text-right">ENGLISH</h4>
-                  <h4 class="col-sm-7">ARABIC</h4>
-                </div>
-                <div class="form-group clearfix">
-                  <label class="col-sm-4 control-label text-right"
-                    >Account Details</label
-                  >
-                  <div class="col-sm-7 controls">
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Title"
-                        value="Arabic text"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group clearfix">
-                  <label class="col-sm-4 control-label text-right"
-                    >Activities</label
-                  >
-                  <div class="col-sm-7 controls">
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Title"
-                        value="Arabic text"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group clearfix">
-                  <label class="col-sm-4 control-label text-right"
-                    >Activity</label
-                  >
-                  <div class="col-sm-7 controls">
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Title"
-                        value="Arabic text"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="button" class="btn btn-success">Save</button>
-            </div>
-          </div>
-        </div>
-      </div>
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
 
-      <!-- REMOVE LANG -->
-      <div
-        class="modal fade modal-danger"
-        id="removeLang"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="Add maincategory"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-md" role="document">
-          <div class="modal-content">
-            <div class="modal-header vd_bg-red">
-              <button
-                type="button"
-                class="close vd_white"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-              <h4 class="modal-title vd_white">REMOVE</h4>
-            </div>
-            <div class="modal-body">
-              <p>Are you sure you want to remove this</p>
-            </div>
-            <div class="modal-footer vd_bg-white">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-              >
-                CONFIRM
-              </button>
-            </div>
-          </div>
-        </div>
+                    <!-- A custom formatted column -->
+
+                    <template #cell(category)="data">
+                      {{ data.item.category }}
+                    </template>
+                    
+                    
+
+                    <template #cell(option)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-media-category-modal' + data.index"
+                        >
+                          
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditCategoryModal :index="data.index"></EditCategoryModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-media-add-category-modal' + data.index"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteAddCategoryModal :index="data.index"></DeleteAddCategoryModal>
+                        </a>
+                      </div>
+
+                      
+                    </template>
+                  </b-table>
+                </div>
+              </b-card-text>
+            </b-tab>
+          </b-tabs>
+        </b-card>
       </div>
-      <!-- Start footer content -->
-      <footer class="footer-content">
-        2014 - <span id="copyright-year">2021</span>© SmartSystems . Created by
-        <a href="" target="_blank">SmartDesign</a>
-        <span class="pull-right">0.01 GB(0%) of 15 GB used</span>
-      </footer>
-      <!-- /.footer-content -->
-      <!--/ End footer content -->
     </section>
   </div>
 </template>
+    
+<style scoped>
+.iconStyle {
+  margin-right: 10px;
+}
+.imageStyles {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.badge {
+  font-size: 13px;
+}
+.allLinks {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+a.viewLink {
+  border: 2px solid black;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 3px;
+}
+a.editLink {
+  border: 2px solid #e9573f;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a.deleteLink {
+  border: 2px solid #367fa9;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 3px;
+}
+</style>
+
+    
+<script>
+import ViewManageItemModal from "@/components/modals/media-modals/ViewManageItemModal"
+import DeleteManageItemModal from "@/components/modals/media-modals/DeleteManageItemModal"
+import DeleteAddCategoryModal from "@/components/modals/media-modals/DeleteAddCategoryModal"
+import AddCategoryModal from "@/components/modals/media-modals/AddCategoryModal"
+import EditCategoryModal from "@/components/modals/media-modals/EditCategoryModal"
+import AddMediaModal from "@/components/modals/media-modals/AddMediaModal"
+import EditMediaModal from "@/components/modals/media-modals/EditMediaModal"
+export default {
+  components: {
+    ViewManageItemModal,
+    DeleteManageItemModal,
+    DeleteAddCategoryModal,
+    AddCategoryModal,
+    EditCategoryModal,
+    AddMediaModal,
+    EditMediaModal,
+  },
+  data() {
+    return {
+      
+      manageItemsFields: [
+        // A virtual column that doesn't exist in items
+        { key: "index", label: "ID" },
+        { key: "title", label: "Title" },
+        { key: "category", label: "Category" },
+        { key: "option", label: "Option" },
+      ],
+      manageItems: [
+        {
+          title: "categ",
+          category: "categ",
+        },
+        {
+          title: "categ",
+          category: "categ",
+        },
+        
+      ],
+      addCategoryFields: [
+        // A virtual column that doesn't exist in items
+        { key: "index", label: "ID" },
+        { key: "category", label: "Category" },
+        { key: "option", label: "Option" },
+      ],
+      addCategoryItems: [
+        {
+          category: "categ",
+        },
+        {
+          category: "categ",
+        },
+        
+      ],
+    };
+  },
+};
+</script>
