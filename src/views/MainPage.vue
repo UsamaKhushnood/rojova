@@ -19,7 +19,8 @@
                 <span class="btn btn-primary fa fa-search ms-2"></span>
               </div>
               <div class="addVideo">
-                <button class="btn btn-success">Add Video</button>
+                <button class="btn btn-success" v-b-modal="'add-new-video-modal'">Add Video</button>
+                <AddVideoModal></AddVideoModal>
               </div>
             </div>
             <!-- <div class="thumbnail repeater-thumbnail">
@@ -137,7 +138,9 @@ position: absolute;
 </style>
 
 <script>
+import AddVideoModal from "@/components/modals/main-page-modals/AddVideoModal"
 export default {
+  components: { AddVideoModal },
   data(){
     return {
       rows: 20,
