@@ -70,9 +70,10 @@
                   <img src="@/assets/img/avatar/35/2.png" alt="image" width="40px" />
                 </a>
                 <div class="emailContent">
-                  <a href="#">John Smith</a>
+                  <a v-b-modal="'user-report-modal'">John Smith</a>
+                  <UserReportModal></UserReportModal>
                   <p class="emailText">
-                    Lorem, ipsum dolor kdjflkdjflkdjlfkjsdlfjsdlfjdlfjsdkljflsdjfklsdjl
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   <span class="label label-success">New</span>
                   </p>
                   
@@ -91,13 +92,13 @@
               </div>
 
               <div class="d-flex align-items-center justify-content-around users">
-                <a href="#" style="margin-top: -12px;">
+                <a style="margin-top: -12px;">
                   <img src="@/assets/img/avatar/35/2.png" alt="image" width="40px" />
                 </a>
                 <div class="emailContent">
                   <a href="#">John Smith</a>
                   <p class="emailText">
-                    Lorem, ipsum dolor kdjflkdjflkdjlfkjsdlfjsdlfjdlfjsdkljflsdjfklsdjl
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   <span class="label label-success">New</span>
                   </p>
                   
@@ -120,3 +121,10 @@
   width: 60%;
 }
 </style>
+
+<script>
+import UserReportModal from "@/components/modals/user-report-modals/UserReportModal.vue";
+export default {
+  components: { UserReportModal }
+}
+</script>

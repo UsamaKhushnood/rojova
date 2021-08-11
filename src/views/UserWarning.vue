@@ -1,468 +1,157 @@
 <template>
   <div>
-    <section id="page-content" style="min-height: 90vh">
-      <!--/ End header content -->
-
-      <!-- Start body content -->
-      <div class="body-content animated fadeIn">
-        <div class="row">
-          <div class="col-md-12">
-            <!-- Start repeater -->
-            <div class="panel rounded shadow no-overflow">
-              <div class="panel-body">
-                <!-- Start repeater -->
-                <div class="fuelux">
-                  <div
-                    class="repeater"
-                    data-staticheight="400"
-                    id="myRepeater"
-                    data-currentview="list"
-                    data-viewtype="list"
+    <section id="page-content">
+      <div>
+        <b-card no-body class="p-3">
+          
+              <b-card-text>
+                <div class="d-flex align-items-center mb-4">
+                  <input class="form-control w-25" type="search" placeholder="Seach">
+                  <span class="btn btn-primary fa fa-search ms-2"></span>
+                </div>
+                <div>
+                  <b-table
+                    small
+                    :fields="userWarningFields"
+                    :items="userWarningItems"
+                    responsive="sm"
                   >
-                    <div class="repeater-header">
-                      <div class="repeater-header-left">
-                        <div class="repeater-search">
-                          <div class="search input-group">
-                            <input
-                              type="search"
-                              class="form-control"
-                              placeholder="Search"
-                            />
-                            <span class="input-group-btn">
-                              <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                                <span class="sr-only">Search</span>
-                              </button>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <!--
-                                                <div class="repeater-header-right">
-                                                    <div class="btn-group selectlist repeater-filters">
-                                                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle='modal' data-target='#add_new_smile'>
-                                                           Add new server
-                                                        </button>
-                                                        
-                                                        <input class="hidden hidden-field" name="filterSelection" readonly="readonly" aria-hidden="true" type="text"/>
-                                                    </div>
-                                                    
-                                                </div>
--->
-                    </div>
-                  </div>
-                  <!-- Start order table -->
-                  <div class="panel">
-                    <div class="panel-heading"></div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body no-padding">
-                      <div class="table-responsive">
-                        <table class="table table-striped table-primary">
-                          <thead>
-                            <tr>
-                              <th>User ID</th>
-                              <th>Image</th>
-                              <th>Username</th>
-                              <th>Warning</th>
-                              <th class="text-center" style="width: 11%">
-                                Options
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr class="border-warning">
-                              <td class="text-center" style="width: 7%">
-                                <b>1024</b>
-                              </td>
-                              <td class="text-center" style="width: 1%">
-                                <img
-                                  src="@/assets/img//media/realistic/4.jpg"
-                                  alt="..."
-                                  width="160"
-                                  class="mt-5 mb-5"
-                                />
-                              </td>
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
 
-                              <td class="text-center" style="width: 1%">tst</td>
+                    <!-- A custom formatted column -->
+                    <template #cell(image)="data">
+                      <img :src="data.item.image" alt="thumbnail"
+                      style="width: 150px; height: auto">
+                    </template>
 
-                              <td>a7med@hotmail.com</td>
+                    <!-- A virtual composite column -->
+                    <template #cell(username)="data">
+                      {{ data.item.username }}
+                    </template>
 
-                              <td class="text-center">
-                                <a
-                                  href="table-samples.html#"
-                                  class="btn btn-default btn-xs"
-                                  data-toggle="modal"
-                                  data-target="#edit_new_smile"
-                                  data-placement="top"
-                                  data-original-title="Edit"
-                                  ><i class="fa fa-pencil"></i
-                                ></a>
-                                <a
-                                  href="table-samples.html#"
-                                  class="btn btn-default btn-xs"
-                                  data-toggle="modal"
-                                  data-target="#modal-remove"
-                                  data-placement="top"
-                                  data-original-title="Delete"
-                                  ><i class="fa fa-times"></i
-                                ></a>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <!-- /.panel-body -->
-                  </div>
-                </div>
-                <!--/ End repeater -->
-              </div>
-              <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-          </div>
-        </div>
-      </div>
-      <!-- /.body-content -->
-      <!--/ End body content -->
-      <!--modal-->
-      <div class="modal modal-danger" role="dialog" id="modal-remove">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Delete</h4>
-            </div>
-            <div class="modal-body">
-              <p>Are you sure to delete this</p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                No
-              </button>
-              <button type="button" class="btn btn-danger">Yes</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <!--modal-->
-      <div class="modal modal-success" role="dialog" id="add_new_smile">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Add New Server</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group">
-                  <span class="input-group-addon">Server Address</span>
-                  <input
-                    id="title"
-                    type="text"
-                    class="form-control"
-                    name="title"
-                    placeholder="Server Address"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">Port</span>
-                  <input
-                    id="Port"
-                    type="text"
-                    class="form-control"
-                    name="Name"
-                    placeholder="Port"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">User Name</span>
-                  <input
-                    id="userName"
-                    type="text"
-                    class="form-control"
-                    name="LName"
-                    placeholder="userName"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">password</span>
-                  <input
-                    id="pass"
-                    type="password"
-                    class="form-control"
-                    name="email"
-                    placeholder="password"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">Http Link</span>
-                  <input
-                    id="Http"
-                    type="text"
-                    class="form-control"
-                    name="PNumber"
-                    placeholder="Http Link"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">Country</span>
-                  <input
-                    id="Country"
-                    type="text"
-                    class="form-control"
-                    name="Country"
-                    placeholder="Country"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">File Limit</span>
-                  <input
-                    id="limit"
-                    type="text"
-                    class="form-control"
-                    name="City"
-                    placeholder="File Limit"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="button" class="btn btn-success">Add</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <!--modal-->
-      <div class="modal modal-success" role="dialog" id="edit_new_smile">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Edit Server</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group">
-                  <span class="input-group-addon">Server Address</span>
-                  <input
-                    id="title"
-                    type="text"
-                    class="form-control"
-                    name="title"
-                    placeholder="Server Address"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">Port</span>
-                  <input
-                    id="Port"
-                    type="text"
-                    class="form-control"
-                    name="Name"
-                    placeholder="Port"
-                  />
-                </div>
-                <br />
+                    <!-- Optional default data cell scoped slot -->
+                    <template #cell(warning)="data">
+                      {{ data.item.warning }}
+                    </template>
 
-                <div class="input-group">
-                  <span class="input-group-addon">User Name</span>
-                  <input
-                    id="userName"
-                    type="text"
-                    class="form-control"
-                    name="LName"
-                    placeholder="userName"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">password</span>
-                  <input
-                    id="pass"
-                    type="password"
-                    class="form-control"
-                    name="email"
-                    placeholder="password"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">Http Link</span>
-                  <input
-                    id="Http"
-                    type="text"
-                    class="form-control"
-                    name="PNumber"
-                    placeholder="Http Link"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">Country</span>
-                  <input
-                    id="Country"
-                    type="text"
-                    class="form-control"
-                    name="Country"
-                    placeholder="Country"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">File Limit</span>
-                  <input
-                    id="limit"
-                    type="text"
-                    class="form-control"
-                    name="City"
-                    placeholder="File Limit"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="button" class="btn btn-success">Add</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <div class="modal modal-success" role="dialog" id="add_new_gif">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Add New Gif</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group">
-                  <span class="input-group-addon">Title</span>
-                  <input
-                    id="title"
-                    type="text"
-                    class="form-control"
-                    name="email"
-                    placeholder="title"
-                  />
-                </div>
-                <br />
-
-                <div class="form-group">
-                  <label class="col-md-4 control-label">Image upload:</label>
-                  <div class="col-md-8">
-                    <div
-                      class="fileinput fileinput-new"
-                      data-provides="fileinput"
-                    >
-                      <div
-                        class="fileinput-preview thumbnail"
-                        data-trigger="fileinput"
-                        style="width: 200px; height: 150px; line-height: 150px"
-                      ></div>
-                      <div>
-                        <span class="btn btn-info btn-file"
-                          ><span class="fileinput-new">Select image</span
-                          ><span class="fileinput-exists">Change</span
-                          ><input type="hidden" value="" name="..." /><input
-                            type="file"
-                            name=""
-                        /></span>
+                    <template #cell(option)="data">
+                      <div class="allLinks">
                         <a
-                          href="form-element.html#"
-                          class="btn btn-danger fileinput-exists"
-                          data-dismiss="fileinput"
-                          >Remove</a
+                          class="editLink"
+                          v-b-modal="'edit-user-warning-modal' + data.index"
                         >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-user-warning-modal' + data.index"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                        </a>
                       </div>
-                    </div>
-                  </div>
+                      <DeleteUserWarningModal :index="data.index"></DeleteUserWarningModal>                      
+                      <EditUserWarningModal :index="data.index"></EditUserWarningModal>
+                    </template>
+                  </b-table>
                 </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="button" class="btn btn-success">Add</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
+              </b-card-text>
+              <AddVideoModal></AddVideoModal>
+            
+        </b-card>
       </div>
-      <!-- /.modal -->
-
-      <!-- Start footer content -->
-      <footer class="footer-content">
-        2014 - <span id="copyright-year">2021</span>© SmartSystems . Created by
-        <a href="" target="_blank">SmartDesign</a>
-        <span class="pull-right">0.01 GB(0%) of 15 GB used</span>
-      </footer>
-      <!-- /.footer-content -->
-      <!--/ End footer content -->
     </section>
   </div>
 </template>
+    
+<style scoped>
+.iconStyle {
+  margin-right: 10px;
+}
+.imageStyles {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.badge {
+  font-size: 13px;
+}
+.allLinks {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+a.editLink {
+  border: 2px solid #e9573f;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a.deleteLink {
+  border: 2px solid #367fa9;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+</style>
+
+    
+<script>
+import DeleteUserWarningModal from "@/components/modals/user-warning-modals/DeleteUserWarningModal.vue"
+import EditUserWarningModal from "@/components/modals/user-warning-modals/EditUserWarningModal.vue"
+export default {
+  components: { DeleteUserWarningModal, EditUserWarningModal },
+  data() {
+    return {
+      userWarningFields: [
+        // A virtual column that doesn't exist in items
+        { key: "index", label: "ID" },
+        // A column that needs custom formatting
+        { key: "image", label: "Image" },
+        // { key: 'userimg', label: 'User'},
+        // A regular column
+        { key: "username", label: "Username" },
+        // A regular column
+        { key: "warning", label: "Warning" },
+        // A virtual column made up from two fields
+        //
+        { key: "option", label: "Option" },
+      ],
+      userWarningItems: [
+        {
+          image: require('@/assets/img/media/realistic/4.jpg'),
+          username: "categ",
+          warning: "categ"
+        },
+        {
+          image: require('@/assets/img/media/realistic/4.jpg'),
+          username: "categ",
+          warning: "categ"
+        },
+        {
+          image: require('@/assets/img/media/realistic/4.jpg'),
+          username: "categ",
+          warning: "categ"
+        },
+        
+        
+      ],
+    
+
+    
+    };
+  },
+};
+</script>

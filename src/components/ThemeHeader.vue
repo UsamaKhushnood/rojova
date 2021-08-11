@@ -3,13 +3,13 @@
   <!-- Logo -->
   <router-link to="/" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini">
+    <!-- <span class="logo-mini">
       <img src="@/assets/images/yamiyamilogo.png" alt="logo" style="width: 50%">
-    </span>
+    </span> -->
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg">
+    <!-- <span class="logo-lg">
       <img src="@/assets/images/yamiyamilogo.png" alt="logo" style="width: 50%">
-    </span>
+    </span> -->
   </router-link>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top">

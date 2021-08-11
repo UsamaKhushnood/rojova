@@ -1,6 +1,9 @@
 <template>
   <div>
     <section id="page-content">
+      <b-card no-body>
+        <b-card-text>
+        
       <div class="container mt-4">
         <div>
           <div class="d-flex justify-content-between align-items-center w-100 pe-3">
@@ -187,7 +190,7 @@
         </div>
         
       </div>
-      <div class="overflow-auto d-flex justify-content-center">
+      <div class="overflow-auto d-flex justify-content-center mt-4">
     <!-- Use text in props -->
     <b-pagination
       v-model="currentPage"
@@ -198,6 +201,9 @@
 
 
         </div>
+          
+        </b-card-text>
+      </b-card>
     </section>
   </div>
 </template>

@@ -1,16 +1,15 @@
 <template>
   <div>
-    <section id="page-content">
-      <b-card no-body class="p-3">
+    <b-modal
+      :id="'edit-language-modal' + index" 
+      header-bg-variant="success"
+      header-text-variant="light"
+      size="sm"
+      title="Edit Language"
+    >
+    <b-card no-body class="p-2">
         <b-card-text>
-          <div class="d-flex justify-content-center mb-4">
-            <button class="btn btn-success btn-md"
-            v-b-modal="'add-language-modal'">
-              <i class="fa fa-plus-circle"></i>
-              Add Language
-            </button>
-            <AddLanguageModal></AddLanguageModal>
-          </div>
+          
           <div>
             <b-table
               small
@@ -23,12 +22,12 @@
                 {{ data.index + 1 }}
               </template>
 
-              <template #cell(icon)="data">
-                <img :src="data.item.icon" alt="icon" style="width: 40px" />
+              <template #cell(type)="data">
+                {{ data.item.type }}
               </template>
 
-              <template #cell(language)="data">
-                {{ data.item.language }}
+              <template #cell(file)="data">
+                {{ data.item.file }}
               </template>
 
               <template #cell(progress)="data">
@@ -41,7 +40,13 @@
                     >
                       {{ data.item.progress }}
                     </div>
-                    
+                    <!-- <div
+                      style="width: 45%"
+                      class="progress-bar progress-bar-info"
+                      v-else-if="data.item.progress == '45%'"
+                    >
+                      {{ data.item.progress }}
+                    </div> -->
                   </div>
                 </div>
               </template>
@@ -58,27 +63,34 @@
 
               <template #cell(actions)="data">
                 <div class="allLinks">
-                  <a class="editLink" v-b-modal="'edit-language-modal' + data.index">
+                  <a class="editLink" v-b-modal="'edit-edit-language-modal' + data.index">
                     <i
                       class="fa fa-pencil"
                       style="font-size: 16px; color: #e9573f"
                     ></i>
-                    <EditLanguageModal :index="data.index"></EditLanguageModal>
+                    <EditEditLanguageModal :editEditIndex="data.index"></EditEditLanguageModal>
                   </a>
-                  <a class="deleteLink" v-b-modal="'delete-language-modal' + data.index">
+                  <!-- <a class="deleteLink">
                     <i
                       class="fa fa-trash-o"
                       style="font-size: 16px; color: #367fa9"
                     ></i>
-                    <DeleteLanguageModal :index="data.index"></DeleteLanguageModal>
-                  </a>
+                  </a> -->
                 </div>
               </template>
             </b-table>
           </div>
         </b-card-text>
       </b-card>
-    </section>
+      
+      <template #modal-footer="{ cancel }">
+        <!-- Emulate built in modal footer ok and cancel button actions -->
+        
+        <b-button size="md" variant="primary" @click="cancel()">
+          Close
+        </b-button>
+      </template>
+    </b-modal>
   </div>
 </template>
 
@@ -124,18 +136,17 @@ a.deleteLink {
 </style>
 
 <script>
-import AddLanguageModal from "@/components/modals/language-modals/AddLanguageModal"
-import EditLanguageModal from "@/components/modals/language-modals/EditLanguageModal"
-import DeleteLanguageModal from "@/components/modals/language-modals/DeleteLanguageModal"
+import EditEditLanguageModal from "@/components/modals/language-modals/EditEditLanguageModal"
 export default {
-  components: { AddLanguageModal, EditLanguageModal, DeleteLanguageModal  },
+    props: ['index'],
+    components: { EditEditLanguageModal },
   data() {
     return {
       languageFields: [
         // A virtual column that doesn't exist in items
         { key: "index", label: "ID" },
-        { key: "icon", label: "Icon" },
-        { key: "language", label: "Language" },
+        { key: "type", label: "Type" },
+        { key: "file", label: "File" },
         { key: "progress", label: "Progress" },
         { key: "done", label: "Done" },
         { key: "total", label: "Total" },
@@ -143,21 +154,38 @@ export default {
       ],
       languageItems: [
         {
-          icon: require("@/assets/img/AE.png"),
-          language: "Arabic",
+          type: "Application",
+          file: "Main",
           progress: "95%",
           done: "Done",
           total: "1234",
         },
         {
-          icon: require("@/assets/img/GB.png"),
-          language: "English",
-          progress: "45%",
+          type: "Application",
+          file: "Task",
+          progress: "95%",
           done: "Done",
           total: "1234",
         },
+        {
+          type: "Application",
+          file: "Projects",
+          progress: "95%",
+          done: "Done",
+          total: "1234",
+        },
+        {
+          type: "Application",
+          file: "Leads",
+          progress: "95%",
+          done: "Done",
+          total: "1234",
+        },
+       
       ],
     };
   },
 };
 </script>
+
+
