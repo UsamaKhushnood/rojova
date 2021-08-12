@@ -100,3 +100,33 @@ button.close {
 input[type="text"] {
   border: 0px;
 }
+ul#__BVID__56__BV_tab_controls_ {
+  padding: 0;
+}
+ul#__BVID__56__BV_tab_controls_ li.nav-item {
+  padding-bottom: 15px;
+}
+ul#__BVID__56__BV_tab_controls_ li.nav-item a{
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+div#__BVID__56__BV_tab_container_ {
+  margin-top: 0;
+  height: auto;
+}
+ul#__BVID__232__BV_tab_controls_ {
+  padding: 0;
+}
+ul#__BVID__232__BV_tab_controls_ li.nav-item {
+  padding-bottom: 15px;
+}
+ul#__BVID__232__BV_tab_controls_ li.nav-item a{
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+div#__BVID__232__BV_tab_container_ {
+  margin-top: 0;
+  height: auto;
+}

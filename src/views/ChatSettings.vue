@@ -1,803 +1,208 @@
 <template>
   <div>
-    <section id="page-content" style="min-height: 90vh">
-      <!--/ End header content -->
-
-      <!-- Start body content -->
-      <div class="body-content animated fadeIn">
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="nav nav-tabs">
-              <li class="active">
-                <a data-toggle="tab" href="#Smileys" class="smile">Smileys</a>
-              </li>
-              <li><a data-toggle="tab" href="#Gifs" class="gifs">Gifs</a></li>
-            </ul>
-
-            <div class="tab-content">
-              <div id="Smileys" class="tab-pane fade in active">
-                <!-- Start repeater -->
-                <div class="panel rounded shadow no-overflow">
-                  <div class="panel-body">
-                    <!-- Start repeater -->
-                    <div class="fuelux">
-                      <div
-                        class="repeater"
-                        data-staticheight="400"
-                        id="myRepeater"
-                        data-currentview="list"
-                        data-viewtype="list"
-                      >
-                        <div class="repeater-header">
-                          <div class="repeater-header-left">
-                            <div class="repeater-search">
-                              <div class="search input-group">
-                                <input
-                                  type="search"
-                                  class="form-control"
-                                  placeholder="Search"
-                                />
-                                <span class="input-group-btn">
-                                  <button class="btn btn-default" type="button">
-                                    <span
-                                      class="glyphicon glyphicon-search"
-                                    ></span>
-                                    <span class="sr-only">Search</span>
-                                  </button>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="repeater-header-right">
-                            <div class="btn-group selectlist repeater-filters">
-                              <button
-                                type="button"
-                                class="btn btn-success dropdown-toggle"
-                                data-toggle="modal"
-                                data-target="#add_new_smile"
-                              >
-                                Add new smilyes
-                              </button>
-
-                              <input
-                                class="hidden hidden-field"
-                                name="filterSelection"
-                                readonly="readonly"
-                                aria-hidden="true"
-                                type="text"
-                              />
-                            </div>
-                            <div
-                              class="btn-group repeater-views"
-                              data-toggle="buttons"
-                            ></div>
-                          </div>
-                        </div>
-                        <div class="repeater-viewport" style="height: 295px">
-                          <div class="thumbnail repeater-thumbnail">
-                            <img
-                              src="@/assets/img/BILLY-ARGEL-GINGA.jpg"
-                              style="height: 97px"
-                            />
-                            <div class="img-description">
-                              <button type="button" class="btn btn-success">
-                                <i
-                                  class="fa fa-pencil"
-                                  data-toggle="modal"
-                                  data-target="#edit_new_smile"
-                                ></i>
-                              </button>
-                              <button
-                                class="btn btn-danger"
-                                data-toggle="modal"
-                                data-target="#modal-remove"
-                              >
-                                <i class="fa fa-trash"></i>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="repeater-footer">
-                          <div class="repeater-footer-left">
-                            <div class="repeater-itemization">
-                              <span
-                                ><span class="repeater-start">1</span> -
-                                <span class="repeater-end">10</span> of
-                                <span class="repeater-count">12</span>
-                                items</span
-                              >
-                              <div
-                                class="btn-group selectlist"
-                                data-resize="auto"
-                              >
-                                <button
-                                  type="button"
-                                  class="btn btn-default dropdown-toggle"
-                                  data-toggle="dropdown"
-                                >
-                                  <span class="selected-label">10</span>
-                                  <span class="caret"></span>
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <ul
-                                  class="dropdown-menu"
-                                  role="menu"
-                                  style="width: 64px"
-                                >
-                                  <li data-value="5"><a href="#">5</a></li>
-                                  <li data-value="10" data-selected="true">
-                                    <a href="#">10</a>
-                                  </li>
-                                  <li data-value="20"><a href="#">20</a></li>
-                                  <li
-                                    data-value="50"
-                                    data-foo="bar"
-                                    data-fizz="buzz"
-                                  >
-                                    <a href="t#">50</a>
-                                  </li>
-                                  <li data-value="100"><a href="#">100</a></li>
-                                </ul>
-                                <input
-                                  class="hidden hidden-field"
-                                  name="itemsPerPage"
-                                  readonly="readonly"
-                                  aria-hidden="true"
-                                  type="text"
-                                />
-                              </div>
-                              <span>Per Page</span>
-                            </div>
-                          </div>
-                          <div class="repeater-footer-right">
-                            <div class="repeater-pagination">
-                              <button
-                                type="button"
-                                class="btn btn-default btn-sm repeater-prev"
-                                disabled="disabled"
-                              >
-                                <span
-                                  class="glyphicon glyphicon-chevron-left"
-                                ></span>
-                                <span class="sr-only">Previous Page</span>
-                              </button>
-                              <label class="page-label" id="myPageLabel"
-                                >Page</label
-                              >
-                              <div class="repeater-primaryPaging active">
-                                <div
-                                  class="
-                                    input-group input-append
-                                    dropdown
-                                    combobox
-                                  "
-                                >
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    aria-labelledby="myPageLabel"
-                                  />
-                                  <div class="input-group-btn">
-                                    <button
-                                      type="button"
-                                      class="btn btn-default dropdown-toggle"
-                                      data-toggle="dropdown"
-                                    >
-                                      <span class="caret"></span>
-                                      <span class="sr-only"
-                                        >Toggle Dropdown</span
-                                      >
-                                    </button>
-                                    <ul
-                                      class="dropdown-menu dropdown-menu-right"
-                                    >
-                                      <li data-value="1"><a href="#">1</a></li>
-                                      <li data-value="2"><a href="#">2</a></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                              <input
-                                type="text"
-                                class="form-control repeater-secondaryPaging"
-                                aria-labelledby="myPageLabel"
-                              />
-                              <span
-                                >of <span class="repeater-pages">2</span></span
-                              >
-                              <button
-                                type="button"
-                                class="btn btn-default btn-sm repeater-next"
-                              >
-                                <span
-                                  class="glyphicon glyphicon-chevron-right"
-                                ></span>
-                                <span class="sr-only">Next Page</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--/ End repeater -->
+    <section id="page-content">
+      <div>
+        <b-card no-body>
+          <b-tabs card>
+            <b-tab>
+              <template #title>
+                <strong>Smilies</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
                   </div>
-                  <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
-              </div>
-              <div id="Gifs" class="tab-pane fade">
-                <!-- Start repeater -->
-                <div class="panel rounded shadow no-overflow">
-                  <div class="panel-body">
-                    <!-- Start repeater -->
-                    <div class="fuelux">
-                      <div
-                        class="repeater"
-                        data-staticheight="400"
-                        id="myRepeater"
-                      >
-                        <div class="repeater-header">
-                          <div class="repeater-header-left">
-                            <div class="repeater-search">
-                              <div class="search input-group">
-                                <input
-                                  type="search"
-                                  class="form-control"
-                                  placeholder="Search"
-                                />
-                                <span class="input-group-btn">
-                                  <button class="btn btn-default" type="button">
-                                    <span
-                                      class="glyphicon glyphicon-search"
-                                    ></span>
-                                    <span class="sr-only">Search</span>
-                                  </button>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="repeater-header-right">
-                            <div
-                              class="btn-group selectlist repeater-filters"
-                              align="center"
-                            >
-                              <button
-                                type="button"
-                                class="btn btn-success"
-                                data-toggle="modal"
-                                data-target="#add_new_gif"
-                              >
-                                Add new Gifs
-                              </button>
-
-                              <input
-                                class="hidden hidden-field"
-                                name="filterSelection"
-                                readonly="readonly"
-                                aria-hidden="true"
-                                type="text"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="repeater-viewport"
-                          style="min-height: 255px"
-                        >
-                          <div class="thumbnail repeater-thumbnail">
-                            <img
-                              src="@/assets/img/BILLY-ARGEL-GINGA.jpg"
-                              style="height: 97px"
-                            />
-                            <div class="img-description">
-                              <button type="button" class="btn btn-success">
-                                <i
-                                  class="fa fa-pencil"
-                                  data-toggle="modal"
-                                  data-target="#edit_new_gif"
-                                ></i>
-                              </button>
-                              <button
-                                class="btn btn-danger"
-                                data-toggle="modal"
-                                data-target="#modal-remove"
-                              >
-                                <i class="fa fa-trash"></i>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="repeater-footer">
-                          <div class="repeater-footer-left">
-                            <div class="repeater-itemization">
-                              <span
-                                ><span class="repeater-start"></span> -
-                                <span class="repeater-end"></span> of
-                                <span class="repeater-count"></span> items</span
-                              >
-                              <div
-                                class="btn-group selectlist"
-                                data-resize="auto"
-                              >
-                                <button
-                                  type="button"
-                                  class="btn btn-default dropdown-toggle"
-                                  data-toggle="dropdown"
-                                >
-                                  <span class="selected-label">&nbsp;</span>
-                                  <span class="caret"></span>
-                                  <span class="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                  <li data-value="5"><a href="#">5</a></li>
-                                  <li data-value="10" data-selected="true">
-                                    <a href="#">10</a>
-                                  </li>
-                                  <li data-value="20"><a href="#">20</a></li>
-                                  <li
-                                    data-value="50"
-                                    data-foo="bar"
-                                    data-fizz="buzz"
-                                  >
-                                    <a href="t#">50</a>
-                                  </li>
-                                  <li data-value="100"><a href="#">100</a></li>
-                                </ul>
-                                <input
-                                  class="hidden hidden-field"
-                                  name="itemsPerPage"
-                                  readonly="readonly"
-                                  aria-hidden="true"
-                                  type="text"
-                                />
-                              </div>
-                              <span>Per Page</span>
-                            </div>
-                          </div>
-                          <div class="repeater-footer-right">
-                            <div class="repeater-pagination">
-                              <button
-                                type="button"
-                                class="btn btn-default btn-sm repeater-prev"
-                              >
-                                <span
-                                  class="glyphicon glyphicon-chevron-left"
-                                ></span>
-                                <span class="sr-only">Previous Page</span>
-                              </button>
-                              <label class="page-label" id="myPageLabel"
-                                >Page</label
-                              >
-                              <div class="repeater-primaryPaging active">
-                                <div
-                                  class="
-                                    input-group input-append
-                                    dropdown
-                                    combobox
-                                  "
-                                >
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    aria-labelledby="myPageLabel"
-                                  />
-                                  <div class="input-group-btn">
-                                    <button
-                                      type="button"
-                                      class="btn btn-default dropdown-toggle"
-                                      data-toggle="dropdown"
-                                    >
-                                      <span class="caret"></span>
-                                      <span class="sr-only"
-                                        >Toggle Dropdown</span
-                                      >
-                                    </button>
-                                    <ul
-                                      class="dropdown-menu dropdown-menu-right"
-                                    ></ul>
-                                  </div>
-                                </div>
-                              </div>
-                              <input
-                                type="text"
-                                class="form-control repeater-secondaryPaging"
-                                aria-labelledby="myPageLabel"
-                              />
-                              <span
-                                >of <span class="repeater-pages"></span
-                              ></span>
-                              <button
-                                type="button"
-                                class="btn btn-default btn-sm repeater-next"
-                              >
-                                <span
-                                  class="glyphicon glyphicon-chevron-right"
-                                ></span>
-                                <span class="sr-only">Next Page</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--/ End repeater -->
-                  </div>
-                  <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.body-content -->
-      <!--/ End body content -->
-      <!--modal-->
-      <div class="modal modal-danger" role="dialog" id="modal-remove">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Delete</h4>
-            </div>
-            <div class="modal-body">
-              <p>Are you sure to delete this</p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                No
-              </button>
-              <button type="button" class="btn btn-danger">Yes</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <!--modal-->
-      <div class="modal modal-success" role="dialog" id="add_new_smile">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Add New Smilye</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group">
-                  <span class="input-group-addon">Title</span>
-                  <input
-                    id="title"
-                    type="text"
-                    class="form-control"
-                    name="email"
-                    placeholder="title"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">Code</span>
-                  <input
-                    id="code"
-                    type="text"
-                    class="form-control"
-                    name="email"
-                    placeholder="Code"
-                  />
-                </div>
-                <br />
-                <div class="form-group">
-                  <label class="col-md-4 control-label">Image upload:</label>
-                  <div class="col-md-8">
-                    <div
-                      class="fileinput fileinput-new"
-                      data-provides="fileinput"
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-smilie-modal'"
                     >
-                      <div
-                        class="fileinput-preview thumbnail"
-                        data-trigger="fileinput"
-                        style="width: 200px; height: 150px; line-height: 150px"
-                      ></div>
-                      <div>
-                        <span class="btn btn-info btn-file"
-                          ><span class="fileinput-new">Select image</span
-                          ><span class="fileinput-exists">Change</span
-                          ><input type="hidden" value="" name="..." /><input
-                            type="file"
-                            name=""
-                        /></span>
-                        <a
-                          href="form-element.html#"
-                          class="btn btn-danger fileinput-exists"
-                          data-dismiss="fileinput"
-                          >Remove</a
-                        >
-                      </div>
-                    </div>
+                      Add New Smilie
+                    </button>
+                    <AddSmilieModal></AddSmilieModal>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="button" class="btn btn-success">Add</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <!--modal-->
-      <div class="modal modal-success" role="dialog" id="edit_new_smile">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Edit Smilye</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group">
-                  <span class="input-group-addon">Title</span>
-                  <input
-                    id="title"
-                    type="text"
-                    class="form-control"
-                    name="email"
-                    placeholder="title"
-                  />
-                </div>
-                <br />
-                <div class="input-group">
-                  <span class="input-group-addon">Code</span>
-                  <input
-                    id="code"
-                    type="text"
-                    class="form-control"
-                    name="email"
-                    placeholder="Code"
-                  />
-                </div>
-                <br />
-                <div class="form-group">
-                  <label class="col-md-4 control-label">Image upload:</label>
-                  <div class="col-md-8">
-                    <div
-                      class="fileinput fileinput-new"
-                      data-provides="fileinput"
-                    >
-                      <div
-                        class="fileinput-preview thumbnail"
-                        data-trigger="fileinput"
-                        style="width: 200px; height: 150px; line-height: 150px"
-                      ></div>
-                      <div>
-                        <span class="btn btn-info btn-file"
-                          ><span class="fileinput-new">Select image</span
-                          ><span class="fileinput-exists">Change</span
-                          ><input type="hidden" value="" name="..." /><input
-                            type="file"
-                            name=""
-                        /></span>
-                        <a
-                          href="form-element.html#"
-                          class="btn btn-danger fileinput-exists"
-                          data-dismiss="fileinput"
-                          >Remove</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="button" class="btn btn-success">Add</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <div class="modal modal-success" role="dialog" id="add_new_gif">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Add New Gif</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group">
-                  <span class="input-group-addon">Title</span>
-                  <input
-                    id="title"
-                    type="text"
-                    class="form-control"
-                    name="email"
-                    placeholder="title"
-                  />
-                </div>
-                <br />
 
-                <div class="form-group">
-                  <label class="col-md-4 control-label">Image upload:</label>
-                  <div class="col-md-8">
-                    <div
-                      class="fileinput fileinput-new"
-                      data-provides="fileinput"
-                    >
-                      <div
-                        class="fileinput-preview thumbnail"
-                        data-trigger="fileinput"
-                        style="width: 200px; height: 150px; line-height: 150px"
-                      ></div>
-                      <div>
-                        <span class="btn btn-info btn-file"
-                          ><span class="fileinput-new">Select image</span
-                          ><span class="fileinput-exists">Change</span
-                          ><input type="hidden" value="" name="..." /><input
-                            type="file"
-                            name=""
-                        /></span>
-                        <a
-                          href="form-element.html#"
-                          class="btn btn-danger fileinput-exists"
-                          data-dismiss="fileinput"
-                          >Remove</a
-                        >
-                      </div>
+                <div class="overlayContent" style="height: 450px">
+                  <div class="container">
+                    <img src="@/assets/img/BILLY-ARGEL-GINGA.jpg" alt="" />
+                    <div class="text-center bg-black title">Title</div>
+                    <div class="overlay"></div>
+                    <div class="button">
+                      <a> <i class="fa fa-pencil"></i> </a>
+                      <a> <i class="fa fa-trash"></i> </a>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="button" class="btn btn-success">Add</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <!--modal-->
-      <div class="modal modal-success" role="dialog" id="edit_new_gif">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                ×
-              </button>
-              <h4 class="modal-title">Edit Gif</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="input-group">
-                  <span class="input-group-addon">Title</span>
-                  <input
-                    id="title"
-                    type="text"
-                    class="form-control"
-                    name="email"
-                    placeholder="title"
-                  />
-                </div>
-                <br />
 
-                <div class="form-group">
-                  <label class="col-md-4 control-label">Image upload:</label>
-                  <div class="col-md-8">
-                    <div
-                      class="fileinput fileinput-new"
-                      data-provides="fileinput"
+                <div class="overflow-auto d-flex justify-content-center mt-4">
+                  <!-- Use text in props -->
+                  <b-pagination
+                    v-model="imageCurrentPage"
+                    :total-rows="imageRows"
+                    :per-page="imagePerPage"
+                  ></b-pagination>
+                </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <strong>Gifs</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
+                  </div>
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-gifs-modal'"
                     >
-                      <div
-                        class="fileinput-preview thumbnail"
-                        data-trigger="fileinput"
-                        style="width: 200px; height: 150px; line-height: 150px"
-                      ></div>
-                      <div>
-                        <span class="btn btn-info btn-file"
-                          ><span class="fileinput-new">Select image</span
-                          ><span class="fileinput-exists">Change</span
-                          ><input type="hidden" value="" name="..." /><input
-                            type="file"
-                            name=""
-                        /></span>
-                        <a
-                          href="form-element.html#"
-                          class="btn btn-danger fileinput-exists"
-                          data-dismiss="fileinput"
-                          >Remove</a
-                        >
-                      </div>
+                      Add New Gifs
+                    </button>
+                    <AddGifsModal></AddGifsModal>
+                  </div>
+                </div>
+
+                <div class="overlayContent" style="height: 450px">
+                  <div class="container">
+                    <img src="@/assets/img/BILLY-ARGEL-GINGA.jpg" alt="" />
+                    <div class="text-center bg-black title">Title</div>
+                    <div class="overlay"></div>
+                    <div class="button">
+                      <a> <i class="fa fa-pencil"></i> </a>
+                      <a> <i class="fa fa-trash"></i> </a>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="button" class="btn btn-success">Add</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal-dialog -->
+
+                <div class="overflow-auto d-flex justify-content-center mt-4">
+                  <!-- Use text in props -->
+                  <b-pagination
+                    v-model="videoCurrentPage"
+                    :total-rows="videoRows"
+                    :per-page="videoPerPage"
+                  ></b-pagination>
+                </div>
+              </b-card-text>
+            </b-tab>
+          </b-tabs>
+        </b-card>
       </div>
-      <!-- /.modal -->
-      <!-- Start footer content -->
-      <footer class="footer-content">
-        2014 - <span id="copyright-year">2021</span>© SmartSystems . Created by
-        <a href="" target="_blank">SmartDesign</a>
-        <span class="pull-right">0.01 GB(0%) of 15 GB used</span>
-      </footer>
-      <!-- /.footer-content -->
-      <!--/ End footer content -->
     </section>
   </div>
 </template>
+    
+<style scoped>
+.iconStyle {
+  margin-right: 10px;
+}
+.container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.container img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 0;
+}
+.container .title {
+  position: absolute;
+  width: 150px;
+  top: 150px;
+  left: 0;
+}
+
+.button {
+  position: absolute;
+  width: 150px;
+  left: 0;
+  top: 65px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.button a {
+  padding: 5px 15px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.container:hover .button {
+  opacity: 1;
+}
+.container:hover .button a i {
+  color: white;
+}
+</style>
+
+<script>
+import AddSmilieModal from "@/components/modals/chat-modals/AddSmilieModal.vue"
+import AddGifsModal from "@/components/modals/chat-modals/AddGifsModal.vue"
+export default {
+  components: { AddSmilieModal, AddGifsModal },
+  data() {
+    return {
+      imageRows: 20,
+      imagePerPage: 5,
+      imageCurrentPage: 1,
+      videoRows: 20,
+      videoPerPage: 5,
+      videoCurrentPage: 1,
+    };
+  },
+};
+</script>

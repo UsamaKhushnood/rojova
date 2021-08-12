@@ -2,7 +2,7 @@
   <div>
     <section id="page-content">
       <div>
-        <b-card no-body class="p-4 pb-5">
+        <b-card no-body class="mt-0">
           <b-tabs pills card vertical nav-wrapper-class="w-25">
             <b-tab active>
               <template #title>
@@ -13,16 +13,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't1-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t1-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -30,8 +32,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't1-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t1-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -45,16 +49,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't2-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t2-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -62,8 +68,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't2-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t2-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -77,16 +85,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't3-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t3-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -94,8 +104,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't3-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t3-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -109,16 +121,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't4-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t4-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -126,8 +140,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't4-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t4-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -141,16 +157,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't5-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t5-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -158,8 +176,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't5-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t5-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -173,16 +193,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't6-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t6-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -190,8 +212,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't6-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t6-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -205,16 +229,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't7-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t7-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -222,8 +248,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't7-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t7-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -237,16 +265,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't8-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t8-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -254,8 +284,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't8-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t8-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -269,16 +301,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't9-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t9-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -286,8 +320,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't9-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t9-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -301,16 +337,18 @@
                 <div class="row p-3 pt-0 border-bottom">Page Settings</div>
                 <div class="d-flex p-3 justify-content-between align-items-center w-100">
                   <div class="status me-5">Status</div>
-                  <div class="rdio rdio-theme inline me-3">
+                  <div class="rdio rdio-theme d-flex align-items-center me-3">
                     <input
                       checked="checked"
                       id="act2"
                       name="radio"
                       type="radio"
+                      v-b-modal="'activate-modal' + 't10-1'"
                     />
                     <label for="act2">Activate</label>
+                    <ActivateModal :index="'t10-1'"></ActivateModal>
                   </div>
-                  <div class="rdio rdio-theme inline me-auto">
+                  <div class="rdio rdio-theme d-flex align-items-center me-auto">
                     <input
                       checked="checked"
                       id="act2"
@@ -318,8 +356,10 @@
                       data-toggle="modal"
                       data-target="#modal-act"
                       type="radio"
+                      v-b-modal="'deactivate-modal' + 't10-2'"
                     />
                     <label for="act2">Deactivate</label>
+                    <DeactivateModal :index="'t10-2'"></DeactivateModal>
                   </div>
                 </div>
               </b-card-text>
@@ -332,15 +372,16 @@
 </template>
 
 <style scoped>
-ul#__BVID__100__BV_tab_controls_ {
-  padding: 0;
+.iconStyle {
+  font-size: 25px;
 }
-li.nav-item {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.card .x-pills,
-.card .tab-content {
-  margin-top: 0;
-}
+
 </style>
+
+<script>
+import ActivateModal from "@/components/modals/page-settings-modals/ActivateModal.vue"
+import DeactivateModal from "@/components/modals/page-settings-modals/DeactivateModal.vue"
+export default {
+  components: { ActivateModal, DeactivateModal }
+}
+</script>

@@ -58,7 +58,7 @@
                       {{ data.item.status }}
                     </template>
 
-                    <template #cell(option)="data">
+                    <template #cell(actions)="data">
                       <div class="allLinks">
                         <a
                           class="editLink"
@@ -147,7 +147,7 @@ export default {
         { key: "password", label: "Password" },
         { key: "fileLimit", label: "File Limit" },
         { key: "status", label: "Status" },
-        { key: "option", label: "Option" },
+        { key: "actions", label: "Actions" },
       ],
       ftpSettingsItems: [
         {

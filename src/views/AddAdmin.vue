@@ -1,406 +1,798 @@
 <template>
-    <div>
-        <section id="page-content">
-
-               
-                <!--/ End header content -->
-
-                <!-- Start body content -->
-                <div class="body-content animated fadeIn ">
-                    <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header card-header-icon" data-background-color="green">
-                                    <i class="material-icons"></i>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="card-title">Global Sales by Top Locations</h4>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="table-responsive table-sales">
-                                                <table class="table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="@/assets/img/US.png">
-                                                                </div>
-                                                            </td>
-                                                            <td>USA</td>
-                                                            <td class="text-right">
-                                                                2.920
-                                                            </td>
-                                                            <td class="text-right">
-                                                                53.23%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="@/assets/img/DE.png">
-                                                                </div>
-                                                            </td>
-                                                            <td>Germany</td>
-                                                            <td class="text-right">
-                                                                1.300
-                                                            </td>
-                                                            <td class="text-right">
-                                                                20.43%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="@/assets/img/AU.png">
-                                                                </div>
-                                                            </td>
-                                                            <td>Australia</td>
-                                                            <td class="text-right">
-                                                                760
-                                                            </td>
-                                                            <td class="text-right">
-                                                                10.35%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="@/assets/img/GB.png">
-                                                                </div>
-                                                            </td>
-                                                            <td>United Kingdom</td>
-                                                            <td class="text-right">
-                                                                690
-                                                            </td>
-                                                            <td class="text-right">
-                                                                7.87%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="@/assets/img/RO.png">
-                                                                </div>
-                                                            </td>
-                                                            <td>Romania</td>
-                                                            <td class="text-right">
-                                                                600
-                                                            </td>
-                                                            <td class="text-right">
-                                                                5.94%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flag">
-                                                                    <img src="@/assets/img/BR.png">
-                                                                </div>
-                                                            </td>
-                                                            <td>Brasil</td>
-                                                            <td class="text-right">
-                                                                550
-                                                            </td>
-                                                            <td class="text-right">
-                                                                4.34%
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-md-offset-1">
-                                            <div id="worldMap" class="map"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header" data-background-color="rose" data-header-animation="true">
-                                    <div class="ct-chart" id="websiteViewsChart"></div>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-actions">
-                                        <button type="button" class="btn btn-danger btn-simple fix-broken-card">
-                                            <i class="material-icons">build</i> Fix Header!
-                                        </button>
-                                        <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
-                                            <i class="material-icons">refresh</i>
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                    </div>
-                                    <h4 class="card-title">Website Views</h4>
-                                    <p class="category">Last Campaign Performance</p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header" data-background-color="green" data-header-animation="true">
-                                    <div class="ct-chart" id="dailySalesChart">
-                                        </div>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-actions">
-                                        <button type="button" class="btn btn-danger btn-simple fix-broken-card">
-                                            <i class="material-icons">build</i> Fix Header!
-                                        </button>
-                                        <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
-                                            <i class="material-icons">refresh</i>
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                    </div>
-                                    <h4 class="card-title">Daily Sales</h4>
-                                    <p class="category">
-                                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">access_time</i> updated 4 minutes ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header" data-background-color="blue" data-header-animation="true">
-                                    <div class="ct-chart" id="completedTasksChart"></div>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-actions">
-                                        <button type="button" class="btn btn-danger btn-simple fix-broken-card">
-                                            <i class="material-icons">build</i> Fix Header!
-                                        </button>
-                                        <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
-                                            <i class="material-icons">refresh</i>
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                    </div>
-                                    <h4 class="card-title">Completed Tasks</h4>
-                                    <p class="category">Last Campaign Performance</p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header" data-background-color="orange">
-                                    <i class="material-icons">weekend</i>
-                                </div>
-                                <div class="card-content">
-                                    <p class="category">Bookings</p>
-                                    <h3 class="card-title">184</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons text-danger">warning</i>
-                                        <a href="#pablo">Get More Space...</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header" data-background-color="rose">
-                                    <i class="material-icons">equalizer</i>
-                                </div>
-                                <div class="card-content">
-                                    <p class="category">Website Visits</p>
-                                    <h3 class="card-title">75.521</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">local_offer</i> Tracked from Google Analytics
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header" data-background-color="green">
-                                    <i class="material-icons">store</i>
-                                </div>
-                                <div class="card-content">
-                                    <p class="category">Revenue</p>
-                                    <h3 class="card-title">$34,245</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">date_range</i> Last 24 Hours
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header" data-background-color="blue">
-                                    <i class="fa fa-twitter"></i>
-                                </div>
-                                <div class="card-content">
-                                    <p class="category">Followers</p>
-                                    <h3 class="card-title">+245</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">update</i> Just Updated
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h3>Manage Listings</h3>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card card-product">
-                                <div class="card-image" data-header-animation="true">
-                                    <a href="#pablo">
-                                        <img class="img" src="@/assets/img/BILLY-ARGEL-GINGA.jpg">
-                                    </a>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-actions">
-                                        <button type="button" class="btn btn-danger btn-simple fix-broken-card">
-                                            <i class="material-icons">build</i> Fix Header!
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
-                                            <i class="material-icons">art_track</i>
-                                        </button>
-                                        <button type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                    </div>
-                                    <h4 class="card-title">
-                                        <a href="#pablo">Cozy 5 Stars Apartment</a>
-                                    </h4>
-                                    <div class="card-description">
-                                        The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="price">
-                                        <h4>$899/night</h4>
-                                    </div>
-                                    <div class="stats pull-right">
-                                        <p class="category"><i class="material-icons">place</i> Barcelona, Spain</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-product">
-                                <div class="card-image" data-header-animation="true">
-                                    <a href="#pablo">
-                                        <img class="img" src="@/assets/img/BILLY-ARGEL-GINGA.jpg">
-                                    </a>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-actions">
-                                        <button type="button" class="btn btn-danger btn-simple fix-broken-card">
-                                            <i class="material-icons">build</i> Fix Header!
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
-                                            <i class="material-icons">art_track</i>
-                                        </button>
-                                        <button type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                    </div>
-                                    <h4 class="card-title">
-                                        <a href="#pablo">Office Studio</a>
-                                    </h4>
-                                    <div class="card-description">
-                                        The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the night life in London, UK.
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="price">
-                                        <h4>$1.119/night</h4>
-                                    </div>
-                                    <div class="stats pull-right">
-                                        <p class="category"><i class="material-icons">place</i> London, UK</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-product">
-                                <div class="card-image" data-header-animation="true">
-                                    <a href="#pablo">
-                                        <img class="img" src="@/assets/img/BILLY-ARGEL-GINGA.jpg">
-                                    </a>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-actions">
-                                        <button type="button" class="btn btn-danger btn-simple fix-broken-card">
-                                            <i class="material-icons">build</i> Fix Header!
-                                        </button>
-                                        <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
-                                            <i class="material-icons">art_track</i>
-                                        </button>
-                                        <button type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                    </div>
-                                    <h4 class="card-title">
-                                        <a href="#pablo">Beautiful Castle</a>
-                                    </h4>
-                                    <div class="card-description">
-                                        The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="price">
-                                        <h4>$459/night</h4>
-                                    </div>
-                                    <div class="stats pull-right">
-                                        <p class="category"><i class="material-icons">place</i> Milan, Italy</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <div>
+    <section id="page-content">
+      <div>
+        <b-card no-body class="mt-0">
+          <b-tabs pills card vertical nav-wrapper-class="w-25">
+            <b-tab active>
+              <template #title>
+                <i class="fa fa-bars iconStyle"></i>
+                <strong>Level 1</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
+                  </div>
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-admin-modal' + 't1-1'"
+                    >
+                      Add Admin
+                    </button>
+                    <AddAdminModal :index="'t1-1'"></AddAdminModal>
+                  </div>
                 </div>
-            </div>
-                </div>
-                <!-- Start footer content -->
-                <footer class="footer-content">
-                    2014 - <span id="copyright-year">2021</span>© SmartSystems . Created by <a href="" target="_blank">SmartDesign</a>
-                    <span class="pull-right">0.01 GB(0%) of 15 GB used</span>
-                </footer><!-- /.footer-content -->
-                <!--/ End footer content -->
 
-            </section>
-    </div>
+                <div>
+                  <b-table
+                    small
+                    :fields="addAdminFields"
+                    :items="addAdminItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- A custom formatted column -->
+
+                    <template #cell(image)="data">
+                      <img
+                        :src="data.item.image"
+                        alt=""
+                        style="width: 150px; height: auto"
+                      />
+                    </template>
+
+                    <template #cell(name)="data">
+                      {{ data.item.name }}
+                    </template>
+                    <template #cell(email)="data">
+                      {{ data.item.email }}
+                    </template>
+                    <template #cell(phone)="data">
+                      {{ data.item.phone }}
+                    </template>
+
+                    <template #cell(actions)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-admin-modal' + data.index + 't1-2'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditAdminModal
+                            :index="data.index + 't1-2'"
+                          ></EditAdminModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-admin-modal' + data.index + 't1-3'"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteAdminModal
+                            :index="data.index + 't1-3'"
+                          ></DeleteAdminModal>
+                        </a>
+                      </div>
+                    </template>
+                  </b-table>
+                </div>
+
+                <div class="d-flex align-items-center mt-5">
+                  <button class="btn btn-success">Submit</button>
+                </div>
+              </b-card-text>
+            </b-tab>
+
+            <b-tab>
+              <template #title>
+                <i class="fa fa-bars iconStyle"></i>
+                <strong>Level 2</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
+                  </div>
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-admin-modal' + 't2-1'"
+                    >
+                      Add Admin
+                    </button>
+                    <AddAdminModal :index="'t2-1'"></AddAdminModal>
+                  </div>
+                </div>
+
+                <div>
+                  <b-table
+                    small
+                    :fields="addAdminFields"
+                    :items="addAdminItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- A custom formatted column -->
+
+                    <template #cell(image)="data">
+                      <img
+                        :src="data.item.image"
+                        alt=""
+                        style="width: 150px; height: auto"
+                      />
+                    </template>
+
+                    <template #cell(name)="data">
+                      {{ data.item.name }}
+                    </template>
+                    <template #cell(email)="data">
+                      {{ data.item.email }}
+                    </template>
+                    <template #cell(phone)="data">
+                      {{ data.item.phone }}
+                    </template>
+
+                    <template #cell(actions)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-admin-modal' + data.index + 't2-2'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditAdminModal
+                            :index="data.index + 't2-2'"
+                          ></EditAdminModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-admin-modal' + data.index + 't2-3'"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteAdminModal
+                            :index="data.index + 't2-3'"
+                          ></DeleteAdminModal>
+                        </a>
+                      </div>
+                    </template>
+                  </b-table>
+                </div>
+
+                <div class="d-flex align-items-center mt-5">
+                  <button class="btn btn-success">Submit</button>
+                </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-bars iconStyle"></i>
+                <strong>Level 3</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
+                  </div>
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-admin-modal' + 't3-1'"
+                    >
+                      Add Admin
+                    </button>
+                    <AddAdminModal :index="'t3-1'"></AddAdminModal>
+                  </div>
+                </div>
+
+                <div>
+                  <b-table
+                    small
+                    :fields="addAdminFields"
+                    :items="addAdminItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- A custom formatted column -->
+
+                    <template #cell(image)="data">
+                      <img
+                        :src="data.item.image"
+                        alt=""
+                        style="width: 150px; height: auto"
+                      />
+                    </template>
+
+                    <template #cell(name)="data">
+                      {{ data.item.name }}
+                    </template>
+                    <template #cell(email)="data">
+                      {{ data.item.email }}
+                    </template>
+                    <template #cell(phone)="data">
+                      {{ data.item.phone }}
+                    </template>
+
+                    <template #cell(actions)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-admin-modal' + data.index + 't3-2'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditAdminModal
+                            :index="data.index + 't3-2'"
+                          ></EditAdminModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-admin-modal' + data.index + 't3-3'"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteAdminModal
+                            :index="data.index + 't3-3'"
+                          ></DeleteAdminModal>
+                        </a>
+                      </div>
+                    </template>
+                  </b-table>
+                </div>
+                <div class="d-flex align-items-center mt-5">
+                  <button class="btn btn-success">Submit</button>
+                </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-bars iconStyle"></i>
+                <strong>Level 4</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
+                  </div>
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-admin-modal' + 't4-1'"
+                    >
+                      Add Admin
+                    </button>
+                    <AddAdminModal :index="'t4-1'"></AddAdminModal>
+                  </div>
+                </div>
+
+                <div>
+                  <b-table
+                    small
+                    :fields="addAdminFields"
+                    :items="addAdminItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- A custom formatted column -->
+
+                    <template #cell(image)="data">
+                      <img
+                        :src="data.item.image"
+                        alt=""
+                        style="width: 150px; height: auto"
+                      />
+                    </template>
+
+                    <template #cell(name)="data">
+                      {{ data.item.name }}
+                    </template>
+                    <template #cell(email)="data">
+                      {{ data.item.email }}
+                    </template>
+                    <template #cell(phone)="data">
+                      {{ data.item.phone }}
+                    </template>
+
+                    <template #cell(actions)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-admin-modal' + data.index + 't4-2'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditAdminModal
+                            :index="data.index + 't4-2'"
+                          ></EditAdminModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-admin-modal' + data.index + 't4-3'"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteAdminModal
+                            :index="data.index + 't4-3'"
+                          ></DeleteAdminModal>
+                        </a>
+                      </div>
+                    </template>
+                  </b-table>
+                </div>
+                <div class="d-flex align-items-center mt-5">
+                  <button class="btn btn-success">Submit</button>
+                </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-bars iconStyle"></i>
+                <strong>Level 5</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
+                  </div>
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-admin-modal' + 't5-1'"
+                    >
+                      Add Admin
+                    </button>
+                    <AddAdminModal :index="'t5-1'"></AddAdminModal>
+                  </div>
+                </div>
+
+                <div>
+                  <b-table
+                    small
+                    :fields="addAdminFields"
+                    :items="addAdminItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- A custom formatted column -->
+
+                    <template #cell(image)="data">
+                      <img
+                        :src="data.item.image"
+                        alt=""
+                        style="width: 150px; height: auto"
+                      />
+                    </template>
+
+                    <template #cell(name)="data">
+                      {{ data.item.name }}
+                    </template>
+                    <template #cell(email)="data">
+                      {{ data.item.email }}
+                    </template>
+                    <template #cell(phone)="data">
+                      {{ data.item.phone }}
+                    </template>
+
+                    <template #cell(actions)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-admin-modal' + data.index + 't5-2'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditAdminModal
+                            :index="data.index + 't5-2'"
+                          ></EditAdminModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-admin-modal' + data.index + 't5-3'"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteAdminModal
+                            :index="data.index + 't5-3'"
+                          ></DeleteAdminModal>
+                        </a>
+                      </div>
+                    </template>
+                  </b-table>
+                </div>
+                <div class="d-flex align-items-center mt-5">
+                  <button class="btn btn-success">Submit</button>
+                </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-bars iconStyle"></i>
+                <strong>Level 6</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
+                  </div>
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-admin-modal' + 't6-1'"
+                    >
+                      Add Admin
+                    </button>
+                    <AddAdminModal :index="'t6-1'"></AddAdminModal>
+                  </div>
+                </div>
+
+                <div>
+                  <b-table
+                    small
+                    :fields="addAdminFields"
+                    :items="addAdminItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- A custom formatted column -->
+
+                    <template #cell(image)="data">
+                      <img
+                        :src="data.item.image"
+                        alt=""
+                        style="width: 150px; height: auto"
+                      />
+                    </template>
+
+                    <template #cell(name)="data">
+                      {{ data.item.name }}
+                    </template>
+                    <template #cell(email)="data">
+                      {{ data.item.email }}
+                    </template>
+                    <template #cell(phone)="data">
+                      {{ data.item.phone }}
+                    </template>
+
+                    <template #cell(actions)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-admin-modal' + data.index + 't6-2'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditAdminModal
+                            :index="data.index + 't6-2'"
+                          ></EditAdminModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-admin-modal' + data.index + 't6-3'"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteAdminModal
+                            :index="data.index + 't6-3'"
+                          ></DeleteAdminModal>
+                        </a>
+                      </div>
+                    </template>
+                  </b-table>
+                </div>
+
+                <div class="d-flex align-items-center mt-5">
+                  <button class="btn btn-success">Submit</button>
+                </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-bars iconStyle"></i>
+                <strong>Level 7</strong>
+              </template>
+              <b-card-text>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    mb-4
+                    p-2
+                    border
+                  "
+                >
+                  <div class="d-flex align-items-center w-25">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="Seach"
+                    />
+                    <span class="btn btn-primary fa fa-search ms-2"></span>
+                  </div>
+                  <div class="addVideo">
+                    <button
+                      class="btn btn-success"
+                      v-b-modal="'add-admin-modal' + 't7-1'"
+                    >
+                      Add Admin
+                    </button>
+                    <AddAdminModal :index="'t7-1'"></AddAdminModal>
+                  </div>
+                </div>
+
+                <div>
+                  <b-table
+                    small
+                    :fields="addAdminFields"
+                    :items="addAdminItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- A custom formatted column -->
+
+                    <template #cell(image)="data">
+                      <img
+                        :src="data.item.image"
+                        alt=""
+                        style="width: 150px; height: auto"
+                      />
+                    </template>
+
+                    <template #cell(name)="data">
+                      {{ data.item.name }}
+                    </template>
+                    <template #cell(email)="data">
+                      {{ data.item.email }}
+                    </template>
+                    <template #cell(phone)="data">
+                      {{ data.item.phone }}
+                    </template>
+
+                    <template #cell(actions)="data">
+                      <div class="allLinks">
+                        <a
+                          class="editLink"
+                          v-b-modal="'edit-admin-modal' + data.index + 't7-2'"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                          <EditAdminModal
+                            :index="data.index + 't7-2'"
+                          ></EditAdminModal>
+                        </a>
+                        <a
+                          class="deleteLink"
+                          v-b-modal="'delete-admin-modal' + data.index + 't7-3'"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeleteAdminModal
+                            :index="data.index + 't7-3'"
+                          ></DeleteAdminModal>
+                        </a>
+                      </div>
+                    </template>
+                  </b-table>
+                </div>
+                <div class="d-flex align-items-center mt-5">
+                  <button class="btn btn-success">Submit</button>
+                </div>
+              </b-card-text>
+            </b-tab>
+          </b-tabs>
+        </b-card>
+      </div>
+    </section>
+  </div>
 </template>
+
+<style scoped>
+.iconStyle {
+  font-size: 25px;
+}
+
+.allLinks {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+a.editLink {
+  border: 2px solid #e9573f;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a.deleteLink {
+  border: 2px solid #367fa9;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 3px;
+}
+</style>
+
+<script>
+import AddAdminModal from "@/components/modals/add-admin-modals/AddAdminModal.vue";
+import EditAdminModal from "@/components/modals/add-admin-modals/EditAdminModal.vue";
+import DeleteAdminModal from "@/components/modals/add-admin-modals/DeleteAdminModal.vue";
+export default {
+  components: { AddAdminModal, EditAdminModal, DeleteAdminModal },
+  data() {
+    return {
+      addAdminFields: [
+        // A virtual column that doesn't exist in items
+        { key: "index", label: "ID" },
+        { key: "image", label: "Image" },
+        { key: "name", label: "Name" },
+        { key: "email", label: "Email" },
+        { key: "phone", label: "Phone" },
+        { key: "actions", label: "Actions" },
+      ],
+      addAdminItems: [
+        {
+          image: require("@/assets/img/media/realistic/4.jpg"),
+          name: "Sameer",
+          email: "user@email.com",
+          phone: "00011122233",
+        },
+        {
+          image: require("@/assets/img/media/realistic/4.jpg"),
+          name: "Sameer",
+          email: "user@email.com",
+          phone: "00011122233",
+        },
+        {
+          image: require("@/assets/img/media/realistic/4.jpg"),
+          name: "Sameer",
+          email: "user@email.com",
+          phone: "00011122233",
+        },
+      ],
+    };
+  },
+};
+</script>
