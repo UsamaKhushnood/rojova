@@ -3,7 +3,7 @@
     <section id="page-content">
       <div>
         <b-card no-body class="mt-0">
-          <b-tabs pills card vertical nav-wrapper-class="w-25">
+          <b-tabs pills card vertical nav-wrapper-class="w-25" content-class="vipUserSettingsTabsContent" class="vipUserSettingsTabs">
             <b-tab active>
               <template #title>
                 <i class="fa fa-bullhorn iconStyle"></i>

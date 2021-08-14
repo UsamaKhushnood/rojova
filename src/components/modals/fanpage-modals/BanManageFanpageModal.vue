@@ -5,29 +5,20 @@
       header-bg-variant="success"
       header-text-variant="light"
       size="sm"
-      title="Edit Item"
+      title="Ban Reason"
     >
-      <div class="container mt-2">
-        <b-row>
-          <b-col cols="4">
-            <div>
-              <label class="mt-4 mb-4">Select Category</label>
-            </div>
-            
-          </b-col>
-          <b-col cols="8">
-            <div class="musicCategory mt-3">
-              <b-form-select
-                v-model="selected"
-                :options="options"
-                class="selectBox"
-              ></b-form-select>
-            </div>
-            
-            
-          </b-col>
-        </b-row>
-      </div>
+      <b-row class="align-items-center mt-4 mb-4">
+        <b-col cols="4">
+          <label>Select Denied Reason</label>
+        </b-col>
+        <b-col cols="8">
+          <b-form-select
+            v-model="selected"
+            :options="options"
+            class="form-control border"
+          ></b-form-select>
+        </b-col>
+      </b-row>
       <template #modal-footer="{ ok, cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
         <b-button size="md" variant="success" @click="ok()">

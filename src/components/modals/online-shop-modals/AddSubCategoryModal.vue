@@ -5,28 +5,24 @@
       header-bg-variant="primary"
       header-text-variant="light"
       size="sm"
-      title="Add Category"
+      title="Add Sub Category"
     >
-      <div class="modal-body" id="input-mask">
-        <form method="post">
-		   <div class="input-group col-xs-12 align-items-center">
-              <label class="col-sm-4 control-label mt-0" style="font-size:15px"> Category Name</label>
-				<div class="col-sm-7 controls">
-				 <input id="title" type="title" class="form-control col-xs-12" name="categ" placeholder="Title">
-
-				</div>
-		      <br>
-		  </div>
-		   <div class="input-group col-xs-12 align-items-center mt-4">
-              <label class="col-sm-4 control-label mt-0" style="font-size:15px"> Category Name</label>
-				<div class="col-sm-7 controls">
-				 <input id="title" type="title" class="form-control col-xs-12" name="categ" placeholder="Title">
-
-				</div>
-		      <br>
-		  </div>
-		</form>
-      </div>
+      <b-row class="align-items-center mt-4 mb-4">
+        <b-col cols="4">
+          <label>Category Name</label>
+        </b-col>
+        <b-col cols="8">
+          <input type="text" class="form-control border" placeholder="Category Name">
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="4">
+          <label>Sub Category Name</label>
+        </b-col>
+        <b-col cols="8">
+          <input type="text" class="form-control border" placeholder="Sub Category Name">
+        </b-col>
+      </b-row>
       <template #modal-footer="{ ok, cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
         <b-button size="md" variant="primary" @click="ok()">

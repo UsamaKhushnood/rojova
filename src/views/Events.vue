@@ -12,11 +12,13 @@
               <b-card-text>
                 <div class="container-fluid mb-4" align="center">
                   <button class="btn btn-success btn-md"
-                 
+                  v-b-modal="'add-events-modal'"
                   >
                     <i class="fa fa-plus-circle"></i>
-                    Add Item
+                    Add New Event
+                    <AddEventsModal></AddEventsModal>
                   </button>
+                  
                 </div>
                 <div>
                   <b-table
@@ -48,23 +50,101 @@
                       {{ data.item.tickets }}
                     </template>
 
-                    <template #cell(option)>
+                    <template #cell(option)="data">
                       <div class="allLinks">
                         <a class="editLink"
-                        
+                         v-b-modal="'edit-events-modal' + data.index"
                         >
                           <i
                             class="fa fa-pencil"
                             style="font-size: 16px; color: #e9573f"
                           ></i>
+                          <EditEventsModal :index="data.index"></EditEventsModal>
                         </a>
                         <a class="deleteLink"
-                        
+                        v-b-modal="'delete-events-modal' + data.index"
                         >
                           <i
                             class="fa fa-trash-o"
                             style="font-size: 16px; color: #367fa9"
                           ></i>
+                          <DeleteEventsModal :index="data.index"></DeleteEventsModal>
+                        </a>
+                      </div>
+                      
+
+                    </template>
+                  </b-table>
+                </div>
+              </b-card-text>
+              
+
+            </b-tab>
+            <b-tab>
+              <template #title>
+                <i class="fa fa-plus-circle iconStyle"></i>
+                <strong>Past Events</strong>
+              </template>
+              <b-card-text>
+                
+                <div>
+                  <b-table
+                    small
+                    :fields="pastEventsFields"
+                    :items="pastEventsItems"
+                    responsive="sm"
+                  >
+                    <!-- A virtual column -->
+                    <template #cell(index)="data">
+                      {{ data.index + 1 }}
+                    </template>
+
+                    <!-- A custom formatted column -->
+                    <template #cell(title)="data">
+                      {{ data.item.title }}
+                    </template>
+
+                    <!-- A virtual composite column -->
+                    <template #cell(images)="data">
+                      {{ data.item.images }}
+                    </template>
+
+                    <!-- Optional default data cell scoped slot -->
+                    <template #cell(videos)="data">
+                      {{ data.item.videos }}
+                    </template>
+                    <template #cell(tickets)="data">
+                      {{ data.item.tickets }}
+                    </template>
+
+                    <template #cell(option)="data">
+                      <div class="allLinks">
+                        <a class="editLink"
+                        v-b-modal="'edit-past-events-modal' + data.index"
+                        >
+                          <i
+                            class="fa fa-pencil"
+                            style="font-size: 16px; color: #e9573f"
+                          ></i>
+                        <EditPastEventsModal :index="data.index"></EditPastEventsModal>
+                        </a>
+                        <a class="deleteLink"
+                        v-b-modal="'delete-past-events-modal' + data.index"
+                        >
+                          <i
+                            class="fa fa-trash-o"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <DeletePastEventsModal :index="data.index"></DeletePastEventsModal>
+                        </a>
+                        <a class="deleteLink"
+                        v-b-modal="'add-past-events-modal' + data.index"
+                        >
+                          <i
+                            class="fa fa-plus"
+                            style="font-size: 16px; color: #367fa9"
+                          ></i>
+                          <AddPastEventsModal :index="data.index"></AddPastEventsModal>
                         </a>
                       </div>
                       
@@ -85,17 +165,18 @@
                 <div class="container-fluid mb-4" align="center">
                   <button
                     class="btn btn-success btn-md"
-                    v-b-modal="'add-category-modal'"
+                    v-b-modal="'add-events-category-modal'"
                   >
                     <i class="fa fa-plus-circle"></i>
                     Add Category
                   </button>
+                  <AddEventsCategoryModal></AddEventsCategoryModal>
                 </div>
                 <div>
                   <b-table
                     small
-                    :fields="addItemCategoryFields"
-                    :items="addSchoolCategoryItems"
+                    :fields="addEventsCategoryFields"
+                    :items="addEventsCategoryItems"
                     responsive="sm"
                   >
                     <!-- A virtual column -->
@@ -104,10 +185,7 @@
                     </template>
 
                     <!-- Optional default data cell scoped slot -->
-                    <template #cell(image)="data">
-                      <img :src="data.item.image" alt="item image"
-                      style="width: 100px; height: auto;">
-                    </template>
+                    
                     <template #cell(category)="data">
                       {{ data.item.category }}
                     </template>
@@ -116,33 +194,33 @@
                       <div class="allLinks">
                         <a
                           class="editLink"
-                          v-b-modal="'edit-category-modal' + data.index + 'category'"
+                        v-b-modal="'edit-events-category-modal' + data.index"
                         >
                           <i
                             class="fa fa-pencil"
                             style="font-size: 16px; color: #e9573f"
                           ></i>
+                          <EditEventsCategoryModal :index="data.index"></EditEventsCategoryModal>
                         </a>
                         <a
                           class="deleteLink"
-                          v-b-modal="'delete-category-modal' + data.index + 'category'"
+                          v-b-modal="'delete-events-category-modal' + data.index"
                            
                         >
                           <i
                             class="fa fa-trash-o"
                             style="font-size: 16px; color: #367fa9"
                           ></i>
+                          <DeleteCategoryModal :index="data.index"></DeleteCategoryModal>
                         </a>
                       </div>
-                    <DeleteCategoryModal :index="data.index + 'category'"></DeleteCategoryModal>
-                    <EditCategoryModal :index="data.index + 'category'"></EditCategoryModal>
-
+                    
                     </template>
                   </b-table>
                 </div>
               </b-card-text>
 
-                <AddCategoryModal></AddCategoryModal>
+                
               
             </b-tab>
           </b-tabs>
@@ -188,31 +266,27 @@ a.deleteLink {
 
     
 <script>
-  import DeleteItemModal from "@/components/modals/school-modals/DeleteItemModal";
-  import EditItemModal from "@/components/modals/school-modals/EditItemModal";
-  import AddItemModal from "@/components/modals/school-modals/AddItemModal";
-  import DeleteCategoryModal from "@/components/modals/school-modals/DeleteCategoryModal";
-  import EditCategoryModal from "@/components/modals/school-modals/EditCategoryModal";
-  import AddCategoryModal from "@/components/modals/school-modals/AddCategoryModal";
-//  import EditVideoModal from "@/components/modals/videos-modals/EditVideoModal";
-//  import AddVideoModal from "@/components/modals/videos-modals/AddVideoModal";
-//  import AddVideoCategoryModal from "@/components/modals/videos-modals/AddVideoCategoryModal";
-//  import EditVideoCategoryModal from "@/components/modals/videos-modals/EditVideoCategoryModal";
-//  import DeleteVideoCategoryModal from "@/components/modals/videos-modals/DeleteVideoCategoryModal";
+import AddEventsModal from "@/components/modals/events-modals/AddEventsModal"
+import EditEventsModal from "@/components/modals/events-modals/EditEventsModal"
+import DeleteEventsModal from "@/components/modals/events-modals/DeleteEventsModal"
+import DeletePastEventsModal from "@/components/modals/events-modals/DeletePastEventsModal"
+import EditPastEventsModal from "@/components/modals/events-modals/EditPastEventsModal"
+import AddPastEventsModal from "@/components/modals/events-modals/AddPastEventsModal"
+import DeleteCategoryModal from "@/components/modals/events-modals/DeleteCategoryModal"
+import AddEventsCategoryModal from "@/components/modals/events-modals/AddEventsCategoryModal"
+import EditEventsCategoryModal from "@/components/modals/events-modals/EditEventsCategoryModal"
 
 export default {
     components: {
-     DeleteItemModal,
-     EditItemModal,
-     AddItemModal,
-     DeleteCategoryModal,
-     EditCategoryModal,
-     AddCategoryModal,
-  //      EditVideoModal,
-  //      AddVideoModal,
-  //      AddVideoCategoryModal,
-  //      EditVideoCategoryModal,
-  //      DeleteVideoCategoryModal,
+    AddEventsModal,
+    EditEventsModal,
+    DeleteEventsModal,
+    DeletePastEventsModal,
+    EditPastEventsModal,
+    AddPastEventsModal,
+    DeleteCategoryModal,
+    AddEventsCategoryModal,
+    EditEventsCategoryModal,
    },
   data() {
     return {
@@ -252,28 +326,57 @@ export default {
         },
         
       ],
-      addItemCategoryFields: [
+      pastEventsFields: [
         // A virtual column that doesn't exist in items
         { key: "index", label: "ID" },
         // A column that needs custom formatting
-        { key: "image", label: "Image" },
+        { key: "title", label: "Title" },
+        // { key: 'userimg', label: 'User'},
+        // A regular column
+        { key: "images", label: "Images" },
+        // A regular column
+        { key: "videos", label: "Videos" },
+        { key: "tickets", label: "Tickets" },
+        // A virtual column made up from two fields
+        //
+        { key: "option", label: "Option" },
+      ],
+      pastEventsItems: [
+        {
+          title: "categ",
+          images: "categ",
+          videos: "categ",
+          tickets: "categ"
+        },
+        {
+          title: "categ",
+          images: "categ",
+          videos: "categ",
+          tickets: "categ"
+        },
+        {
+          title: "categ",
+          images: "categ",
+          videos: "categ",
+          tickets: "categ"
+        },
+      ],
+      addEventsCategoryFields: [
+        // A virtual column that doesn't exist in items
+        { key: "index", label: "ID" },
+        // A column that needs custom formatting
         { key: "category", label: "Category" },
         //
         { key: "option", label: "Option" },
       ],
-      addSchoolCategoryItems: [
+      addEventsCategoryItems: [
         {
-            image: require("@/assets/img/media/realistic/4.jpg"),
             category: 'categ'
         },
         {
-            image: require("@/assets/img/media/realistic/4.jpg"),
             category: 'categ'
         },
-        {
-            image: require("@/assets/img/media/realistic/4.jpg"),
-            category: 'categ'
-        }
+        
       ],
     };
   },

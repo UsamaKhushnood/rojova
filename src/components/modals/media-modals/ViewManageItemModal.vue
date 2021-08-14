@@ -7,41 +7,35 @@
       size="sm"
       title="View Items"
     >
-      <div class="modal-body" id="input-mask">
-        <form method="post">
-          <div class="input-group col-xs-12 align-items-center">
-            <label class="col-sm-4 control-label mt-0" style="font-size: 15px"
-              >Title</label
-            >
-            <div class="col-sm-7 controls">
-              <p>Title Name</p>
-            </div>
-            <br />
-          </div>
-          <div class="input-group col-xs-12 align-items-center mt-4">
-            <label class="col-sm-4 control-label mt-0" style="font-size: 15px"
-              >URL</label
-            >
-            <div class="col-sm-7 controls">
-              <a href="https://youtube.com">www.youtube.com</a>
-            </div>
-            <br />
-          </div>
-          <div class="input-group col-xs-12 align-items-center mt-4">
-            <label class="col-sm-4 control-label mt-0" style="font-size: 15px"
-              >Banner</label
-            >
-            <div class="col-sm-7 controls">
-              <img
-                src="@/assets/img/BILLY-ARGEL-GINGA.jpg"
-                alt="img"
-                width="150px"
-              />
-            </div>
-            <br />
-          </div>
-        </form>
-      </div>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>Title</label>
+        </b-col>
+        <b-col cols="9">
+          <p class="mb-0">Title Name</p>
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>URL</label>
+        </b-col>
+        <b-col cols="9">
+          <a href="https://youtube.com">www.youtube.com</a>
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>Banner</label>
+        </b-col>
+        <b-col cols="9">
+          <img
+            src="@/assets/img/BILLY-ARGEL-GINGA.jpg"
+            alt="img"
+            width="150px"
+          />
+        </b-col>
+      </b-row>
+
       <template #modal-footer="{ ok, cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
         <b-button size="md" variant="primary" @click="ok()">

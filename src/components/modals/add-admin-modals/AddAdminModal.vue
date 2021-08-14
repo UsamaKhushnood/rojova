@@ -42,30 +42,20 @@
         </b-row>
       </div>
       <div class="container mt-2">
-        <b-row>
-          <b-col cols="4">
-            <div class="">
-              <label class="uploadImage">Video Upload</label>
+        <b-row class="align-items-center mb-4">
+          <b-col cols="3">
+            <div>
+              <label>Video Upload</label>
             </div>
           </b-col>
-          <b-col cols="8">
-            <div class="uploadFile mt-3">
-              <div
-                class="fileinput-preview thumbnail"
-                data-trigger="fileinput"
-                style="
-                  width: 200px;
-                  height: 150px;
-                  line-height: 150px;
-                  border: 1px solid #ddd;
-                "
-              ></div>
-              <div class="mt-2"></div>
+          <b-col cols="9">
+            <div>
               <b-form-file
                 v-model="file1"
                 :state="Boolean(file1)"
                 placeholder="Select a file or drop it here..."
                 drop-placeholder="Drop file here..."
+                class="form-control border"
               ></b-form-file>
             </div>
           </b-col>

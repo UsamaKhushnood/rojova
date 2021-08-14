@@ -7,74 +7,49 @@
       size="sm"
       title="Edit Category"
     >
-      <div class="modal-body" id="input-mask">
-        <form method="post">
-		   <div class="input-group col-xs-12">
-              <label class="col-sm-4 control-label mt-0" style="font-size:15px"> Category Name</label>
-				<div class="col-sm-7 controls">
-				 <input id="title" type="title" class="form-control col-xs-12" name="categ" placeholder="Title">
-
-				</div>
-		      <br>
-		  </div>
-		</form>
-        <div class="container mt-2">
-            <b-row>
-          <b-col cols="4">
-            <div>
-              <label class="uploadImage">Upload Image</label>
-            </div>
-          </b-col>
-          <b-col cols="8">
-            
-            <div class="uploadFile mt-3">
-              <div
-                class="fileinput-preview thumbnail"
-                data-trigger="fileinput"
-                style="
-                  width: 200px;
-                  height: 150px;
-                  line-height: 150px;
-                  border: 1px solid #ddd;
-                "
-              ></div>
-              <div class="mt-2"></div>
-              <b-form-file
-                v-model="file1"
-                :state="Boolean(file1)"
-                placeholder="Select a file or drop it here..."
-                drop-placeholder="Drop file here..."
-              ></b-form-file>
-            </div>
-          </b-col>
-        </b-row>
-        </div>
-      </div>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>Category Name</label>
+        </b-col>
+        <b-col cols="9">
+          <input
+            type="text"
+            class="form-control border"
+            placeholder="Category Name"
+          />
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>Upload Image</label>
+        </b-col>
+        <b-col cols="9">
+          <b-form-file
+            v-model="file1"
+            :state="Boolean(file1)"
+            placeholder="Select a file or drop it here..."
+            drop-placeholder="Drop file here..."
+            class="form-control border"
+          ></b-form-file>
+        </b-col>
+      </b-row>
       <template #modal-footer="{ ok, cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
         <b-button size="md" variant="primary" @click="ok()">
           Save and add new
         </b-button>
         <b-button size="md" variant="primary" @click="cancel()">
-         Save and close
+          Save and close
         </b-button>
-
       </template>
     </b-modal>
   </div>
 </template>
-<style scoped>
-.input-group {
-    align-items: center;
-}
-.uploadImage {
-    margin-top: 180px;
-}
-</style>
+
 <script>
 export default {
-    props: ['index'],
-    data() {
+  props: ["index"],
+  data() {
     return {
       selected: null,
       options: [
@@ -94,5 +69,5 @@ export default {
       // ]
     };
   },
-}
+};
 </script>

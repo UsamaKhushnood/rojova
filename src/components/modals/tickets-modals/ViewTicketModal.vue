@@ -2,41 +2,34 @@
   <div>
     <b-modal
       :id="'view-ticket-modal' + index"
-      header-bg-variant="primary"
+      header-bg-variant="success"
       header-text-variant="light"
       size="sm"
-      title="Add Category"
+      title="View Ticket"
     >
-      <div class="modal-body" id="input-mask">
-        <form method="post">
-		   <div class="input-group col-xs-12 align-items-center">
-              <label class="col-sm-4 control-label mt-0" style="font-size:15px">Title</label>
-				<div class="col-sm-7 controls">
-				 <p>Title Name</p>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>Title Name</label>
+        </b-col>
+        <b-col cols="9">
+          <p class="mb-0">Title Name</p>
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>URL</label>
+        </b-col>
+        <b-col cols="9">
+          <a href="https://youtube.com">www.youtube.com</a>
+        </b-col>
+      </b-row>
 
-				</div>
-		      <br>
-		  </div>
-		   <div class="input-group col-xs-12 align-items-center mt-4">
-              <label class="col-sm-4 control-label mt-0" style="font-size:15px">URL</label>
-				<div class="col-sm-7 controls">
-				 <a href="https://youtube.com">www.youtube.com</a>
-
-				</div>
-		      <br>
-		  </div>
-		   
-		</form>
-      </div>
-      <template #modal-footer="{ ok, cancel }">
+      <template #modal-footer="{ cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
-        <b-button size="md" variant="primary" @click="ok()">
-          Save and add new
+        
+        <b-button size="md" variant="secondary" @click="cancel()">
+          Close
         </b-button>
-        <b-button size="md" variant="primary" @click="cancel()">
-         Save and close
-        </b-button>
-
       </template>
     </b-modal>
   </div>
@@ -44,6 +37,6 @@
 
 <script>
 export default {
-    props: ['index']
-}
+  props: ["index"],
+};
 </script>

@@ -7,18 +7,14 @@
       size="sm"
       title="Edit Category"
     >
-      <div class="modal-body px-0" id="input-mask">
-        <form method="post">
-		   <div class="input-group col-xs-12">
-              <label class="col-sm-4 control-label mt-0" style="font-size:15px"> Category Name</label>
-				<div class="col-sm-7 controls">
-				 <input id="title" type="title" class="form-control col-xs-12" name="categ" placeholder="Category Name">
-
-				</div>
-		      <br>
-		  </div>
-		</form>
-      </div>
+      <b-row class="align-items-center mt-4 mb-4">
+        <b-col cols="3">
+          <label>Category Name</label>
+        </b-col>
+        <b-col cols="9">
+          <input type="text" class="form-control border" placeholder="Category Name">
+        </b-col>
+      </b-row>
       <template #modal-footer="{ ok, cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
         <b-button size="md" variant="primary" @click="ok()">

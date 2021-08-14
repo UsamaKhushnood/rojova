@@ -253,7 +253,7 @@
                           v-b-modal="'upgrade-user-modal' + data.index + 'block-user'"
                           ><i
                             class="fa fa-usd"
-                            style="font-size: 16px; color: #28a745"
+                            style="font-size: 17px; color: #28a745"
                           ></i
                         ></a>
                         <a

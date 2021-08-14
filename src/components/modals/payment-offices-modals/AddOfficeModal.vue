@@ -74,35 +74,28 @@
                 aria-label="Address"
                 class="border border-left-0"
                 placeholder="Address"
+                
               ></b-form-input>
             </b-input-group>
           </div>
         </b-row>
 
-        <b-row>
+        <b-row class="align-items-center mt-4 mb-4">
           <b-col cols="4">
             <div>
-              <label class="uploadImage">Image Upload</label>
+              <label>Image Upload</label>
             </div>
           </b-col>
           <b-col cols="8">
-            <div class="uploadFile mt-3">
-              <div
-                class="fileinput-preview thumbnail"
-                data-trigger="fileinput"
-                style="
-                  width: 200px;
-                  height: 150px;
-                  line-height: 150px;
-                  border: 1px solid #ddd;
-                "
-              ></div>
-              <div class="mt-2"></div>
+            <div>
+              
+              
               <b-form-file
                 v-model="file1"
                 :state="Boolean(file1)"
                 placeholder="Select a file or drop it here..."
                 drop-placeholder="Drop file here..."
+                class="form-control border"
               ></b-form-file>
             </div>
           </b-col>

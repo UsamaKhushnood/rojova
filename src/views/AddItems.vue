@@ -293,6 +293,7 @@
               type="button"
               class="btn btn-outline-success"
               @click="tabIndex--"
+              v-show="tabIndex >= 1"
             >
               Previous
             </button>
@@ -300,12 +301,13 @@
               type="button"
               class="btn btn-outline-success"
               @click="tabIndex++"
+              v-show="tabIndex <= 5"
             >
               Next
             </button>
           </div>
 
-          <div class="text-muted">Current Tab: {{ tabIndex }}</div>
+          
         </b-card>
       </div>
     </div>

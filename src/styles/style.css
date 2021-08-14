@@ -68,10 +68,10 @@ section#page-content {
   padding: 30px;
   padding-bottom: 150px;
 }
-div#__BVID__56__BV_tab_container_ {
+/* div#__BVID__56__BV_tab_container_ {
     height: 850px;
     margin-bottom: 20px;
-  }
+  } */
 .bg-white.container-fluid.post[data-v-66b2084c] {
     align-items: unset;
     height: 700px;
@@ -100,7 +100,7 @@ button.close {
 input[type="text"] {
   border: 0px;
 }
-ul#__BVID__56__BV_tab_controls_ {
+/* ul#__BVID__56__BV_tab_controls_ {
   padding: 0;
 }
 ul#__BVID__56__BV_tab_controls_ li.nav-item {
@@ -129,4 +129,139 @@ ul#__BVID__232__BV_tab_controls_ li.nav-item a{
 div#__BVID__232__BV_tab_container_ {
   margin-top: 0;
   height: auto;
+} */
+.pageSettingsTabs .iconStyle {
+  font-size: 25px !important;
 }
+
+.pageSettingsTabs ul {
+  padding: 0 !important;
+}
+.pageSettingsTabs li.nav-item {
+  padding-bottom: 15px !important;
+}
+.pageSettingsTabs li.nav-item a{
+  padding: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.pageSettingsTabsContent {
+  margin-top: 0 !important;
+  height: auto !important;
+}
+.addAdminTabs .iconStyle {
+  font-size: 25px !important;
+}
+
+.addAdminTabs ul {
+  padding: 0 !important;
+}
+.addAdminTabs li.nav-item {
+  padding-bottom: 15px !important;
+}
+.addAdminTabs li.nav-item a{
+  padding: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.addAdminTabsContent {
+  margin-top: 0 !important;
+  height: auto !important;
+}
+.levelSettingTabs .iconStyle {
+  font-size: 25px !important;
+}
+
+.levelSettingTabs ul {
+  padding: 0 !important;
+}
+.levelSettingTabs li.nav-item {
+  padding-bottom: 15px !important;
+}
+.levelSettingTabs li.nav-item a{
+  padding: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.levelSettingTabsContent {
+  margin-top: 0 !important;
+  height: auto !important;
+}
+.standardUserSettingsTabs .iconStyle {
+  font-size: 25px !important;
+}
+
+.standardUserSettingsTabs ul {
+  padding: 0 !important;
+}
+.standardUserSettingsTabs li.nav-item {
+  padding-bottom: 15px !important;
+}
+.standardUserSettingsTabs li.nav-item a{
+  padding: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.standardUserSettingsTabsContent {
+  margin-top: 0 !important;
+  height: auto !important;
+}
+.premiumUserSettingsTabs .iconStyle {
+  font-size: 25px !important;
+}
+
+.premiumUserSettingsTabs ul {
+  padding: 0 !important;
+}
+.premiumUserSettingsTabs li.nav-item {
+  padding-bottom: 15px !important;
+}
+.premiumUserSettingsTabs li.nav-item a{
+  padding: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.premiumUserSettingsTabsContent {
+  margin-top: 0 !important;
+  height: auto !important;
+}
+.vipUserSettingsTabs .iconStyle {
+  font-size: 25px !important;
+}
+
+.vipUserSettingsTabs ul {
+  padding: 0 !important;
+}
+.vipUserSettingsTabs li.nav-item {
+  padding-bottom: 15px !important;
+}
+.vipUserSettingsTabs li.nav-item a{
+  padding: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.vipUserSettingsTabsContent {
+  margin-top: 0 !important;
+  height: auto !important;
+}
+.policyAndTermsTabs .iconStyle {
+  font-size: 25px !important;
+}
+
+.policyAndTermsTabs ul {
+  padding: 0 !important;
+}
+.policyAndTermsTabs li.nav-item {
+  padding-bottom: 15px !important;
+}
+.policyAndTermsTabs li.nav-item a{
+  padding: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.policyAndTermsTabsContent {
+  margin-top: 0 !important;
+  height: auto !important;
+}
+
+

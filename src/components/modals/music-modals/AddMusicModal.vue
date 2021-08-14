@@ -7,47 +7,58 @@
       size="sm"
       title="Add Music"
     >
-      <div class="container mt-2">
-        <b-row>
-          <b-col cols="4">
-            <label>Title</label>
-            <div>
-              <label class="mt-3 mb-4">Select Category</label>
-            </div>
-            <div>
-              <label class="mt-3">Upload File</label>
-            </div>
-            <div>
-              <label class="mt-5">Status</label>
-            </div>
-          </b-col>
-          <b-col cols="8">
-            <div class="titleOfMusic">Title will add automatically.</div>
-            <div class="musicCategory mt-3">
-              <b-form-select
-                v-model="selected"
-                :options="options"
-                class="selectBox"
-              ></b-form-select>
-            </div>
-            <div class="uploadFile mt-3">
-              <b-form-file
-                v-model="file1"
-                :state="Boolean(file1)"
-                placeholder="Select a file or drop it here..."
-                drop-placeholder="Drop file here..."
-              ></b-form-file>
-            </div>
-            <div class="mt-3">
-              <b-form-select
-                v-model="selected"
-                :options="options"
-                class="selectBox"
-              ></b-form-select>
-            </div>
-          </b-col>
-        </b-row>
-      </div>
+      <b-row class="align-items-center mb-3">
+        <b-col cols="4">
+          <label>Title</label>
+        </b-col>
+        <b-col cols="8">
+          <input
+            type="text"
+            class="form-control border"
+            placeholder="Title will add automatically."
+          />
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="4">
+          <label>Select Category</label>
+        </b-col>
+        <b-col cols="8">
+          <b-form-select
+            v-model="selected"
+            :options="options"
+            class="form-control border"
+          ></b-form-select>
+        </b-col>
+      </b-row>
+
+      <b-row class="align-items-center mb-4">
+        <b-col cols="4">
+          <label>Upload File</label>
+        </b-col>
+        <b-col cols="8">
+          <b-form-file
+            v-model="file1"
+            :state="Boolean(file1)"
+            placeholder="Select a file or drop it here..."
+            drop-placeholder="Drop file here..."
+            class="form-control border"
+          ></b-form-file>
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="4">
+          <label>Status</label>
+        </b-col>
+        <b-col cols="8">
+          <b-form-select
+            v-model="selected"
+            :options="options"
+            class="form-control border"
+          ></b-form-select>
+        </b-col>
+      </b-row>
+
       <template #modal-footer="{ ok, cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
         <b-button size="md" variant="success" @click="ok()">
@@ -82,14 +93,14 @@ export default {
         { value: { C: "3PO" }, text: "This is an option with object value" },
         { value: "d", text: "This one is disabled", disabled: true },
       ],
-        file1: null,
-        file2: null,
-        // statusSelected: null,
-        // statusOption: [
-        //     { value: null, text: "Please select an option"},
-        //     { value: "a", text: "Publish"  },
-        //     { value: "b", text: "UnPublish"  }
-        // ]
+      file1: null,
+      file2: null,
+      // statusSelected: null,
+      // statusOption: [
+      //     { value: null, text: "Please select an option"},
+      //     { value: "a", text: "Publish"  },
+      //     { value: "b", text: "UnPublish"  }
+      // ]
     };
   },
 };

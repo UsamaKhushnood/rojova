@@ -3,33 +3,38 @@
     <section id="page-content">
       <div>
         <b-card no-body class="mt-0">
-          <b-tabs pills card vertical nav-wrapper-class="w-25">
+          <b-tabs pills card vertical nav-wrapper-class="w-25" content-class="policyAndTermsTabsContent" class="policyAndTermsTabs">
             <b-tab active>
               <template #title>
-                <i class="fa fa-bars iconStyle"></i>
-                <strong>Level 1</strong>
+                <i class="fa fa-file-text-o iconStyle"></i>
+                <strong>Privacy Policy</strong>
               </template>
               <b-card-text>
-                <div class="d-flex align-items">
-                  <button class="btn btn-success me-3">Reply Comments</button>
-                  <button class="btn btn-success">Reply Messages</button>
+                <vue-editor></vue-editor>
+                <div class="d-flex align-items-center mt-2">
+                  <button class="btn btn-success">Submit</button>
                 </div>
+                
               </b-card-text>
             </b-tab>
 
             <b-tab>
               <template #title>
-                <i class="fa fa-bars iconStyle"></i>
-                <strong>Level 2</strong>
+                <i class="fa fa-file-text-o iconStyle"></i>
+                <strong>Desclaimer</strong>
               </template>
               <b-card-text>
-                <p>working 2</p>
+                <vue-editor></vue-editor>
+                <div class="d-flex align-items-center mt-2">
+                  <button class="btn btn-success">Submit</button>
+                </div>
+                
               </b-card-text>
             </b-tab>
             <b-tab>
               <template #title>
-                <i class="fa fa-bars iconStyle"></i>
-                <strong>Level 3</strong>
+                <i class="fa fa-rss iconStyle"></i>
+                <strong>News</strong>
               </template>
               <b-card-text>
                 <p>working 3</p>

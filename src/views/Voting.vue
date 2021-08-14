@@ -12,11 +12,11 @@
               </template>
               <b-card-text>
                 <div class="container-fluid mb-4" align="center">
-                  <button class="btn btn-success btn-md">
+                  <button class="btn btn-success btn-md" v-b-modal="'add-new-vote-modal'">
                     <i class="fa fa-plus-circle"></i>
                     Add Vote
                   </button>
-                  
+                  <AddNewVoteModal></AddNewVoteModal>
                 </div>
                 <div>
                   <b-table
@@ -55,14 +55,14 @@
                         </a>
                         <a
                           class="editLink"
-                           
+                           v-b-modal="'edit-vote-modal' + data.index"
                         >
                           
                           <i
                             class="fa fa-pencil"
                             style="font-size: 16px; color: #e9573f"
                           ></i>
-                          
+                          <EditVoteModal :index="data.index"></EditVoteModal>
                         </a>
                         <a
                           class="deleteLink"
@@ -201,6 +201,8 @@ import DeleteManageItemModal from "@/components/modals/voting-modals/DeleteManag
 import DeleteAddCategoryModal from "@/components/modals/voting-modals/DeleteAddCategoryModal"
 import AddCategoryModal from "@/components/modals/voting-modals/AddCategoryModal"
 import EditCategoryModal from "@/components/modals/voting-modals/EditCategoryModal"
+import AddNewVoteModal from "@/components/modals/voting-modals/AddNewVoteModal"
+import EditVoteModal from "@/components/modals/voting-modals/EditVoteModal"
 export default {
   components: {
     ViewManageItemModal,
@@ -208,6 +210,8 @@ export default {
     DeleteAddCategoryModal,
     AddCategoryModal,
     EditCategoryModal,
+    AddNewVoteModal,
+    EditVoteModal,
   },
   data() {
     return {

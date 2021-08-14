@@ -1,53 +1,38 @@
 <template>
   <div>
     <b-modal
-      :id="'add-language-modal'" 
+      :id="'add-language-modal'"
       header-bg-variant="success"
       header-text-variant="light"
       size="sm"
       title="Add Language "
     >
-      <div class="modal-body"> 
-        <div class="row">
-          <div class="input-group col-xs-12 align-items-center">
-            <label
-              class="col-sm-4 control-label mt-0"
-              style="font-size: 15px;"
-              >Select Language</label
-            >
-            <div class="selectCategory mt-3 mb-4 ps-2 col-sm-7">
-              <b-form-select
-                v-model="selected"
-                :options="options"
-                class="selectBox form-control border"
-              ></b-form-select>
-            </div>
-            
-          </div>
-        </div>
-        <div class="row align-items-center">
-            <label
-              class="col-sm-4 control-label mt-0"
-              style="font-size: 15px;"
-              >Title</label
-            >
-            <div class="col-sm-7 controls">
-              <input
-                id="title"
-                type="text"
-                class="form-control col-xs-12 border"
-                name="title"
-                placeholder="Title"
-              />
-            </div>
-        </div>
-      </div>
+      <b-row class="align-items-center mt-4 mb-4">
+        <b-col cols="4">
+          <label>Select Language</label>
+        </b-col>
+        <b-col cols="8">
+          <b-form-select
+            v-model="selected"
+            :options="options"
+            class="form-control border"
+          ></b-form-select>
+        </b-col>
+      </b-row>
+
+      <b-row class="align-items-center mb-4">
+        <b-col cols="4">
+          <label>Title</label>
+        </b-col>
+        <b-col cols="8">
+          <input type="text" class="form-control border" placeholder="Title" />
+        </b-col>
+      </b-row>
+
       <template #modal-footer="{ ok }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
-        
-        <b-button size="md" variant="primary" @click="ok()">
-          Save
-        </b-button>
+
+        <b-button size="md" variant="primary" @click="ok()"> Save </b-button>
       </template>
     </b-modal>
   </div>
@@ -64,7 +49,6 @@
 
 <script>
 export default {
-
   data() {
     return {
       selected: null,
@@ -75,8 +59,8 @@ export default {
         { value: { C: "3PO" }, text: "This is an option with object value" },
         { value: "d", text: "This one is disabled", disabled: true },
       ],
-    //   file1: null,
-    //   file2: null,
+      //   file1: null,
+      //   file2: null,
       // statusSelected: null,
       // statusOption: [
       //     { value: null, text: "Please select an option"},

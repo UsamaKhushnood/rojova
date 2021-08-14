@@ -7,29 +7,28 @@
       size="sm"
       title="Warn User"
     >
-      <div>
-        <div class="form-group">
+      <b-row class="align-items-center w-75 mb-4">
+        <b-col cols="2">
           <img
             style="border-radius: 50%; width: 40px; height: 40px"
             src="@/assets/img/DE.png"
-          /><label style="padding-left: 5px">username</label>
-        </div>
-        <div class="form-group clearfix">
-          <label class="col-sm-12 control-label"
-            ><b>Block User for(days)</b></label
-          >
-          <br />
-          <div class="col-sm-12 controls">
-            <input
-              class="col-sm-12"
-              style="padding: 5px"
-              type="text"
-              placeholder="Type number of days"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+          />
+        </b-col>
+        <b-col cols="10">
+          <label>username</label>
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col>
+          <label><b>Block User for(days)</b></label>
+          <input
+            type="text"
+            class="form-control border mt-2"
+            placeholder="Type number of days"
+          />
+        </b-col>
+      </b-row>
+
       <template #modal-footer="{ ok, cancel }">
       <!-- Emulate built in modal footer ok and cancel button actions -->
       <b-button size="md" variant="danger" @click="cancel()">
@@ -44,16 +43,6 @@
     </div>
 </template>
 
-<style scoped>
-input.col-sm-12:focus {
-    border: 1px solid black;
-}
-
-input.col-sm-12 {
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-}
-</style>
 
 <script>
 export default {

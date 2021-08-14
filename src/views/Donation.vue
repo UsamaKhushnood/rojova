@@ -4,7 +4,6 @@
       <div>
         <b-card no-body>
           <b-tabs card>
-            
             <b-tab>
               <template #title>
                 <i class="fa fa-user iconStyle"></i>
@@ -12,7 +11,10 @@
               </template>
               <b-card-text>
                 <div class="container-fluid mb-4" align="center">
-                  <button class="btn btn-success btn-md" v-b-modal="'manage-add-organization-modal'">
+                  <button
+                    class="btn btn-success btn-md"
+                    v-b-modal="'manage-add-organization-modal'"
+                  >
                     <i class="fa fa-plus-circle"></i>
                     Add Organization
                   </button>
@@ -35,7 +37,7 @@
                     <template #cell(organizationName)="data">
                       {{ data.item.organizationName }}
                     </template>
-                    
+
                     <template #cell(totalReach)="data">
                       {{ data.item.totalReach }}
                     </template>
@@ -44,28 +46,33 @@
                       <div class="allLinks">
                         <a
                           class="editLink"
-                           v-b-modal="'manage-edit-organization-modal' + data.index"
+                          v-b-modal="
+                            'manage-edit-organization-modal' + data.index
+                          "
                         >
-                          
                           <i
                             class="fa fa-pencil"
                             style="font-size: 16px; color: #e9573f"
                           ></i>
-                          <ManageEditOrganizationModal :index="data.index"></ManageEditOrganizationModal>
+                          <ManageEditOrganizationModal
+                            :index="data.index"
+                          ></ManageEditOrganizationModal>
                         </a>
                         <a
                           class="deleteLink"
-                          v-b-modal="'delete-manage-donation-modal' + data.index"
+                          v-b-modal="
+                            'delete-manage-donation-modal' + data.index
+                          "
                         >
                           <i
                             class="fa fa-trash-o"
                             style="font-size: 16px; color: #367fa9"
                           ></i>
-                          <DeleteManageDonationModal :index="data.index"></DeleteManageDonationModal>
+                          <DeleteManageDonationModal
+                            :index="data.index"
+                          ></DeleteManageDonationModal>
                         </a>
                       </div>
-
-                      
                     </template>
                   </b-table>
                 </div>
@@ -78,11 +85,14 @@
               </template>
               <b-card-text>
                 <div class="container-fluid mb-4" align="center">
-                  <button class="btn btn-success btn-md">
+                  <button
+                    class="btn btn-success btn-md"
+                    v-b-modal="'add-new-donation-modal'"
+                  >
                     <i class="fa fa-plus-circle"></i>
                     Add New Donation
                   </button>
-                  
+                  <AddNewDonationModal></AddNewDonationModal>
                 </div>
                 <div>
                   <b-table
@@ -101,36 +111,35 @@
                     <template #cell(organizationName)="data">
                       {{ data.item.organizationName }}
                     </template>
-                    
+
                     <template #cell(totalReach)="data">
                       {{ data.item.totalReach }}
                     </template>
 
                     <template #cell(option)="data">
                       <div class="allLinks">
-                        <a
-                          class="editLink"
-                          
-                        >
-                          
+                        <a class="editLink" v-b-modal="'edit-new-donation-modal' + data.index">
                           <i
                             class="fa fa-pencil"
                             style="font-size: 16px; color: #e9573f"
                           ></i>
+                          <EditNewDonationModal :index="data.index"></EditNewDonationModal>
                         </a>
                         <a
                           class="deleteLink"
-                          v-b-modal="'delete-add-organization-modal' + data.index"
+                          v-b-modal="
+                            'delete-add-organization-modal' + data.index
+                          "
                         >
                           <i
                             class="fa fa-trash-o"
                             style="font-size: 16px; color: #367fa9"
                           ></i>
-                          <DeleteAddOrganizationModal :index="data.index"></DeleteAddOrganizationModal>
+                          <DeleteAddOrganizationModal
+                            :index="data.index"
+                          ></DeleteAddOrganizationModal>
                         </a>
                       </div>
-
-                      
                     </template>
                   </b-table>
                 </div>
@@ -179,20 +188,23 @@ a.deleteLink {
 
     
 <script>
-import DeleteManageDonationModal from "@/components/modals/donation-modals/DeleteManageDonationModal"
-import DeleteAddOrganizationModal from "@/components/modals/donation-modals/DeleteAddOrganizationModal"
-import ManageEditOrganizationModal from "@/components/modals/donation-modals/ManageEditOrganizationModal"
-import ManageAddOrganizationModal from "@/components/modals/donation-modals/ManageAddOrganizationModal"
+import DeleteManageDonationModal from "@/components/modals/donation-modals/DeleteManageDonationModal";
+import DeleteAddOrganizationModal from "@/components/modals/donation-modals/DeleteAddOrganizationModal";
+import ManageEditOrganizationModal from "@/components/modals/donation-modals/ManageEditOrganizationModal";
+import ManageAddOrganizationModal from "@/components/modals/donation-modals/ManageAddOrganizationModal";
+import AddNewDonationModal from "@/components/modals/donation-modals/AddNewDonationModal";
+import EditNewDonationModal from "@/components/modals/donation-modals/EditNewDonationModal";
 export default {
-  components: { 
+  components: {
     DeleteManageDonationModal,
     DeleteAddOrganizationModal,
     ManageAddOrganizationModal,
-    ManageEditOrganizationModal
+    ManageEditOrganizationModal,
+    AddNewDonationModal,
+    EditNewDonationModal,
   },
   data() {
     return {
-      
       manageDonationFields: [
         // A virtual column that doesn't exist in items
         { key: "index", label: "ID" },
@@ -209,7 +221,6 @@ export default {
           organizationName: "categ",
           totalReach: "categ",
         },
-        
       ],
       addOrganizationFields: [
         // A virtual column that doesn't exist in items
@@ -227,7 +238,6 @@ export default {
           organizationName: "categ",
           totalReach: "categ",
         },
-        
       ],
     };
   },

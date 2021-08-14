@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import util from './mixins/Utils'
 import "./styles/style.css"
+import Vue2Editor from "vue2-editor";
+
+Vue.use(Vue2Editor);
 
 Vue.mixin(util);
 

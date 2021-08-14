@@ -8,16 +8,14 @@
       title="Edit Category"
     >
       <div class="modal-body" id="input-mask">
-        <form method="post">
-		   <div class="input-group col-xs-12">
-              <label class="col-sm-4 control-label mt-0" style="font-size:15px"> Category Name</label>
-				<div class="col-sm-7 controls">
-				 <input id="title" type="title" class="form-control col-xs-12" name="categ" placeholder="Title">
-
-				</div>
-		      <br>
-		  </div>
-		</form>
+        <b-row class="align-items-center">
+            <b-col cols="3">
+                <label>Category Name</label>
+            </b-col>
+            <b-col cols="9">
+                <input type="text" class="form-control border" placeholder="Category Name">
+            </b-col>
+        </b-row>
       </div>
       <template #modal-footer="{ ok, cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->

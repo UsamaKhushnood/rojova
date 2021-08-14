@@ -11,10 +11,11 @@
               </template>
               <b-card-text>
                 <div class="container-fluid mb-4" align="center">
-                  <button class="btn btn-success btn-md">
+                  <button class="btn btn-success btn-md" v-b-modal="'add-new-news-modal'">
                     <i class="fa fa-plus-circle"></i>
                     Add New News
                   </button>
+                  <AddNewNewsModal></AddNewNewsModal>
                 </div>
                 <div>
                   <b-table
@@ -54,15 +55,17 @@
                         <a
                           class="editLink"
                           v-b-modal="
-                            'edit-news-category-modal' +
-                            data.index +
-                            'news-category'
-                          "
+                            'edit-news-modal' +
+                            data.index"
                         >
                           <i
                             class="fa fa-pencil"
                             style="font-size: 16px; color: #e9573f"
+
                           ></i>
+                          <EditNewsModal
+                        :index="data.index"
+                      ></EditNewsModal>
                         </a>
                         <a
                           class="deleteLink"
@@ -74,10 +77,7 @@
                           ></i>
                         </a>
                       </div>
-                      <EditNewsCategoryModal
-                        :index="data.index +
-                            'news-category'"
-                      ></EditNewsCategoryModal>
+                      
                       <DeleteNewsModal
                         :index="data.index + 'news'"
                       ></DeleteNewsModal>
@@ -130,13 +130,13 @@
                         <a
                           class="editLink"
                           v-b-modal="
-                            'edit-news-modal' + data.index + 'manage-news'
-                          "
+                            'edit-manage-news-modal' + data.index"
                         >
                           <i
                             class="fa fa-pencil"
                             style="font-size: 16px; color: #e9573f"
                           ></i>
+                          <EditManageNewsModal :index="data.index"></EditManageNewsModal>
                         </a>
                         <a
                           class="deleteLink"
@@ -266,12 +266,18 @@ a.deleteLink {
 
     
 <script>
+import AddNewNewsModal from "@/components/modals/news-modals/AddNewNewsModal";
+import EditNewsModal from "@/components/modals/news-modals/EditNewsModal";
+import EditManageNewsModal from "@/components/modals/news-modals/EditManageNewsModal";
 import DeleteNewsModal from "@/components/modals/news-modals/DeleteNewsModal";
 import EditNewsCategoryModal from "@/components/modals/news-modals/EditNewsCategoryModal";
 import AddNewsCategoryModal from "@/components/modals/news-modals/AddNewsCategoryModal";
 
 export default {
   components: {
+    AddNewNewsModal,
+    EditManageNewsModal,
+    EditNewsModal,
     DeleteNewsModal,
     EditNewsCategoryModal,
     AddNewsCategoryModal,

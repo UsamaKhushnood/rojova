@@ -7,42 +7,42 @@
       size="sm"
       title="Edit Video"
     >
-      <div class="container mt-2">
-        <b-row>
-          <b-col cols="4">
-            <div>
-              <label class="mt-4 mb-4">Select Category</label>
-            </div>
-            <div>
-              <label class="mt-4">Item Name</label>
-            </div>
-            <div>
-              <label class="mt-5">Select Thumbnail</label>
-            </div>
-           
-          </b-col>
-          <b-col cols="8">
-            <div class="selectCategory mt-3 mb-4">
-              <b-form-select
-                v-model="selected"
-                :options="options"
-                class="selectBox"
-              ></b-form-select>
-            </div>
-            <div class="itemName mt-3">
-              <input type="text" placeholder="Item Name" />
-            </div>
-            
-            <div class="mt-3">
-              <b-form-select
-                v-model="selected"
-                :options="options"
-                class="selectBox"
-              ></b-form-select>
-            </div>
-          </b-col>
-        </b-row>
-      </div>
+     <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>Select Category</label>
+        </b-col>
+        <b-col cols="9">
+          <b-form-select
+            v-model="selected"
+            :options="options"
+            class="form-control border"
+          ></b-form-select>
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>Item Name</label>
+        </b-col>
+        <b-col cols="9">
+          <input
+            type="text"
+            class="form-control border"
+            placeholder="Item Name"
+          />
+        </b-col>
+      </b-row>
+      <b-row class="align-items-center mb-4">
+        <b-col cols="3">
+          <label>Select Category</label>
+        </b-col>
+        <b-col cols="9">
+          <b-form-select
+            v-model="selected"
+            :options="options"
+            class="form-control border"
+          ></b-form-select>
+        </b-col>
+      </b-row>
       <template #modal-footer="{ ok, cancel }">
         <!-- Emulate built in modal footer ok and cancel button actions -->
         <b-button size="md" variant="success" @click="ok()">
@@ -56,20 +56,6 @@
   </div>
 </template>
 
-<style scoped>
-.selectBox {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 8px;
-  padding-right: 105px;
-}
-.itemName {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-</style>
 
 <script>
 export default {

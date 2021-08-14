@@ -3,7 +3,7 @@
     <section id="page-content">
       <div>
         <b-card no-body class="mt-0">
-          <b-tabs pills card vertical nav-wrapper-class="w-25">
+          <b-tabs pills card vertical nav-wrapper-class="w-25" content-class="pageSettingsTabsContent" class="pageSettingsTabs">
             <b-tab active>
               <template #title>
                 <i class="fa fa-bullhorn iconStyle"></i>
@@ -371,12 +371,6 @@
   </div>
 </template>
 
-<style scoped>
-.iconStyle {
-  font-size: 25px;
-}
-
-</style>
 
 <script>
 import ActivateModal from "@/components/modals/page-settings-modals/ActivateModal.vue"
