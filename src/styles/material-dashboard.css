@@ -8701,8 +8701,14 @@ label,
 .label-on-right {
     font-size: 14px;
     line-height: 1.428571429;
-    color: #AAAAAA;
+    color: #000;
     font-weight: 400;
+}
+
+p.card-text h4.mt-0 {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 label.control-label {

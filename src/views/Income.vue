@@ -11,7 +11,7 @@
               </template>
               <b-card-text>
 
-                <div class="container mt-3 mb-2 ps-0">
+                <div class=" mt-3 mb-2 ps-0">
                   <button class="btn btn-success">Print PDF</button>
                 </div>
                 
@@ -81,7 +81,7 @@
               </template>
               <b-card-text>
 
-                <div class="container mt-3 mb-2 ps-0">
+                <div class=" mt-3 mb-2 ps-0">
                   <button class="btn btn-success">Print PDF</button>
                 </div>
                 
@@ -151,7 +151,7 @@
               </template>
               <b-card-text>
 
-                <div class="container mt-3 mb-2 ps-0">
+                <div class=" mt-3 mb-2 ps-0">
                   <button class="btn btn-success">Print PDF</button>
                 </div>
                 
@@ -247,13 +247,7 @@ a.editLink {
   cursor: pointer;
 }
 
-a.deleteLink {
-  border: 2px solid #367fa9;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 3px;
-}
+ 
 </style>
 
     

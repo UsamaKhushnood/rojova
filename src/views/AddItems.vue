@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container px-0 pb-2">
+    <div class=" px-4 pb-2">
       <div>
         <b-card no-body>
           <b-tabs v-model="tabIndex" card>
@@ -337,13 +337,7 @@ a.editLink {
   margin-left: 3px;
 }
 
-a.deleteLink {
-  border: 2px solid #367fa9;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 3px;
-}
+ 
 </style>
 
 <script>

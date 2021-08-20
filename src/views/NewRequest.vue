@@ -1,8 +1,8 @@
 <template>
   <div>
     <section id="page-content">
-      <div class="container bg-white p-4"></div>
-      <div class="container bg-white">
+      <!-- <div class="container bg-white p-4"></div> -->
+      <div class="p-4 bg-white">
         <b-card-text>
           <div>
             <b-table
@@ -38,7 +38,7 @@
                   <a class="acceptLink">
                     <i
                       class="fa fa-check"
-                      style="font-size: 16px; color: black"
+                      style="font-size: 16px;"
                     ></i>
                   </a>
                   <a
@@ -47,7 +47,7 @@
                   >
                     <i
                       class="fa fa-times"
-                      style="font-size: 16px; color: black"
+                      style="font-size: 16px;"
                     ></i>
                     <DeniedRequestModal
                       :index="data.index"
@@ -73,19 +73,13 @@
   align-items: center;
   width: 100%;
 }
+
 a.acceptLink {
-  border: 2px solid black;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 3px;
-}
+color: red;
+} 
 a.denyLink {
-  border: 2px solid black;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+color: red
+} 
 </style>
 
     

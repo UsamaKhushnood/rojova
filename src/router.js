@@ -48,7 +48,7 @@ let router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    { path: '/dashboard', name: "NewDash",component: NewDash },
+    { path: '/', name: "NewDash",component: NewDash },
     { path: '/standard-user', name: "StandardUser", component: StandardUser },
     { path: '/premium-user', name: "PremiumUser", component: PremiumUser },
     { path: '/diamond-user', name: "DiamondUser", component: DiamondUser },

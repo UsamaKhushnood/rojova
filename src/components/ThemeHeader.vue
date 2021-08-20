@@ -1,85 +1,92 @@
 <template>
-<header class="main-header">
-  <!-- Logo -->
-  <router-link to="/" class="logo">
-    <!-- mini logo for sidebar mini 50x50 pixels -->
-    <!-- <span class="logo-mini">
-      <img src="@/assets/images/yamiyamilogo.png" alt="logo" style="width: 50%">
-    </span> -->
-    <!-- logo for regular state and mobile devices -->
-    <!-- <span class="logo-lg">
-      <img src="@/assets/images/yamiyamilogo.png" alt="logo" style="width: 50%">
-    </span> -->
-  </router-link>
-  <!-- Header Navbar: style can be found in header.less -->
-  <nav class="navbar navbar-static-top">
-    <!-- Sidebar toggle button-->
-    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-      <span class="sr-only">Toggle navigation</span>
-    </a>
+  <header class="main-header">
+    <!-- Logo -->
+    <router-link to="/" class="logo text-decoration-none" tag="a">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">
+        <img src="@/assets/logo.png" alt="logo" style="width: 50%" />
+      </span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg d-flex align-items-center">
+        <img
+          src="@/assets/logo.png"
+          alt="logo"
+          style="width: 50px; margin: 0; margin-right: 0px"
+        />
+        <h4 class="logo-text">RojovaSystem</h4>
+      </span>
+    </router-link>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
 
-    <div class="navbar-custom-menu">
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown messages-menu">
+            <form
+              action="#"
+              method="get"
+              class="sidebar-form"
+              style="margin: 7px 10px; width: 330px"
+            >
+              <div
+                class="input-group position-relative"
+                style="background: #374850"
+              >
+                <input
+                  type="text"
+                  name="q"
+                  class="form-control search-input"
+                  placeholder="Search..."
+                />
 
-      <ul class="nav navbar-nav">
-        <li class="dropdown messages-menu">
-            <form action="#" method="get" class="sidebar-form" style="margin: 7px 10px; width: 330px;">
-      <div class="input-group">
-        <input type="text" name="q" class="form-control" placeholder="Search...">
-        <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-      </div>
-    </form>
-        </li>
-        <!-- Messages: style can be found in dropdown.less-->
-        
-         <li class="messages-menu" style="margin-right: 8px;">
-        </li>
-        <li class=" messages-menu" style="margin-right: 8px;">
+                <button type="submit" name="search" class="search-btn">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </li>
+          <!-- Messages: style can be found in dropdown.less-->
 
-          <ul class="dropdown-menu">
-           <!--  <li class="header">You have 4 messages</li> -->
-            <li>
-              <!-- inner menu: contains the actual data -->
-              <ul class="menu">
-                <li><!-- start message -->
-                  <a href="#">
-                    <div class="pull-left">
-                     <i class="fa fa-circle-o"></i>
-                    </div>
-                    <h4>
-                      Add Shop Items
+          <li class="messages-menu" style="margin-right: 8px"></li>
+          <li class="messages-menu" style="margin-right: 8px">
+            <ul class="dropdown-menu">
+              <!--  <li class="header">You have 4 messages</li> -->
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <i class="fa fa-circle-o"></i>
+                      </div>
+                      <h4>Add Shop Items</h4>
+                    </a>
+                  </li>
+                  <li>
+                    <!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <i class="fa fa-circle-o"></i>
+                      </div>
+                      <h4>Manage Shops</h4>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
 
-                    </h4>
+          <!-- User Account: style can be found in dropdown.less -->
 
-                  </a>
-                </li>
-                <li><!-- start message -->
-                  <a href="#">
-                    <div class="pull-left">
-                     <i class="fa fa-circle-o"></i>
-                    </div>
-                    <h4>
-                     Manage Shops
-
-                    </h4>
-
-                  </a>
-                </li>
-                <!-- end message -->
-
-              </ul>
-            </li>
-
-          </ul>
-        </li>
-        <!-- Tasks: style can be found in dropdown.less -->
-
-        <!-- User Account: style can be found in dropdown.less -->
-        
-            <!-- Menu Body -->
-            <!-- <li class="user-body">
+          <!-- Menu Body -->
+          <!-- <li class="user-body">
               <div class="row">
                 <div class="col-xs-4 text-center">
                   <a href="#">Followers</a>
@@ -92,29 +99,29 @@
                 </div>
               </div>
             </li> -->
-            <!-- Menu Footer-->
-          
-          </ul>
-       
+          <!-- Menu Footer-->
+        </ul>
+
         <!-- Control Sidebar Toggle Button -->
         <li>
-          <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears" style="color: white"></i></a>
+          <a href="#" data-toggle="control-sidebar"
+            ><i class="fa fa-gears" style="color: white"></i
+          ></a>
         </li>
-   
-    </div>
-  </nav>
-</header>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters } from "vuex";
 // import BsModal from '@/components/BsModal'
 // import AddPOSForm from '@/components/AddPOSForm'
 // import AddShopForm from '@/components/AddShopForm'
 // import gql from 'graphql-tag'
 
 export default {
-  name: 'ThemeHeader',
+  name: "ThemeHeader",
 
   computed: {
     ...mapState({
@@ -127,27 +134,44 @@ export default {
   },
   methods: {
     getPath: function (routeName) {
-      let path = '/'
-      if (this.$router.resolve({ name: routeName }).route.path) { path = this.$router.resolve({ name: routeName }).route.path }
-      return path
+      let path = "/";
+      if (this.$router.resolve({ name: routeName }).route.path) {
+        path = this.$router.resolve({ name: routeName }).route.path;
+      }
+      return path;
     },
-    logout () {
-       // this.$store.commit('SET_AUTH_TOKEN',false);
-       localStorage.removeItem('AUTH_TOKEN');
-       localStorage.clear();
-       window.location.href = '/login'
+    logout() {
+      // this.$store.commit('SET_AUTH_TOKEN',false);
+      localStorage.removeItem("AUTH_TOKEN");
+      localStorage.clear();
+      window.location.href = "/login";
       // onLogout()
       // localStorage.removeItem('token')
       // localStorage.removeItem('username')
       // this.$router.push({ name: 'Login' })
     },
-    checkAuthToken () {
+    checkAuthToken() {
       // let isAuthenticated = new Date().getTime() > localStorage.getItem('expiresAT')
       // if (isAuthenticated) this.$router.push({ name: 'Login' })
-    }
+    },
   },
   created: function () {
     // this.checkAuthToken()
-  }
-}
+  },
+};
 </script>
+<style>
+button.search-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+}
+
+.search-input:focus button.search-btn {
+  color: red;
+}
+</style>

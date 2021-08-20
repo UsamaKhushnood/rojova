@@ -4,7 +4,7 @@
       <b-card no-body>
         <b-card-text>
         
-      <div class="container mt-4">
+      <div class="p-2 mt-4">
         <div>
           <div class="d-flex justify-content-between align-items-center w-100 pe-3">
             <input type="search" class="form-control w-25 mt-3 mb-3" placeholder="Search a product">
@@ -226,13 +226,7 @@ a.editLink {
   margin-left: 3px;
 }
 
-a.deleteLink {
-  border: 2px solid #367fa9;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 3px;
-}
+ 
 </style>
 
 <script>

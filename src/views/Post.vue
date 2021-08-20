@@ -42,7 +42,7 @@
                     <b-col cols="10">
                       <div class="col-xs-10 post">
                         <div class="col-xs-12 post-header">
-                          <div class="col-xs-4 username">
+                          <div class="col-xs-4 username w-100">
                             <img
                               style="
                                 border-radius: 50%;
@@ -57,31 +57,35 @@
                             <br />
                             <p style="margin-left: 61px">{{ post.location }}</p>
                           </div>
-                          <div class="col-xs-8 postIcons" align="right">
-                            <a
-                              class="banLink"
-                              v-b-modal="'block-user-modal' + postIndex"
-                            >
-                              <i class="fa fa-ban" style="font-size: 15px"></i>
-                            </a>
-                            <a
-                              class="warnLink"
-                              v-b-modal="'warn-user-modal' + postIndex"
-                            >
-                              <i
+                          <div data-v-20451178="" class="allLinks postIcons">
+                            <a data-v-20451178="" class="banLink ms-auto" role="button"  v-b-modal="'block-user-modal' + postIndex"
+                              ><i
+                                data-v-20451178=""
+                                class="fa fa-ban"
+                                style="font-size: 16px; color: rgb(233, 87, 63)"
+                              ></i></a
+                            ><a
+                              data-v-20451178=""
+                              class="warningLink"
+                              role="button" v-b-modal="'warn-user-modal' + postIndex"
+                              ><i
+                                data-v-20451178=""
                                 class="fa fa-exclamation-triangle"
-                                style="font-size: 15px"
-                              ></i>
-                            </a>
-                            <a
+                                style="font-size: 16px; color: grey"
+                              ></i></a
+                            ><a
+                              data-v-20451178=""
                               class="deleteLink"
-                              v-b-modal="'delete-user-modal' + postIndex"
-                            >
-                              <i
+                              role="button" v-b-modal="'delete-user-modal' + postIndex"
+                              ><i
+                                data-v-20451178=""
                                 class="fa fa-trash-o"
-                                style="font-size: 15px"
-                              ></i>
-                            </a>
+                                style="
+                                  font-size: 16px;
+                                  color: rgb(54, 127, 169);
+                                "
+                              ></i
+                            ></a>
                           </div>
                         </div>
                         <div class="col-xs-12 post-content">
@@ -334,7 +338,7 @@
   left: 50%;
   top: 81px;
 }
-.banLink {
+/* .banLink {
   padding: 2px 7px;
   margin-right: 2px;
   cursor: pointer;
@@ -353,7 +357,7 @@
   cursor: pointer;
   background-color: #009dc8;
   color: white;
-}
+} */
 </style>
 
 <script>

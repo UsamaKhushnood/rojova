@@ -1,10 +1,9 @@
 <template>
   <div>
     <section id="page-content">
-      <div class="container">
-        <div class="space"></div>
-        <div class="container bg-white px-0 pb-2">
-          <div class="container addButtons p-3">
+      <div class="">
+        <div class=" bg-white px-4 pb-2" >
+          <div class=" addButtons p-3">
             <button
               class="btn btn-success btn-md"
               style="margin-right: 20px"
@@ -23,7 +22,7 @@
             </button>
             <AddSubCategoryModal></AddSubCategoryModal>
           </div>
-          <div class="container mt-4">
+          <div class=" mt-4">
             <div>
               <b-table
                 small
@@ -108,13 +107,7 @@ a.editLink {
   cursor: pointer;
 }
 
-a.deleteLink {
-  border: 2px solid #367fa9;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 3px;
-}
+ 
 </style>
 
 <script>

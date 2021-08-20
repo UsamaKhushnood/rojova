@@ -746,13 +746,7 @@ a.editLink {
   cursor: pointer;
 }
 
-a.deleteLink {
-  border: 2px solid #367fa9;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 3px;
-}
+ 
 </style>
 
 <script>

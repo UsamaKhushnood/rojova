@@ -300,12 +300,7 @@
   justify-content: space-around;
   width: 42%;
 }
-a.banLink {
-  border: 2px solid #e9573f;
-  padding: 3px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
 a.warningLink {
   border: 2px solid grey;
   padding: 3px 8px;

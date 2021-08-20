@@ -73,9 +73,9 @@ section#page-content {
     margin-bottom: 20px;
   } */
 .bg-white.container-fluid.post[data-v-66b2084c] {
-    align-items: unset;
-    height: 700px;
-    margin-bottom: 20px;
+  align-items: unset;
+  height: 700px;
+  margin-bottom: 20px;
 }
 .tableStyles tr > th:first-child {
   width: 150px;
@@ -130,22 +130,62 @@ div#__BVID__232__BV_tab_container_ {
   margin-top: 0;
   height: auto;
 } */
-.pageSettingsTabs .iconStyle {
-  font-size: 25px !important;
+
+/* tabs custom styling  */
+
+ul[role="tablist"].nav.nav-pills {
+  padding: 5px !important;
 }
 
-.pageSettingsTabs ul {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #222d32 !important;
+}
+
+.nav-pills .nav-link,
+.nav-pills .show > .nav-link {
+  font-size: 14px !important;  
+  display: flex;
+  align-items: center;
+}
+
+.nav-pills .nav-link,
+.nav-pills .show > .nav-link i {
+  font-size: 14px !important;  
+}
+
+.nav-pills a[role="tab"] i {
+  font-size: 18px !important;
+}
+
+.nav > li > a:hover, .nav > li > a:active, .nav > li > a:focus {
+  color: #222d32;
+  background: #ececec;
+}
+
+.tabs .col-auto.w-25 {
+  width: 300px !important;
+}
+
+/* 
+.customTabs .iconStyle {
+  font-size: 25px !important; 
+}
+
+.customTabs ul {
   padding: 0 !important;
 }
-.pageSettingsTabs li.nav-item {
-  padding-bottom: 15px !important;
-}
-.pageSettingsTabs li.nav-item a{
+
+.customTabs li.nav-item a {
   padding: 15px !important;
   display: flex !important;
   align-items: center !important;
+  border-radius: 0 !important;
 }
-.pageSettingsTabsContent {
+.customTabs li.nav-item a.active {
+  background-color: #3b8dbc;
+}
+.customTabsContent {
   margin-top: 0 !important;
   height: auto !important;
 }
@@ -159,7 +199,7 @@ div#__BVID__232__BV_tab_container_ {
 .addAdminTabs li.nav-item {
   padding-bottom: 15px !important;
 }
-.addAdminTabs li.nav-item a{
+.addAdminTabs li.nav-item a {
   padding: 15px !important;
   display: flex !important;
   align-items: center !important;
@@ -178,7 +218,7 @@ div#__BVID__232__BV_tab_container_ {
 .levelSettingTabs li.nav-item {
   padding-bottom: 15px !important;
 }
-.levelSettingTabs li.nav-item a{
+.levelSettingTabs li.nav-item a {
   padding: 15px !important;
   display: flex !important;
   align-items: center !important;
@@ -197,7 +237,7 @@ div#__BVID__232__BV_tab_container_ {
 .standardUserSettingsTabs li.nav-item {
   padding-bottom: 15px !important;
 }
-.standardUserSettingsTabs li.nav-item a{
+.standardUserSettingsTabs li.nav-item a {
   padding: 15px !important;
   display: flex !important;
   align-items: center !important;
@@ -216,7 +256,7 @@ div#__BVID__232__BV_tab_container_ {
 .premiumUserSettingsTabs li.nav-item {
   padding-bottom: 15px !important;
 }
-.premiumUserSettingsTabs li.nav-item a{
+.premiumUserSettingsTabs li.nav-item a {
   padding: 15px !important;
   display: flex !important;
   align-items: center !important;
@@ -235,7 +275,7 @@ div#__BVID__232__BV_tab_container_ {
 .vipUserSettingsTabs li.nav-item {
   padding-bottom: 15px !important;
 }
-.vipUserSettingsTabs li.nav-item a{
+.vipUserSettingsTabs li.nav-item a {
   padding: 15px !important;
   display: flex !important;
   align-items: center !important;
@@ -254,7 +294,7 @@ div#__BVID__232__BV_tab_container_ {
 .policyAndTermsTabs li.nav-item {
   padding-bottom: 15px !important;
 }
-.policyAndTermsTabs li.nav-item a{
+.policyAndTermsTabs li.nav-item a {
   padding: 15px !important;
   display: flex !important;
   align-items: center !important;
@@ -262,6 +302,28 @@ div#__BVID__232__BV_tab_container_ {
 .policyAndTermsTabsContent {
   margin-top: 0 !important;
   height: auto !important;
+} */
+
+.allLinks {
+  justify-content: flex-start !important;
+  width: 100% !important;
 }
 
+.allLinks a {
+  border: 2px solid #e9573f;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 33px;
+  height: 30px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 
+.badge {
+  font-size: 10px !important;
+  text-transform: uppercase;
+}
